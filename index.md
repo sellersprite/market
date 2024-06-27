@@ -42,135 +42,135 @@ f### Request a gateway
 
 #### Request parameter
 
-| Name            | Type    | Introduction                                                                                | Example                                                      | Required |
+| Name| Type    | Introduction        | Example      | Required |
 | ----------------- | --------- | --------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | ---------- |
- | marketplace             | String   | marketplace code                                             | see table 1.2                           | ✓       |
-            | month                   | String   | The filter date is the last 30 days by default, and the earliest query time is July 2021 | see table 1.1                           |              |
-            | topNum                  | Integer  | Number of header listings                                  | 10                                 |              |
-            | newProduct              | Integer  | New Product Definition                                         | 6                                  |              |
-            | nodeIdPath              | String   | Category                                             | 172282:281407                      |              |
-            | departmentKeyword       | String   | Category  keyword                                       | Electronics:Accessories & Supplies |              |
-            | minAvgUnits             | Integer  | Minimum monthly average sales volume                                     | 100                                |              |
-            | maxAvgUnits             | Integer  | The highest average monthly sales volume                                     | 10000                              |              |
-            | minAvgRevenue           | Float    | Minimum monthly average sales revenue                                   | 100                                |              |
-            | maxAvgRevenue           | Float    | Maximum monthly average sales revenue                                   | 900                                |              |
-            | minAvgRatings           | Integer  | Minimum average rating                                   | 100                                |              |
-            | maxAvgRatings           | Integer  | Maximum average rating                                   | 500                                |              |
-            | minAvgRating            | Float    | Minimum average score                                   | 2.5                                |              |
-            | maxAvgRating            | Float    | Maximum average rating                                   | 3.0                                |              |
-            | minAvgBsr               | Integer  | Lowest average BSR ranking                                  | 50                                 |              |
-            | maxAvgBsr               | Integer  | The highest average BSR ranking                                  | 100                                |              |
-            | minAvgPrice             | Float    | Minimum average price                                     | 30                                 |              |
-            | maxAvgPrice             | Float    | Maximum average price                                     | 50                                 |              |
-            | minWeight               | Float    | Minimum weight                                         | 30                                 |              |
-            | maxWeight               | Float    | Maximum weight                                         | 60                                 |              |
-            | minVolume               | Float    | Minimum volume                                         | 20                                 |              |
-            | maxVolume               | Float    | Maximum volume                                         | 50                                 |              |
-            | minAvgProfit            | Float    | Minimum average gross profit margin                                   | 20                                 |              |
-            | maxAvgProfit            | Float    | Maximum average gross profit margin                                   | 70                                 |              |
-            | minTopAvgUnits          | Integer  | Minimum monthly average sales of the first part                                 | 200                                |              |
-            | maxTopAvgUnits          | Integer  | The highest average monthly sales of the top tier                                 | 300                                |              |
-            | minTopAvgRevenue        | Float    | Lowest monthly average sales revenue                               | 2000                               |              |
-            | maxTopAvgRevenue        | Float    | The highest monthly average sales revenue in the top tier                               | 3000                               |              |
-            | minTopAvgBsr            | Integer  | Lowest head average BSR                                  | 68                                 |              |
-            | maxTopAvgBsr            | Integer  | Maximum Head Average BSR                                  | 998                                |              |
-            | minGoodsCount           | Integer  | Minimum quantity of goods                                     | 40                                 |              |
-            | maxGoodsCount           | Integer  | Maximum quantity of goods                                     | 90                                 |              |
-            | minBrands               | Integer  | Minimum number of brands                                     | 10                                 |              |
-            | maxBrands               | Integer  | Maximum number of brands                                     | 20                                 |              |
-            | minSellers              | Integer  | Minimum number of sellers                                     | 6                                  |              |
-            | maxSellers              | Integer  | Maximum number of sellers                                     | 10                                 |              |
-            | minAvgSellers           | Float    | Minimum average number of sellers                                 | 4.4                                |              |
-            | maxAvgSellers           | Float    | Maximum average number of sellers                                 | 10.4                               |              |
-            | minGoodsCrn             | Float    | Minimum product concentration                                   | 45                                 |              |
-            | maxGoodsCrn             | Float    | Maximum product concentration                                   | 55                                 |              |
-            | minBrandCrn             | Float    | Minimum brand concentration                                   | 45                                 |              |
-            | maxBrandCrn             | Float    | Maximum brand concentration                                   | 55                                 |              |
-            | maxSellerCrn            | Float    | Minimum seller concentration                                   | 45                                 |              |
-            | minSellerCrn            | Float    | Concentration of the largest sellers                                   | 55                                 |              |
-            | minEbcProportion        | Float    | Minimum A+quantity proportion                                   | 34                                 |              |
-            | maxEbcProportion        | Float    | Maximum proportion of A+quantity                                | 54                                 |              |
-            | minFbaProportion        | Float    | Minimum FBA proportion                                      | 34                                 |              |
-            | maxFbaProportion        | Float    | Maximum proportion of FBA                                      | 54                                 |              |
-            | minFbmProportion        | Float    | Minimum FBM proportion                                      | 34                                 |              |
-            | maxFbmProportion        | Float    | Maximum proportion of FBM                                      | 54                                 |              |
-            | minAmazonSelfProportion | Float    | Minimum Amazon self operated proportion                               | 34                                 |              |
-            | maxAmazonSelfProportion | Float    | Maximum proportion of self operated Amazon                               | 56                                 |              |
-            | sellerLocation          | String   | Seller's location，see table 1.3                              | US,GB                              |              |
-            | minNewProportion        | Float    | Minimum proportion of new products                                 | 34                                 |              |
-            | maxNewProportion        | Float    | Maximum proportion of new products                                 | 56                                 |              |
-            | minNewCount             | Integer  | Minimum New Product Quantity                                     | 4                                  |              |
-            | maxNewCount             | Integer  | Maximum number of new products                                     | 20                                 |              |
-            | minNewAvgRatings        | Integer  | Minimum average rating for new products                               | 23                                 |              |
-            | maxNewAvgRatings        | Integer  | Maximum average rating score for new products                               | 554                                |              |
-            | minNewAvgPrice          | Float    | Minimum average price of new products                                 | 34                                 |              |
-            | maxNewAvgPrice          | Float    | Maximum average price of new products                                 | 45                                 |              |
-            | minNewAvgRating         | Float    | Minimum average star rating for new products                                 | 4.0                                |              |
-            | maxNewAvgRating         | Float    | Maximum average star rating for new products                                 | 4.5                                |              |
-            | minNewAvgUnits          | Float    | Minimum monthly average sales of new products                                 | 400                                |              |
-            | maxNewAvgUnits          | Float    | The highest monthly average sales of new products                                 | 800                                |              |
-            | minNewAvgRevenue        | Float    | Minimum monthly average sales of new products                               | 900                                |              |
-            | maxNewAvgRevenue        | Float    | The highest monthly average sales of new products                               | 2000                               |              |
-            | page                    | Integer  | Page numbers, starting from 1                                  | default 1                            |              |
-            | size                    | Integer  | Number of entries per page                                         | default 50，max 200                |              |
-            | order                   | Object   | sort                                             |                                        |              |
-            | └field                 | String   | sort field                                         | see table 1.4                            |              |
-            | └desc                  | boolean  | True is in descending order, false is in ascending order                           | default desc                           |              |
+| marketplace | String   | marketplace code         | see table 1.2   | ✓       |
+| month       | String   | The filter date is the last 30 days by default, and the earliest query time is July 2021 | see table 1.1   |  |
+| topNum      | Integer  | Number of header listings          | 10         |  |
+| newProduct  | Integer  | New Product Definition     | 6          |  |
+| nodeIdPath  | String   | Category         | 172282:281407          |  |
+| departmentKeyword       | String   | Category  keyword   | Electronics:Accessories & Supplies |  |
+| minAvgUnits | Integer  | Minimum monthly average sales volume | 100        |  |
+| maxAvgUnits | Integer  | The highest average monthly sales volume | 10000      |  |
+| minAvgRevenue           | Float    | Minimum monthly average sales revenue           | 100        |  |
+| maxAvgRevenue           | Float    | Maximum monthly average sales revenue           | 900        |  |
+| minAvgRatings           | Integer  | Minimum average rating           | 100        |  |
+| maxAvgRatings           | Integer  | Maximum average rating           | 500        |  |
+| minAvgRating| Float    | Minimum average score           | 2.5        |  |
+| maxAvgRating| Float    | Maximum average rating           | 3.0        |  |
+| minAvgBsr   | Integer  | Lowest average BSR ranking          | 50         |  |
+| maxAvgBsr   | Integer  | The highest average BSR ranking          | 100        |  |
+| minAvgPrice | Float    | Minimum average price | 30         |  |
+| maxAvgPrice | Float    | Maximum average price | 50         |  |
+| minWeight   | Float    | Minimum weight     | 30         |  |
+| maxWeight   | Float    | Maximum weight     | 60         |  |
+| minVolume   | Float    | Minimum volume     | 20         |  |
+| maxVolume   | Float    | Maximum volume     | 50         |  |
+| minAvgProfit| Float    | Minimum average gross profit margin           | 20         |  |
+| maxAvgProfit| Float    | Maximum average gross profit margin           | 70         |  |
+| minTopAvgUnits          | Integer  | Minimum monthly average sales of the first part         | 200        |  |
+| maxTopAvgUnits          | Integer  | The highest average monthly sales of the top tier         | 300        |  |
+| minTopAvgRevenue        | Float    | Lowest monthly average sales revenue       | 2000       |  |
+| maxTopAvgRevenue        | Float    | The highest monthly average sales revenue in the top tier       | 3000       |  |
+| minTopAvgBsr| Integer  | Lowest head average BSR          | 68         |  |
+| maxTopAvgBsr| Integer  | Maximum Head Average BSR          | 998        |  |
+| minGoodsCount           | Integer  | Minimum quantity of goods | 40         |  |
+| maxGoodsCount           | Integer  | Maximum quantity of goods | 90         |  |
+| minBrands   | Integer  | Minimum number of brands | 10         |  |
+| maxBrands   | Integer  | Maximum number of brands | 20         |  |
+| minSellers  | Integer  | Minimum number of sellers | 6          |  |
+| maxSellers  | Integer  | Maximum number of sellers | 10         |  |
+| minAvgSellers           | Float    | Minimum average number of sellers         | 4.4        |  |
+| maxAvgSellers           | Float    | Maximum average number of sellers         | 10.4       |  |
+| minGoodsCrn | Float    | Minimum product concentration           | 45         |  |
+| maxGoodsCrn | Float    | Maximum product concentration           | 55         |  |
+| minBrandCrn | Float    | Minimum brand concentration           | 45         |  |
+| maxBrandCrn | Float    | Maximum brand concentration           | 55         |  |
+| maxSellerCrn| Float    | Minimum seller concentration           | 45         |  |
+| minSellerCrn| Float    | Concentration of the largest sellers           | 55         |  |
+| minEbcProportion        | Float    | Minimum A+quantity proportion           | 34         |  |
+| maxEbcProportion        | Float    | Maximum proportion of A+quantity        | 54         |  |
+| minFbaProportion        | Float    | Minimum FBA proportion  | 34         |  |
+| maxFbaProportion        | Float    | Maximum proportion of FBA  | 54         |  |
+| minFbmProportion        | Float    | Minimum FBM proportion  | 34         |  |
+| maxFbmProportion        | Float    | Maximum proportion of FBM  | 54         |  |
+| minAmazonSelfProportion | Float    | Minimum Amazon self operated proportion       | 34         |  |
+| maxAmazonSelfProportion | Float    | Maximum proportion of self operated Amazon       | 56         |  |
+| sellerLocation          | String   | Seller's location，see table 1.3      | US,GB      |  |
+| minNewProportion        | Float    | Minimum proportion of new products         | 34         |  |
+| maxNewProportion        | Float    | Maximum proportion of new products         | 56         |  |
+| minNewCount | Integer  | Minimum New Product Quantity | 4          |  |
+| maxNewCount | Integer  | Maximum number of new products | 20         |  |
+| minNewAvgRatings        | Integer  | Minimum average rating for new products       | 23         |  |
+| maxNewAvgRatings        | Integer  | Maximum average rating score for new products       | 554        |  |
+| minNewAvgPrice          | Float    | Minimum average price of new products         | 34         |  |
+| maxNewAvgPrice          | Float    | Maximum average price of new products         | 45         |  |
+| minNewAvgRating         | Float    | Minimum average star rating for new products         | 4.0        |  |
+| maxNewAvgRating         | Float    | Maximum average star rating for new products         | 4.5        |  |
+| minNewAvgUnits          | Float    | Minimum monthly average sales of new products         | 400        |  |
+| maxNewAvgUnits          | Float    | The highest monthly average sales of new products         | 800        |  |
+| minNewAvgRevenue        | Float    | Minimum monthly average sales of new products       | 900        |  |
+| maxNewAvgRevenue        | Float    | The highest monthly average sales of new products       | 2000       |  |
+| page        | Integer  | Page numbers, starting from 1          | default 1    |  |
+| size        | Integer  | Number of entries per page     | default 50，max 200    |  |
+| order       | Object   | sort         |    |  |
+| └field     | String   | sort field     | see table 1.4    |  |
+| └desc      | boolean  | True is in descending order, false is in ascending order   | default desc   |  |
 
 #### Response parameter
 
-| Name           | Type    | Description                                | Example                                                                                                                                 |
+| Name           | Type    | Description        | Example         |
 | ---------------- | --------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| marketplace           | String   | marketplace code                     | US                                                                                                                                                     |
-            | currency              | String   | The currency type of this market             | USD                                                                                                                                                    |
-            | nodeId                | String   | category ID                       | 3732981                                                                                                                                                |
-            | nodeLabelName         | String   | category name                     | Mattresses                                                                                                                                             |
-            | nodeIdPath            | String   | category id path                   | 1055398:1063306:1063308:3732961:3732981                                                                                                                |
-            | nodeLabelPath         | String   | category name path                 | Home & Kitchen:Furniture:Bedroom Furniture:Mattresses & Box Springs:Mattresses                                                                         |
-            | nodeLabelLocale       | String   | Node Name Translation                 | 床垫                                                                                                                                                   |
-            | nodeLabelPathLocale   | String   | Node Name Path Translation             | 家居用品 厨房:家具:家具卧室:床垫:床垫                                                                                                                  |
-            | totalProducts         | Integer  | Total number of products                     | 1000                                                                                                                                                   |
-            | ranking               | Integer  | rank                         | 1                                                                                                                                                      |
-            | topProducts           | Integer  | Sample quantity                     | 100                                                                                                                                                    |
-            | brands                | Integer  | Number of brands                     | 34                                                                                                                                                     |
-            | sellers               | Integer  | Number of sellers                     | 60                                                                                                                                                     |
-            | totalUnits            | Integer  | Total monthly sales                     | 539009                                                                                                                                                 |
-            | totalRevenue          | Float    | Total monthly sales revenue                   | 179950610.38                                                                                                                                           |
-            | avgUnits              | Integer  | Monthly average sales volume                     | 5390                                                                                                                                                   |
-            | avgRevenue            | Float    | Monthly average sales revenue                   | 1799506                                                                                                                                                |
-            | avgPrice              | Float    | average price                     | 296.11                                                                                                                                                 |
-            | avgRatings            | Integer  | Average rating score                   | 14591                                                                                                                                                  |
-            | avgRating             | Float    | Average rating value                   | 4.5                                                                                                                                                    |
-            | avgBsr                | Integer  | Average BSR                      | 198077                                                                                                                                                 |
-            | baseAvgVolume         | Float    | Average volume(cm³)               | 529430.46                                                                                                                                              |
-            | avgVolume             | Float    | Average volume(in³)               | 32307.87                                                                                                                                               |
-            | baseAvgWeight         | Float    | Average weight(g)                  | 35301.19                                                                                                                                               |
-            | avgWeight             | Float    | Average weight(pound)              | 77.8259                                                                                                                                                |
-            | avgProfit             | Float    | Average profit margin                   | 68.76                                                                                                                                                  |
-            | avgSellers            | Float    | Average number of sellers                   | 3.3                                                                                                                                                    |
-            | ebcProportion         | Float    | A+Product proportion, percentage            | 80                                                                                                                                                     |
-            | amazonSelfProportion  | Float    | Amazon's self operated proportion, percentage        | 55                                                                                                                                                     |
-            | fbaProportion         | Float    | FBA proportion, percentage              | 22                                                                                                                                                     |
-            | fbmProportion         | Float    | FBM proportion, percentage               | 14                                                                                                                                                     |
-            | sellerNation          | String   | Most sellers belong to code，see table 1.3 | US                                                                                                                                                     |
-            | sellerNationLabel     | String   | Most sellers belong to label         | 美国                                                                                                                                                   |
-            | sellerProportion      | Float    | Most sellers belong to           | 59.3                                                                                                                                                   |
-            | top10Images           | List     | Pictures of the top 10 products               |                                                                                                                                                            |
-            | └asin                | String   | asin                         | B01IU6RJYA                                                                                                                                             |
-            | └image               | String   | ASIN image link                 | [https://images-na.ssl-images-amazon.com/images/I/51+5VVLcXSL.\_AC\_US200\_.jpg](https://images-na.ssl-images-amazon.com/images/I/51+5VVLcXSL._AC_US200_.jpg) |
-            | returnRatio           | Float    | Return rate                       | 3.51                                                                                                                                                   |
-            | avgReturnRatio        | Float    | Average return rate category             | 5.54                                                                                                                                                   |
-            | searchToPurchaseRatio | Float    | Search purchase ratio            | 0.94926                                                                                                                                                |
-                                                                                                    |
+| marketplace           | String   | marketplace code         | US     |
+| currency  | String   | The currency type of this market | USD    |
+| nodeId    | String   | category ID           | 3732981|
+| nodeLabelName         | String   | category name         | Mattresses         |
+| nodeIdPath| String   | category id path       | 1055398:1063306:1063308:3732961:3732981    |
+| nodeLabelPath         | String   | category name path     | Home & Kitchen:Furniture:Bedroom Furniture:Mattresses & Box Springs:Mattresses |
+| nodeLabelLocale       | String   | Node Name Translation     | 床垫   |
+| nodeLabelPathLocale   | String   | Node Name Path Translation | 家居用品 厨房:家具:家具卧室:床垫:床垫      |
+| totalProducts         | Integer  | Total number of products         | 1000   |
+| ranking   | Integer  | rank | 1      |
+| topProducts           | Integer  | Sample quantity         | 100    |
+| brands    | Integer  | Number of brands         | 34     |
+| sellers   | Integer  | Number of sellers         | 60     |
+| totalUnits| Integer  | Total monthly sales         | 539009 |
+| totalRevenue          | Float    | Total monthly sales revenue       | 179950610.38       |
+| avgUnits  | Integer  | Monthly average sales volume         | 5390   |
+| avgRevenue| Float    | Monthly average sales revenue       | 1799506|
+| avgPrice  | Float    | average price         | 296.11 |
+| avgRatings| Integer  | Average rating score       | 14591  |
+| avgRating | Float    | Average rating value       | 4.5    |
+| avgBsr    | Integer  | Average BSR          | 198077 |
+| baseAvgVolume         | Float    | Average volume(cm³)   | 529430.46          |
+| avgVolume | Float    | Average volume(in³)   | 32307.87           |
+| baseAvgWeight         | Float    | Average weight(g)      | 35301.19           |
+| avgWeight | Float    | Average weight(pound)  | 77.8259|
+| avgProfit | Float    | Average profit margin       | 68.76  |
+| avgSellers| Float    | Average number of sellers       | 3.3    |
+| ebcProportion         | Float    | A+Product proportion, percentage| 80     |
+| amazonSelfProportion  | Float    | Amazon's self operated proportion, percentage        | 55     |
+| fbaProportion         | Float    | FBA proportion, percentage  | 22     |
+| fbmProportion         | Float    | FBM proportion, percentage   | 14     |
+| sellerNation          | String   | Most sellers belong to code，see table 1.3 | US     |
+| sellerNationLabel     | String   | Most sellers belong to label         | 美国   |
+| sellerProportion      | Float    | Most sellers belong to           | 59.3   |
+| top10Images           | List     | Pictures of the top 10 products   ||
+| └asin    | String   | asin | B01IU6RJYA         |
+| └image   | String   | ASIN image link     | [https://images-na.ssl-images-amazon.com/images/I/51+5VVLcXSL.\_AC\_US200\_.jpg](https://images-na.ssl-images-amazon.com/images/I/51+5VVLcXSL._AC_US200_.jpg) |
+| returnRatio           | Float    | Return rate           | 3.51   |
+| avgReturnRatio        | Float    | Average return rate category | 5.54   |
+| searchToPurchaseRatio | Float    | Search purchase ratio| 0.94926|
+|
 
 #### Request example
 
 ```
-curl 'https://api.sellersprite.com/v1/market/research' \
-  -H 'Content-Type: application/json;charset=UTF-8' \
-  -H 'secret-key: your secret key' \
-  --data-raw $'{\n  "marketplace":"US",\n  "size":20,\n  "page":1\n}' \
-  --compressed
+    curl 'https://api.sellersprite.com/v1/market/research' \
+-H 'Content-Type: application/json;charset=UTF-8' \
+-H 'secret-key: your secret key' \
+--data-raw $'{\n  "marketplace":"US",\n  "size":20,\n  "page":1\n}' \
+--compressed
 ```
 
 ### Category statistics
@@ -179,69 +179,69 @@ curl 'https://api.sellersprite.com/v1/market/research' \
   
 #### Request parameter
 
-| Name        | Type    | Introduction                                                                                | Example                    | Required |
+| Name        | Type    | Introduction        | Example        | Required |
 | ------------- | --------- | --------------------------------------------------------------------------------------------- | ---------------------------- | ---------- |
-| marketplace | String   | marketplace code                                           | see table 1.2                                    | ✓       |
-|  month      | String   | The filter date is the last 30 days by default, and the earliest query time is July 2021 | see table 1.1                                    |              |
-| topN        | Integer  | Number of header listings                                  | 10                                              |              |
-| newProduct  | Integer  | New Product Definition                                         | 6                                               |              |
-| nodeIdPath  | String   | Node ID path string                               | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
+| marketplace | String   | marketplace code       | see table 1.2| ✓       |
+|  month      | String   | The filter date is the last 30 days by default, and the earliest query time is July 2021 | see table 1.1|  |
+| topN        | Integer  | Number of header listings          | 10          |  |
+| newProduct  | Integer  | New Product Definition     | 6           |  |
+| nodeIdPath  | String   | Node ID path string       | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
 
 #### Response parameter
 
-| Name           | Type    | Description                                               | Example                                                                                                                                 |
+| Name           | Type    | Description           | Example         |
 | ---------------- | --------- | ----------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
- | marketplace          | String   | marketplace code                             | US                                                                                                                            |
-            | currency             | String   | The currency type of this market                     | USD                                                                                                                           |
-            | nodeIdPath           | String   | category ID                           | 1064954:1069242:1069784:1069820:1069838:1069828                                                                               |
-            | nodeLabelPath        | String   | category name                         | Office Products:Office & School Supplies:Writing & Correction Supplies:Pens & Refills:Rollerball Pens:Gel Ink Rollerball Pens |
-            | nodeLabelLocale      | String   | Node Name Translation                         | 办公产品:办公室:写作:钢笔:滚珠笔:中性笔                                                                                       |
-            | countryCode          | String   | National two simplified codes                           | US                                                                                                                            |
-            | totalProducts        | Integer  | Total number of products                             | 5127                                                                                                                          |
-            | products             | Integer  | Number of sample products                           | 100                                                                                                                           |
-            | brands               | Integer  | Number of brands                               | 4                                                                                                                             |
-            | sellers              | Integer  | Number of sellers                               | 58                                                                                                                            |
-            | avgBsr               | Integer  | Average BSR                              | 41970                                                                                                                         |
-            | baseAvgVolume        | Float    | Average volume(cm³)                       | 819942.68                                                                                                                     |
-            | avgVolume            | Float    | Average volume(in³)                       | 50035.97                                                                                                                      |
-            | baseAvgWeight        | Float    | Average weight(g)                          | 2460.95                                                                                                                       |
-            | avgWeight            | Float    | Average weight(pound)                      | 5.4255                                                                                                                        |
-            | avgProfit            | Float    | Average profit margin                           | 66.03                                                                                                                         |
-            | avgUnits             | Integer  | Monthly average sales volume                             | 26255                                                                                                                         |
-            | avgRevenue           | Float    | Monthly average sales revenue                           | 344369                                                                                                                        |
-            | avgPrice             | Float    | average price                             | 13.91                                                                                                                         |
-            | avgRatingsCv         | Integer  | Average monthly comment growth                     | 0                                                                                                                             |
-            | avgRatings           | Integer  | Average rating score                           | 19071                                                                                                                         |
-            | avgRating            | Float    | Average star rating                             | 4.7                                                                                                                           |
-            | avgSellers           | Float    | Average number of sellers                           | 5.2                                                                                                                           |
-            | hlProducts           | Integer  | Number of top N product samples in the header listing           | 5                                                                                                                             |
-            | hlAvgBsr             | Integer  | The average BSR of the top N products in the top listing          | 13126                                                                                                                         |
-            | hlAvgUnits           | Integer  | The top N products in the top listing have an average monthly sales volume         | 1123                                                                                                                          |
-            | hlAvgRevenue         | Float    | The monthly average sales revenue of the top N products in the top listing       | 12342.85                                                                                                                      |
-            | hlAvgPrice           | Float    | The average price of the top N products in the top listing         | 11.77                                                                                                                         |
-            | hlAvgRatingsCv       | Integer  | The average growth rate of monthly reviews for the top N products in the top listing | 0                                                                                                                             |
-            | hlAvgRatings         | Integer  | The average number of comments on the top N products in the top listing       | 2794                                                                                                                          |
-            | hlAvgRating          | Float    | The average star rating of the top N products in the top listing         | 4.7                                                                                                                           |
-            | newProducts          | Integer  | Number of new products                             | 67                                                                                                                            |
-            | newProductProportion | Float    | Proportion of new product quantity                         | 67                                                                                                                            |
-            | newAvgPrice          | Float    | Average price of new products                         | 14.14                                                                                                                         |
-            | newAvgRatings        | Integer  | Average rating score for new products                       | 24295                                                                                                                         |
-            | minNewRatings        | Integer  | Minimum New Product Review Score                       | 24                                                                                                                            |
-            | maxNewRatings        | Integer  | Highest New Product Review Score                       | 6432                                                                                                                          |
-            | newAvgRating         | Float    | Average star rating of new products                         | 4.7                                                                                                                           |
-            | newAvgUnits          | Integer  | Monthly average sales of new products                         | 26425                                                                                                                         |
-            | newAvgRevenue        | Float    | Monthly average sales revenue of new products                       | 350209.91                                                                                                                     |
-            | firstShelfDate       | String   | First listing date of the product                     | 2014-10-30                                                                                                                    |
-            | lastShelfDate        | String   | Latest listing date of the product                     | 2021-04-28                                                                                                                    |
+| marketplace          | String   | marketplace code     | US    |
+| currency | String   | The currency type of this market         | USD   |
+| nodeIdPath           | String   | category ID   | 1064954:1069242:1069784:1069820:1069838:1069828       |
+| nodeLabelPath        | String   | category name | Office Products:Office & School Supplies:Writing & Correction Supplies:Pens & Refills:Rollerball Pens:Gel Ink Rollerball Pens |
+| nodeLabelLocale      | String   | Node Name Translation | 办公产品:办公室:写作:钢笔:滚珠笔:中性笔   |
+| countryCode          | String   | National two simplified codes   | US    |
+| totalProducts        | Integer  | Total number of products     | 5127  |
+| products | Integer  | Number of sample products   | 100   |
+| brands   | Integer  | Number of brands       | 4     |
+| sellers  | Integer  | Number of sellers       | 58    |
+| avgBsr   | Integer  | Average BSR      | 41970 |
+| baseAvgVolume        | Float    | Average volume(cm³)           | 819942.68         |
+| avgVolume| Float    | Average volume(in³)           | 50035.97          |
+| baseAvgWeight        | Float    | Average weight(g)  | 2460.95           |
+| avgWeight| Float    | Average weight(pound)          | 5.4255|
+| avgProfit| Float    | Average profit margin   | 66.03 |
+| avgUnits | Integer  | Monthly average sales volume     | 26255 |
+| avgRevenue           | Float    | Monthly average sales revenue   | 344369|
+| avgPrice | Float    | average price     | 13.91 |
+| avgRatingsCv         | Integer  | Average monthly comment growth         | 0     |
+| avgRatings           | Integer  | Average rating score   | 19071 |
+| avgRating| Float    | Average star rating     | 4.7   |
+| avgSellers           | Float    | Average number of sellers   | 5.2   |
+| hlProducts           | Integer  | Number of top N product samples in the header listing           | 5     |
+| hlAvgBsr | Integer  | The average BSR of the top N products in the top listing          | 13126 |
+| hlAvgUnits           | Integer  | The top N products in the top listing have an average monthly sales volume         | 1123  |
+| hlAvgRevenue         | Float    | The monthly average sales revenue of the top N products in the top listing       | 12342.85          |
+| hlAvgPrice           | Float    | The average price of the top N products in the top listing         | 11.77 |
+| hlAvgRatingsCv       | Integer  | The average growth rate of monthly reviews for the top N products in the top listing | 0     |
+| hlAvgRatings         | Integer  | The average number of comments on the top N products in the top listing       | 2794  |
+| hlAvgRating          | Float    | The average star rating of the top N products in the top listing         | 4.7   |
+| newProducts          | Integer  | Number of new products     | 67    |
+| newProductProportion | Float    | Proportion of new product quantity | 67    |
+| newAvgPrice          | Float    | Average price of new products | 14.14 |
+| newAvgRatings        | Integer  | Average rating score for new products           | 24295 |
+| minNewRatings        | Integer  | Minimum New Product Review Score           | 24    |
+| maxNewRatings        | Integer  | Highest New Product Review Score           | 6432  |
+| newAvgRating         | Float    | Average star rating of new products | 4.7   |
+| newAvgUnits          | Integer  | Monthly average sales of new products | 26425 |
+| newAvgRevenue        | Float    | Monthly average sales revenue of new products           | 350209.91         |
+| firstShelfDate       | String   | First listing date of the product         | 2014-10-30        |
+| lastShelfDate        | String   | Latest listing date of the product         | 2021-04-28        |
 
 #### Request example
 
 ```
-curl 'https://api.sellersprite.com/v1/market/statistics' \
-  -H 'Content-Type: application/json;charset=UTF-8' \
-  -H 'secret-key: your secret key' \
-  --data-raw $'{\n  "marketplace":"US",\n  "nodeIdPath":"1064954:1069242:1069784:1069820:1069838:1069828"\n}' \
-  --compressed
+    curl 'https://api.sellersprite.com/v1/market/statistics' \
+-H 'Content-Type: application/json;charset=UTF-8' \
+-H 'secret-key: your secret key' \
+--data-raw $'{\n  "marketplace":"US",\n  "nodeIdPath":"1064954:1069242:1069784:1069820:1069838:1069828"\n}' \
+--compressed
 ```
 
 ### Product concentration
@@ -250,1235 +250,531 @@ curl 'https://api.sellersprite.com/v1/market/statistics' \
 
 #### Request parameter
 
-| Name        | Type   | description                                | Example                    | Required |
+| Name        | Type   | description        | Example        | Required |
 | ------------- | -------- | -------------------------------------------- | ---------------------------- | ---------- |
-    | marketplace | String   | marketplace code                                           | see table 1.2                                    | ✓       |
-    |  month      | String   | The filter date is the last 30 days by default, and the earliest query time is July 2021 | see table 1.1                                    |              |
-    | asins       | List     | filter asin                                         | ["B00P19MFYE"]                                  |              |
-    | topN        | Integer  | Number of header listings                                  | 10                                              |              |
-    | newProduct  | Integer  | New Product Definition                                         | 6                                               |              |
-    | nodeIdPath  | String   | Node ID path string                               | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
+| marketplace | String   | marketplace code       | see table 1.2| ✓       |
+| month       | String   | The filter date is the last 30 days by default, and the earliest query time is July 2021 | see table 1.1|  |
+| asins       | List     | filter asin     | ["B00P19MFYE"]          |  |
+| topN        | Integer  | Number of header listings          | 10          |  |
+| newProduct  | Integer  | New Product Definition     | 6           |  |
+| nodeIdPath  | String   | Node ID path string       | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
 
 #### Response parameter
 
-| Name                | Type    | Description                                | Example                |
+| Name    | Type    | Description        | Example    |
 | --------------------- | --------- | -------------------------------------------- | ------------------------ |
-            | title             | String   | tile                    | Pilot G2, Dr. Grip Gel/Ltd, ExecuGel G6, Q7 Rollerball Gel Ink Pen Refills, 0.7mm, Fine Point, Black Ink, 3 Packs of 2                                 |
-            | asin              | String   | asin                    | B00P19MFYE                                                                                                                                             |
-            | asinUrl           | String   | asin url                | [https://www.amazon.com/dp/B00P19MFYE](https://www.amazon.com/dp/B00P19MFYE)                                                                                  |
-            | imageUrl          | String   | image url                | [https://images-na.ssl-images-amazon.com/images/I/51hxvoxGnjL.\_AC\_US200\_.jpg](https://images-na.ssl-images-amazon.com/images/I/51hxvoxGnjL._AC_US200_.jpg) |
-            | ranking           | Integer  | rank                    | 1                                                                                                                                                      |
-            | brand             | String   | brank                    | PILOT                                                                                                                                                  |
-            | sellerName        | String   | seller name                | JA Wholesale LLC                                                                                                                                       |
-            | sellerType        | String   | seller type                | FBA                                                                                                                                                    |
-            | price             | Float    | price                    | 6.19                                                                                                                                                   |
-            | shelfDate         | String   | Listing time                | 2014-10-30                                                                                                                                             |
-            | ratings           | Integer  | Score evaluation                  | 5695                                                                                                                                                   |
-            | reviews           | Integer  | Number of comments                  | 133                                                                                                                                                    |
-            | rating            | Float    | Comment value                  | 4.8                                                                                                                                                    |
-            | newFlag           | Integer  | Is it a new product? 1 new product, 0 non new product | 0                                                                                                                                                      |
-            | totalUnits        | Integer  | Total sales volume                  | 2515                                                                                                                                                   |
-            | totalRevenue      | Float    | Total sales                  | 18837.35                                                                                                                                               |
-            | totalUnitsRatio   | Float    | Total sales proportion              | 0.4478                                                                                                                                                 |
-            | totalRevenueRatio | Float    | Proportion of total sales              | 0.3052                                                                                                                                                 |
+| title | String   | tile        | Pilot G2, Dr. Grip Gel/Ltd, ExecuGel G6, Q7 Rollerball Gel Ink Pen Refills, 0.7mm, Fine Point, Black Ink, 3 Packs of 2         |
+| asin  | String   | asin        | B00P19MFYE         |
+| asinUrl           | String   | asin url    | [https://www.amazon.com/dp/B00P19MFYE](https://www.amazon.com/dp/B00P19MFYE)          |
+| imageUrl          | String   | image url    | [https://images-na.ssl-images-amazon.com/images/I/51hxvoxGnjL.\_AC\_US200\_.jpg](https://images-na.ssl-images-amazon.com/images/I/51hxvoxGnjL._AC_US200_.jpg) |
+| ranking           | Integer  | rank        | 1      |
+| brand | String    | brank        | PILOT  |
+| sellerName        | String   | seller name    | JA Wholesale LLC   |
+| sellerType        | String   | seller type    | FBA    |
+| price | Float     | price        | 6.19   |
+| shelfDate         | String   | Listing time    | 2014-10-30         |
+| ratings           | Integer  | Score evaluation      | 5695   |
+| reviews           | Integer  | Number of comments      | 133    |
+| rating| Float     | Comment value      | 4.8    |
+| newFlag           | Integer  | Is it a new product? 1 new product, 0 non new product | 0      |
+| totalUnits        | Integer  | Total sales volume      | 2515   |
+| totalRevenue      | Float    | Total sales      | 18837.35           |
+| totalUnitsRatio   | Float    | Total sales proportion  | 0.4478 |
+| totalRevenueRatio | Float    | Proportion of total sales  | 0.3052 |
 
 #### Request example
 
 ```
-curl 'https://api.sellersprite.com/v1/market/goods' \
-  -H 'Content-Type: application/json;charset=UTF-8' \
-  -H 'secret-key: your secret key' \
-  --data-raw $'{\n  "marketplace":"US",\n  "nodeIdPath":"1064954:1069242:1069784:1069820:1069838:1069828"\n}' \
-  --compressed
-```
-
-### Keyword mining
-
-* Request URI：**GET** /v1/keyword/miner
-
-#### Request parameter
-
-| Name                 | Type    | Description                                          | Example         | Required |
-| ---------------------- | --------- | ------------------------------------------------------ | ----------------- | ---------- |
-| marketplace          | String  | marketplace code                                     | see table 1.2   | ✓       |
-| historyDate          | String  | Historical date, yyyyMM format, default last 30 days | 202201          |          |
-| keyword              | String  |                                                      |                 | ✓       |
-| keywordList          | List    | keyword collection                                   | ["phone stand"] |          |
-| minSearch            | Integer |                                                      | 543             |          |
-| maxSearch            | Integer |                                                      | 23453           |          |
-| minPurchases         | Integer |                                                      | 6               |          |
-| maxPurchases         | Integer |                                                      | 34              |          |
-| minPurchasesRate     | Float   |                                                      | 3               |          |
-| maxPurchasesRate     | Float   |                                                      | 43              |          |
-| minSPR               | Integer | minimum SellerSprite product rank                    | 2               |          |
-| maxSPR               | Integer | maximum SellerSprite product rank                    | 16              |          |
-| minTitleDensity      | Integer | minimum title density                                | 2               |          |
-| maxTitleDensity      | Integer | maximum title density                                | 23              |          |
-| minRelevancy         | Float   | minimum 0                                            | 23              |          |
-| maxRelevancy         | Float   | maximum 100                                          | 90              |          |
-| minSearchRank        | Integer |                                                      | 33              |          |
-| maxSearchRank        | Integer |                                                      | 3223            |          |
-| minProducts          | Integer |                                                      | 54              |          |
-| maxProducts          | Integer |                                                      | 324             |          |
-| minSupplyDemandRatio | Float   |                                                      | 11.2            |          |
-| maxSupplyDemandRatio | Float   |                                                      | 45.2            |          |
-| minAdProducts        | Integer |                                                      | 123             |          |
-| maxAdProducts        | Integer |                                                      | 345             |          |
-| minWordCount         | Integer |                                                      | 2               |          |
-| maxWordCount         | Integer |                                                      | 4               |          |
-| minMonopolyClickRate | Float   |                                                      | 23.4            |          |
-| maxMonopolyClickRate | Float   |                                                      | 53.1            |          |
-| minBid               | Float   |                                                      | 10.2            |          |
-| maxBid               | Float   |                                                      | 23.1            |          |
-| minPrice             | Float   |                                                      | 43.3            |          |
-| maxPrice             | Float   |                                                      | 234.2           |          |
-| minRatings           | Integer |                                                      | 100             |          |
-| maxRatings           | Integer |                                                      | 399             |          |
-| minRating            | Float   |                                                      | 3.0             |          |
-| maxRating            | Float   |                                                      | 4.9             |          |
-| amazonChoice         | Boolean | whether amazonChoice                                 | true            |          |
-| filterRootWord       | Integer | Filter root 0 contains all 1 contains only roots     | 0               |          |
-| includeKeywords      | List    | collection of included keywords                      | ["phone stand"] |          |
-| excludeKeywords      | List    | collection of excluded keywords                      | ["phone stand"] |          |
-| page                 | Integer | one-based page index                                 | default 1       |          |
-| size                 | Integer | the size of the page to be returned                  | default 50      |          |
-| order                | Object  |                                                      |                 |          |
-| └field              | String  | sort field                                           | see table 2.4   |          |
-| └desc               | boolean | sort direction                                       | default true    |          |
-
-#### Response parameter
-
-| Name              | Type    | Description                                                                   | Example                   |
-| ------------------- | --------- | ------------------------------------------------------------------------------- | --------------------------- |
-| marketplace       | String  | marketplace code，see table 1.2                                               | US                        |
-| keyword           | String  |                                                                               | phone stand for recording |
-| keywordCn         | String  | chinese translation of node names                                             | 用于录音的电话支架        |
-| keywordJp         | String  | japanese translation of node names                                            | 録音用電話スタンド        |
-| departments       | List    |                                                                               |                           |
-| └code            | String  |                                                                               | electronics               |
-| └label           | String  |                                                                               | Electronics               |
-| month             | String  | historical date, yyyyMM format, default last 30 days                          | 202201                    |
-| supplement        | String  | whether it is a supplementary keyword (current monthly search volume is null) | Y/N                       |
-| searches          | Integer |                                                                               | 21582                     |
-| purchases         | Integer |                                                                               | 1996                      |
-| purchaseRate      | Float   |                                                                               | 0.0925                    |
-| monopolyClickRate | Float   |                                                                               | 0.3                       |
-| products          | Integer |                                                                               | 1645                      |
-| adProducts        | Integer |                                                                               | 34                        |
-| supplyDemandRatio | Float   | supply and demand ratio                                                       | 13.12                     |
-| avgPrice          | Float   |                                                                               | 36.14                     |
-| avgRatings        | Integer |                                                                               | 12223                     |
-| avgRating         | Float   |                                                                               | 4.5                       |
-| bidMin            | Float   | maximum ppc price                                                             | 1.34                      |
-| bidMax            | Float   | minimumppc price                                                              | 3.21                      |
-| bid               | Float   | ppc price                                                                     | 1.6                       |
-| cvsShareRate      | Float   | conversion sharing rate                                                       | 0.3084                    |
-| wordCount         | Integer | the number of words                                                           | 4                         |
-| titleDensity      | Integer |                                                                               | 42.9                      |
-| spr               | Integer | SellerSprite product rank                                                     | 6                         |
-| relevancy         | Double  |                                                                               | 28.6                      |
-| amazonChoice      | Boolean |                                                                               | false                     |
-| searchRank        | Integer |                                                                               | 17910                     |
-
-#### Request example
-
-```
-curl 'https://api.sellersprite.com/v1/keyword/miner' \
---H 'Content-Type: application/json' \
---H 'secret-key: your secret key' \
---data-raw '{"desc": true,"keyword":"phone stand","marketplace": "US","amazonChoice":false,"pageNum": 1,"pageSize":100,"order":{ "field":"searches", "desc":false}}'
---compressed
-```
-
-### Reverse ASIN
-
-* Request URI：**POST** /v1/traffic/keyword
-
-#### Request parameter
-
-| Name                   | Type    | Description                                              | Example                                                         | Required |
-| ------------------------ | --------- | ---------------------------------------------------------- | ----------------------------------------------------------------- | ---------- |
-| marketplace            | String  |                                                          | US                                                              | ✓       |
-| asin                   | String  |                                                          | B07Z82895W                                                      | ✓       |
-| keyword                | String  |                                                          | phone stand                                                     |          |
-| month                  | String  | yyyyMM,If null, the default is to query the last 30 days | 202308                                                          |          |
-| badges                 | List    |                                                          | see table 1.10                                                  |          |
-| trafficKeywordTypes    | List    |                                                          | see table 2.0                                                   |          |
-| conversionKeywordTypes | List    |                                                          | see table 2.1                                                   |          |
-| page                   | Integer |                                                          | default 1                                                       |          |
-| size                   | Integer |                                                          | default 200，Maximum 200,The maximum number of queries is 2,000 |          |
-| order                  | Object  |                                                          |                                                                 |         |
-| └field                | String  |                                                          | see table 2.3                                                   |         |
-| └desc                 | Boolean |                                                          | false                                                           |         |
-
-#### Response parameter
-
-| Name                       | Type         | Description                                          | Example       |
-| ---------------------------- | -------------- | ------------------------------------------------------ | --------------- |
-| marketplace                | String       |                                                      | US            |
-| asin                       | String       | asin                                                 | B07Z82895W    |
-| total                      | Integer      |                                                      | 2685          |
-| items                      | List         |                                                      | 1848          |
-| └keywords                 | String       |                                                      | phone stand   |
-| └keywordCn                | String       |                                                      | 手机支架      |
-| └searches                 | Integer      |                                                      | 10            |
-| └products                 | Integer      |                                                      | 10            |
-| └purchases                | Integer      |                                                      | 10000         |
-| └purchaseRate             | Float        |                                                      | 0.5           |
-| └bid                      | Float        |                                                      | 2.9           |
-| └bidMax                   | Float        |                                                      |               |
-| └bidMin                   | Float        |                                                      |               |
-| └badges                   | List         |                                                      | see table 1.9 |
-| └rankPosition             | RankPosition |                                                      |               |
-| └└page                   | Integer      |                                                      | 3             |
-| └└pageSize               | Integer      |                                                      | 60            |
-| └└index                  | Integer      |                                                      | 10            |
-| └└position               | Integer      |                                                      | 106           |
-| └└updatedTime            | long         |                                                      |               |
-| └adPosition               | AdPosition   |                                                      |               |
-| └└page                   | Integer      |                                                      | 2             |
-| └└pageSize               | Integer      |                                                      | 63            |
-| └└index                  | Integer      |                                                      | 37            |
-| └└position               | Integer      |                                                      | 85            |
-| └└updatedTime            | long         |                                                      |               |
-| └searchesRank             | Integer      |                                                      | 25            |
-| └searchesRankTimeFrom     | Long         |                                                      |               |
-| └searchesRankTimeTo       | Long         |                                                      |               |
-| └latest1daysAds           | Integer      | Number of advertised competitors in the last 1 days  | 70            |
-| └latest7daysAds           | Integer      | Number of advertised competitors in the last 7 days  | 100           |
-| └latest30daysAds          | Integer      | Number of advertised competitors in the last 30 days | 280           |
-| └supplyDemandRatio        | Float        |                                                      | 3.8           |
-| └trafficPercentage        | Float        | percentage of traffic flow                           | 0.015         |
-| └trafficKeywordType       | String       |                                                      | see table 2.0 |
-| └conversionKeywordType    | String       |                                                      | see table 2.1 |
-| └calculatedWeeklySearches | Float        | Estimated weekly search volume                       | 40            |
-| └updatedTime              | Long         |                                                      |               |
-| stats                      | List         | High-frequency word statistics                       |               |
-| └keywords                 | String       | keyword term                                         | phone         |
-| └total                    | Integer      | number of keyword term                               | 90            |
-
-#### Request example
-
-```
-curl 'https://api.sellersprite.com/v1/traffic/keyword' \
+    curl 'https://api.sellersprite.com/v1/market/goods' \
+-H 'Content-Type: application/json;charset=UTF-8' \
 -H 'secret-key: your secret key' \
--H 'content-type: application/json;charset=UTF-8' \
---data-raw $'{"marketplace":"US","asin":"B07Z82895W"}' \
---compressed
-```
-### Reverse Multiple ASINs
-
-* Request URI：**POST** /v1/traffic/extend
-
-#### Request parameter
-
-| **Name**             | **Type**    | **Description**                                       | **Example**               | **Required** |
-| -------------------------- | ----------------- | ---------------------------------------------------- | ------------------------ | -------------- |
-| marketplace          | String      | marketplace code,see table 1.2                                   | US                 | ✓       |
-| historyDate      | String      | Historical month, default to the last 30 days if not passed | 202201             |              |
-| asinList             | List        | asin list                                       | ["B07Z82895W"] | ✓       |
-| queryType            | Integer     | Query Method 0 All Variants 1 Bestseller Variant 2 Current Variant, Default 2 | 2                  |              |
-| minSearches          | Integer     |                                  | 100                |              |
-| maxSearches          | Integer     |                                    | 300                |              |
-| minSearchRank        | Integer     |                                    | 33                 |              |
-| maxSearchRank        | Integer     |                                    | 3223               |              |
-| minPurchases         | Integer     |                                   | 6                  |              |
-| maxPurchases         | Integer     |                                     | 34                 |              |
-| minPurchasesRate | Float       |                                      | 3                  |              |
-| maxPurchasesRate | Float       |                                      | 43                 |              |
-| minProducts          | Integer     |                                      | 10                 |              |
-| maxProducts          | Integer     |                                      | 90                 |              |
-| minSupplyDemandRatio | Float       |                                    | 11.2               |              |
-| maxSupplyDemandRatio | Float       |                                      | 45.2               |              |
-| minBid               | Float       | Minimum PPC bidding                                    | 10.2               |              |
-| maxBid               | Float       | Maximum PPC bidding                                    | 23.1               |              |
-| minAdProducts    | Integer     | Minimum number of advertising competitors                                 | 123                |              |
-| maxAdProducts    | Integer     | Maximum number of advertising competitors                                 | 345                |              |
-| minAvgPrice          | Float       |                                        | 20.0               |              |
-| maxAvgPrice          | Float       |                                        | 30.3               |              |
-| minWordCount     | Integer     |                                        | 2                  |              |
-| maxWordCount     | Integer     |                                        | 4                  |              |
-| includeKeywords      | List        |                                 | ["phone stand"]    |              |
-| excludeKeywords      | List        |                                       | ["phone stand"]    |              |
-| minSPR               | Integer     |                                     | 2                  |              |
-| maxSPR               | Integer     |                                       | 16                 |              |
-| minTitleDensity      | Integer     |                                  | 2                  |              |
-| maxTitleDensity      | Integer     |                                    | 23                 |              |
-| minMonopolyClickRate | Float       | Minimum Click Concentration                                 | 23.4               |              |
-| maxMonopolyClickRate | Float       | Maximum Click Concentration                                 | 53.1               |              |
-| minTrafficPercentage | Float       | Minimum traffic proportion                                   | 45                 |              |
-| maxTrafficPercentage | Float       | Maximum traffic proportion                                   | 23                 |              |
-| minConversionRate    | Float       | Minimum Conversion Share                                     | 0.23               |              |
-| maxConversionRate    | Float       | Maximum Conversion Share                                     | 1.4                |              |
-| minCompetitors       | Integer     | Minimum Related ASINs                                     | 4                  |              |
-| maxCompetitors       | Integer     | Maximum Related ASINs                                     | 23                 |              |
-| amazonChoice         | Boolean     |                                  | true               |              |
-| page                 | Integer     |                                 | default 1            |              |
-| size                 | Integer |                                        | default 50           |              |
-| order                | Object  |                                            |                        |              |
-| └field              | String      |                                        | set table 2.5            |              |
-| └desc               | boolean     | True is in descending order,False is in ascending order                         | default true           |           
-
-#### Response parameter
-
-| **Name**                 | **Type** | **Description**             | **Example**               |
-| ------------------------------ | -------------- | -------------------------- | ------------------------ |
-| keyword                  | String   |               | N95                |
-| keywordCn                | String   |      | 用于录音的电话支架 |
-| searches                 | Integer  |                | 21582              |
-| purchases            | Integer  |              | 1996               |
-| purchaseRate             | Float    |              | 0.0925             |
-| products                 | Integer  |                | 1645               |
-| bidMin                   | Float    |           | 1.34               |
-| bidMax                   | Float    |           | 3.21               |
-| bid                      | Float    |               | 1.6                |
-| badges                   | List     |            | see table 1.10           |
-| rankPosition             | Object   | Natural ranking             |                        |
-| └page                   | Integer  |                | 3                  |
-| └pageSize               | Integer  |                | 60                 |
-| └index                  | Integer  |          | 10                 |
-| └position               | Integer  |        | 106                |
-| └updatedTime            | long     | Ranking time             |                        |
-| adPosition               | Object   | Advertising ranking             |                        |
-| └page                   | Integer  |                | 2                  |
-| └pageSize               | Integer  |        | 63                 |
-| └index                  | Integer  |          | 37                 |
-| └position               | Integer  |        | 85                 |
-| └updatedTime            | long     | Ranking time             |                        |
-| updatedTime              | long     | update time             |                        |
-| searchesRank             | Integer  | Weekly search volume ranking         | 25                 |
-| searchesRankTimeFrom     | Long     | Weekly search volume ranking time range |                        |
-| searchesRankTimeTo       | Long     | Weekly search volume ranking time range                         |                        |
-| latest1daysAds           | Integer  | Number of advertising competitors in the past day    | 70                 |
-| latest7daysAds           | Integer  | Number of advertising competitors in the past 7 days    | 100                |
-| latest30daysAds          | Integer  | Number of advertising competitors in the past 30 days   | 280                |
-| supplyDemandRatio        | Float    |                | 3.8                |
-| trafficPercentage        | Float    |              | 0.015              |
-| trafficKeywordType       | List     |          | see table 2.0            |
-| conversionKeywordType    | List     |          | see table 2.1            |
-| calculatedWeeklySearches | Float    | Estimated weekly search volume         | 40                 |
-| avgPrice                 | Float    |              | 36.14              |
-| avgRatings           | Integer  |            | 12223              |
-| avgRating                | Float    |            | 4.5                |
-| titleDensity             | Integer  |              | 42.9               |
-| spr                      | Integer  |                   | 6                  |
-| monopolyClickRate        | Float    |            | 0.3                |
-| top3ClickingRate         | Float    | First three clicks             | 0.0813             |
-| top3ConversionRate       | Float    | Top three conversions             | 0.2011             |
-| relationVariationsItems  | List     | From which variants       |                        |
-| └marketplace            | String   |                  | US                  |
-| └asin                   | String   |                          | B08P6SC34B         |
-| └imageUrl               | String   |              | 10                 |
-| └trafficPercentage      | Float    |              | 54.6               |
-| └title                  | String   |                  |                        |
-| └price                  | Float    |                  | 60                 |
-| └reviews                | Float    |                | 10                 |
-| └rating                 | Float    |                  | 4.5                |
-
-#### Request example
-
-```
-curl 'https://api.sellersprite.com/v1/traffice/extend' \
-  -H 'secret-key: Your Key' \
-  -H 'content-type: application/json;charset=UTF-8' \
-  --data-raw $'{"marketplace": "US","asinList":["B07Z82895W"] }' \
-  --compressed
-```
-
-### ASIN Detail
-
-* Request URI：**GET** /v1/asin/{marketplace}/{asin}
-  
-#### Request parameter
-
-| Name              | Type           | Description                       | Example          | Required       |
-| ----------------- | -------------- | --------------------------------- | ---------------- | -------------- |
-| marketplace       | String         | marketplace code,see table 1.2    | US               | ✓              |
-| asin              | String         | asin                              | B08GHW4TBS       | ✓              |
-| month             | String         | Historical month, default to the last 30 days if not passed | 202308     |              |
-
-#### Response parameter
-
-| Name        | Type    | Description                      | Example    |
-| ------------------------- | -------------- | -------------------------- | --------------------------------- |
-| asin                | String   | asin                 | B08GHW4TBS     |
-| asinUrl             | String   | asin url             | [https://www.amazon.com/dp/B08GHW4TBS](https://www.amazon.com/dp/B08GHW4TBS)    |
-| availableDate       | Long     | Date of listing             | 1609059137000   |
-| badge               | Badge    | characteristic    | Including the following 5 signs  |
-| └bestSeller        | String   | Best Seller      | Y or N       |
-| └amazonChoice      | String   | amazon choice    | Y or N       |
-| └newRelease        | String   | release          | Y or N     |
-| └ebc               | String   | A+ Pages               | Y or N      |
-| └video             | String   | Video Introduction     | Y or N      |
-| brand               | String   | brand                 | mermaker    |
-| brandUrl            | String   | brand URL             | /stores/Mermaker/page/984A6448-1C68-4CCA-AD5A-D574EA2D65D5?ref_=ast_bln    |
-| bsrId               | String   | bsr id               | home-garden      |
-| bsrLabel            | String   | BSR label             | Home & Kitchen       |
-| bsrRank             | Integer  | bsr rank             | 1006         |
-| createdTime         | Long     | Creation time             | 1606467137000     |
-| dimensions          | String   | dimensions                 | 7 x 6 x 0.6 inches      |
-| firstRatingDate     | Long     | First comment time       | 1609059137000      |
-| imageUrl            | String   | pictures linking             | [https://images-na.ssl-images-amazon.com/images/I/412616zl5YL .AC_US200.jpg](https://images-na.ssl-images-amazon.com/images/I/412616zl5YL)     |
-| lqs                 | Integer  | Listing Page Quality Score | 97       |
-| nodeId              | String   | node id              | 1063280       |
-| nodeIdPath          | String   | node id path           | 1055398:1063252:1063280     |
-| nodeLabelPath       | String   | Category name string           | Home & Kitchen:Bedding:Blankets & Throws  |
-| nodeLabelPathLocale | String   | Category name string in Chinese       | 家居厨房用品:床上用品:毯子、盖毯       |
-| parent              | String   | parent asin              | B07V5GB9B5      |
-| price               | Float    | price                 | 21.99               |
-| questions           | Integer  | Number of issues             | 5                  |
-| rating              | Float    | score                 | 4.8           |
-| ratings             | Integer  | Score evaluation               | 29229        |
-| sellerId            | String   | seller id              | A13AJ1GXFINAZ    |
-| sellerName          | String   | seller name             | Mermaker         |
-| fulfillment         | String   | Delivery method             | FBA           |
-| sellers             | Integer  | Number of sellers               | 1        |
-| skuList             | List     | sku                  | ["Color: Beige","Size: 47 inches"]    |
-| marketplace         | String   | marketplace               | table 1.2    |
-| title               | String   | title                 | mermaker Burritos Tortilla Blanket 2.0 Double Sided 47 inches for Adult and Kids,Giant Funny Realistic Food Throw Blanket,285 GSM Novelty Soft Flannel Taco Blanket (Yellow Blanket-Double Sided) |
-| updatedTime         | Long     | update time             | 1609059137000  |
-| variationList       | List     | variant                 | [{"asin":"B07V5GB9B5","attribute":"Beige"},{"asin":"B08H86SSSF","attribute":"Cookie"}]  |
-| variations          | Integer  | Number of variants             | 14      |
-| weight              | String   | weight                 | 15.2 ounces         |
-| zoomImageUrl        | String   | Large image URL            | [https://images-na.ssl-images-amazon.com/images/I/412616zl5YL .AC_US600.jpg](https://images-na.ssl-images-amazon.com/images/I/412616zl5YL)    |
-| subcategories       | Object   | Subcategory information           |                   |
-| └rank              | Integer  | Ranking of subcategories           | 1              |
-| └code              | String   | Subcategory code           | 17874234011            |
-| └label             | String   | Subclass Target Label           | Kids' Throw Blankets |
-
-#### Request example
-
-```
-curl 'https://api.sellersprite.com/v1/asin/US/B07V34QQ3C' \
-  -H 'secret-key: Your Key' \
-  -H 'content-type: application/json;charset=utf-8' \
-  --compressed
-```
-
-### Reverse ASIN Stat
-
-* Request URI：**GET** /v1/traffic/keyword/stat/{marketplace}/{asin}
-
-#### Request parameter
-
-| Name        | Type   | Description                    | Example    | Required |
-| ------------- | -------- | -------------------------------- | ------------ | ---------- |
-| marketplace | String | marketplace code,see table 1.2 | US         | ✓       |
-| asin        | String | asin                           | B07Z82895W | ✓       |
-
-#### Response parameter
-
-| Name        | Type    | Description                      | Example    |
-| ------------- | --------- | ---------------------------------- | ------------ |
-| marketplace | String  | marketplace code                 | US         |
-| asin        | String  | asin                             | B07Z82895W |
-| keywords    | Integer | number of all keywords           | 2685       |
-| ranks       | Integer | number of keywords without ads   | 1848       |
-| ads         | Integer | number of keywords with ads only | 1414       |
-| calcTime    | Long    | last calculated time             |            |
-| badgeCount  | Object  | keyword type statistics          |            |
-| └ns        | Integer | natural search terms             | 1070       |
-| └ac        | Integer | amazon'choice terms              | 0          |
-| └er        | Integer | edition recommendation terms     | 42         |
-| └fs        | Integer | four stars terms                 | 0          |
-| └hr        | Integer | highly recommendation terms      | 117        |
-| └sb        | Integer | sponsor brand terms              | 334        |
-| └sv        | Integer | sponsor video terms              | 208        |
-| └ad        | Integer | sponsor terms                    | 764        |
-
-#### Request example
-
-```
-curl 'https://api.sellersprite.com/v1/traffic/keyword/stat/US/B07Z82895W' \
--H 'secret-key: your key' \
--H 'content-type: application/json;charset=UTF-8' \
+--data-raw $'{\n  "marketplace":"US",\n  "nodeIdPath":"1064954:1069242:1069784:1069820:1069838:1069828"\n}' \
 --compressed
 ```
 
-### Google trends
+## **品牌集中度**
 
-* Request URI：**GET** /v1/google/trends
+**请求 URL:/v1/market/brand，请求方式 POST**
 
-#### Request parameter
+#### **请求参数**
 
-| Name        | Type    | Description                                             | Example          | Required |
-| ------------- | --------- | --------------------------------------------------------- | ------------------ | ---------- |
-| marketplace | String  | marketplace code                                        | see table 1.2    | ✓       |
-| keyword     | String  |                                                         | iphone stand     | ✓       |
-| googleProp  | String  | search type                                             | web/shoppingCart |          |
-| monthly     | boolean | Whether the statistics are based on monthly granularity | false            |          |
+| **参数名称**    | **参数类型** | **参数说明**     | **举例**        | **是否必传** |
+| ----------------- | -------------- | ------------------------------------------------------ | ----------------------------------------------------- | -------------- |
+| **marketplace** | **String**   | **市场 id**      | **见表 1.2**    | **✓**       |
+|  **month**      | **String**   | **筛选日期,默认最近30天，最早查询时间为2021年7月份** | **见表 1.1**    |  |
+| **topN**        | **Integer**  | **头部Listing数量**          | **10**          |  |
+| **newProduct**  | **Integer**  | **新品定义**     | **6**           |  |
+| **nodeIdPath**  | **String**   | **节点 id 路径字符串**       | **1064954:1069242:1069784:1069820:1069838:1069828** | **✓**       |
 
-#### Response parameter
+#### **响应参数**
 
-| Name        | Type    | Description                     | Example       |
-| ------------- | --------- | --------------------------------- | --------------- |
-| marketplace | String  | marketplace code，see table 1.2 | US            |
-| keyword     |         |                                 | phone stand   |
-| link        | String  | google trend link               |               |
-| items       | List    |                                 |               |
-| └time      | Long    |                                 | 1555804800000 |
-| └value     | Integer |                                 | 2             |
+| **参数名称**          | **参数类型** | **参数说明**           | **举例**           |
+| ----------------------- | -------------- | ------------------------ | -------------------- |
+| **brand** | **String**   | **品牌名称**           | **PILOT**          |
+| **ranking**           | **Integer**  | **排名**   | **1**  |
+| **asins** | **List**     | **包含的商品ASIN集合** | **["B00P19MFYE"]** |
+| **products**          | **Integer**  | **商品数量，包含新品** | **4**  |
+| **newProducts**       | **Integer**  | **新品数量**           | **1**  |
+| **newUnits**          | **Integer**  | **新品销量**           | **45** |
+| **newRevenue**        | **Float**    | **新品销售额**         | **2342**           |
+| **newUnitsRatio**     | **Float**    | **新品销量占比**       | **4.3**|
+| **newRevenueRatio**   | **Float**    | **新品销售额占比**     | **4**  |
+| **avgPrice**          | **Float**    | **平均价格**           | **6.19**           |
+| **ratings**           | **Integer**  | **评分数** | **5695**           |
+| **rating**| **Float**    | **评分值** | **4.8**|
+| **reviews**           | **Integer**  | **评论数** | **234**|
+| **totalUnits**        | **Integer**  | **总销量** | **32342**          |
+| **totalRevenue**      | **Float**    | **总销额** | **18837.35**       |
+| **totalUnitsRatio**   | **Float**    | **总销量占比**         | **0.4478**         |
+| **totalRevenueRatio** | **Float**    | **总销额占比**         | **0.3052**         |
 
-#### Request example
+####
+
+#### **请求示例**
 
 ```
-curl 'https://api.sellersprite.com/v1/google/trends?googleProp=web&keyword=iphone%20stand&marketplace=US&monthly=true' \
--H 'secret-key: your secret key' \
--H 'content-type: application/json;charset=utf-8' \
+    curl 'https://api.sellersprite.com/v1/market/brand' \
+-H 'Content-Type: application/json;charset=UTF-8' \
+-H 'secret-key: 你的密钥' \
+--data-raw $'{\n  "marketplace":"US",\n  "nodeIdPath":"1064954:1069242:1069784:1069820:1069838:1069828"\n}' \
 --compressed
 ```
 
-### Keyword Research
+### **卖家集中度**
 
-* Request URI：**POST** /v1/keyword-research
+**请求 URL:/v1/market/seller，请求方式 POST**
 
-#### Request parameter
+#### **请求参数**
 
-| dName                | Type    | Description                                                          | Example                        | Required |
-| ---------------------- | --------- | ---------------------------------------------------------------------- | -------------------------------- | ---------- |
-| marketplace          | String  | marketplace code                                                     | see table 1.2                  | ✓       |
-| month                | String  | Historical date, yyyyMM format, default last 30 days                 | 202203                         |          |
-| departments          | List    | see **Keyword Research Category** interface,pass the code            | ["automotive","baby-products"] |          |
-| keywords             | String  |                                                                      | N95                            |          |
-| excludeKeywords      | String  |                                                                      | portable                       |          |
-| minSearches          | Integer |                                                                      | 100                            |          |
-| maxSearches          | Integer |                                                                      | 300                            |          |
-| minSearchesCr        | Float   | minimum searches growth rate                                         | 10.0                           |          |
-| maxSearchesCr        | Float   | maximum searches growth rate                                         | 50.8                           |          |
-| minProducts          | Integer |                                                                      | 10                             |          |
-| maxProducts          | Integer |                                                                      | 90                             |          |
-| minPurchases         | Integer |                                                                      | 100                            |          |
-| maxPurchases         | Integer |                                                                      | 500                            |          |
-| minPurchaseRate      | Float   |                                                                      | 3.2                            |          |
-| maxPurchaseRate      | Float   |                                                                      | 10.5                           |          |
-| withYearlyGrowth     | Boolean | new market segments                                                  | false                          |          |
-| minSearchMonthCv     | Integer | minimum searches increase                                            | 1000                           |          |
-| maxSearchMonthCv     | Integer | maximum searches increase                                            | 3000                           |          |
-| minSearchMonthCr     | Float   | Year-over-year growth rate of minimum monthly searches               | 5.3                            |          |
-| maxSearchMonthCr     | Float   | Year-over-year growth rate of maximum monthly searches               | 30.1                           |          |
-| minSearchNearlyCv    | Integer | The minimum monthly searches has increased in the last 3 months      | 6000                           |          |
-| maxSearchNearlyCv    | Integer | The maximum monthly searches has increased in the last 3 months      | 20000                          |          |
-| minSearchNearlyCr    | Float   | The growth rate of the minimum monthly searches in the past 3 months | 10.3                           |          |
-| maxSearchNearlyCr    | Float   | The growth rate of the maximum monthly searches in the past 3 months | 20.4                           |          |
-| marketPeriod         | String  | marketplace cycls                                                    | see table1.7                   |          |
-| minAvgPrice          | Float   |                                                                      | 20.0                           |          |
-| maxAvgPrice          | Float   |                                                                      | 30.3                           |          |
-| minRatings           | Integer |                                                                      | 2000                           |          |
-| maxRatings           | Integer |                                                                      | 3000                           |          |
-| minRating            | Float   |                                                                      | 3.2                            |          |
-| maxRating            | Float   |                                                                      | 4.1                            |          |
-| minBid               | Float   |                                                                      | 6.2                            |          |
-| maxBid               | Float   |                                                                      | 10.6                           |          |
-| minAraClickRate      | Float   | minimum click concentration                                          | 20.1                           |          |
-| maxAraClickRate      | Float   | maximum click concentration                                          | 56.4                           |          |
-| minGoodsValue        | Float   | minimum flow value                                                   | 10.1                           |          |
-| maxGoodsValue        | Float   | maximum flow value                                                   | 41.1                           |          |
-| minSupplyDemandRatio | Float   |                                                                      | 5.6                            |          |
-| maxSupplyDemandRatio | Float   |                                                                      | 10.4                           |          |
-| minWordCount         | Integer |                                                                      | 1                              |          |
-| maxWordCount         | Integer |                                                                      | 3                              |          |
-| page                 | Integer | one-based page index                                                 | default 1                      |          |
-| size                 | Integer |                                                                      | default 50                     |          |
-| order                | Object  | sort object                                                          |                                |          |
-| └field              | String  | sort field                                                           | see table1.8                   |          |
-| └desc               | boolean | sort direction                                                       | default true                   |          |
+| **参数名称**    | **参数类型** | **参数说明**     | **举例**        | **是否必传** |
+| ----------------- | -------------- | ------------------------------------------------------ | ----------------------------------------------------- | -------------- |
+| **marketplace** | **String**   | **市场 id**      | **见表 1.2**    | **✓**       |
+|  **month**      | **String**   | **筛选日期,默认最近30天，最早查询时间为2021年7月份** | **见表 1.1**    |  |
+| **topN**        | **Integer**  | **头部Listing数量**          | **10**          |  |
+| **newProduct**  | **Integer**  | **新品定义**     | **6**           |  |
+| **nodeIdPath**  | **String**   | **节点 id 路径字符串**       | **1064954:1069242:1069784:1069820:1069838:1069828** | **✓**       |
 
-#### Response parameter
+#### **返回参数**
 
-| Name                  | Type    | Description                                                                   | Example                                                                                                                       |
-| ----------------------- | --------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| marketplace           | String  | marketplace code                                                              | US                                                                                                                            |
-| keywords              | String  |                                                                               | polaroid cameras                                                                                                              |
-| searches              | Integer |                                                                               | 141356                                                                                                                        |
-| purchases             | Integer |                                                                               | 4029                                                                                                                          |
-| growth                | Float   |                                                                               | -25.482092                                                                                                                    |
-| purchaseRate          | Float   |                                                                               | 0.0285                                                                                                                        |
-| products              | Integer |                                                                               | 173                                                                                                                           |
-| supplyDemandRatio     | Float   |                                                                               | 817.09                                                                                                                        |
-| searchDepartments     | List    | product node object                                                           |                                                                                                                               |
-| └code                | String  |                                                                               | electronics                                                                                                                   |
-| └label               | String  |                                                                               | Electronics                                                                                                                   |
-| └total               | Integer |                                                                               | 141356                                                                                                                        |
-| └ratio               | Float   |                                                                               | 1.0                                                                                                                           |
-| month                 | String  | query month, yyyyMM format, default last 30 days                              | 202201                                                                                                                        |
-| supplement            | String  | whether it is a supplementary keyword (current monthly search volume is null) | N                                                                                                                             |
-| searchMonthlyCv       | Integer | searches increase                                                             | 139749                                                                                                                        |
-| searchMonthlyCr       | Float   | year-over-year growth rate of minimum monthly searches                        | 8696.27                                                                                                                       |
-| searchNearlyCv        | Integer | monthly searches has increased in the last 3 months                           | -48338                                                                                                                        |
-| searchNearlyCr        | Float   | the growth rate of the monthly searches in the past 3 months                  | -25.48                                                                                                                        |
-| currency              | String  | currency unit                                                                 | $                                                                                                                             |
-| avgPrice              | Float   |                                                                               | 116.24                                                                                                                        |
-| avgRatings            | Integer |                                                                               | 2584                                                                                                                          |
-| avgRating             | Float   |                                                                               | 4.5                                                                                                                           |
-| relationAsinList      | List    | collection of related asin                                                    | 4.8                                                                                                                           |
-| └asin                | String  |                                                                               | B06WW64YM6                                                                                                                    |
-| └imageUrl            | String  |                                                                               | [https://m.media-amazon.com/images/I/817aVWYpblL._AC_UY218_.jpg](https://m.media-amazon.com/images/I/817aVWYpblL._AC_UY218_.jpg) |
-| └price               | Float   |                                                                               | 59.95                                                                                                                         |
-| └ratings             | Integer |                                                                               | 20115                                                                                                                         |
-| └rating              | Float   |                                                                               | 4.7                                                                                                                           |
-| bidMin                | Float   |                                                                               | 0.987                                                                                                                         |
-| bidMax                | Float   |                                                                               | 2.54                                                                                                                          |
-| bid                   | Float   |                                                                               | 1.26                                                                                                                          |
-| araClickRate          | Float   | click concentration                                                           | 0.2633                                                                                                                        |
-| araAsinList           | List    | click on the first three ASINs                                                |                                                                                                                               |
-| └asin                | String  |                                                                               | B099VDRGG1                                                                                                                    |
-| └title               | String  |                                                                               | Fujifilm Instax Mini 9                                                                                                        |
-| └imageUrl            | String  |                                                                               | [https://m.media-amazon.com/images/I/51aZiZaicYL._AC_US200_.jpg](https://m.media-amazon.com/images/I/51aZiZaicYL._AC_US200_.jpg) |
-| └clickRate           | Double  |                                                                               | 0.116                                                                                                                         |
-| └conversionShareRate | Double  |                                                                               | 0.1217                                                                                                                        |
-| goodsValue            | Float   | flow value                                                                    | 0.0108                                                                                                                        |
-| marketPeriod          | String  | marketplace cycles                                                            | S11,S12                                                                                                                       |
-| brand                 | String  |                                                                               | Fujifilm                                                                                                                      |
-| hasBrandWord          | Boolean |                                                                               | false                                                                                                                         |
-| keywordCn             | String  | chinese translation of keyword                                                | 宝丽来相机                                                                                                                    |
+| **参数名称**          | **参数类型** | **参数说明**           | **举例** |
+| ----------------------- | -------------- | ------------------------ | ---------------------- |
+| **name**  | **String**   | **卖家名称**           | **JA Wholesale LLC** |
+| **ranking**           | **Integer**  | **排名**   | **1**    |
+| **asinSet**           | **List**     | **包含的商品ASIN集合** | **["B00P19MFYE"]**   |
+| **products**          | **Integer**  | **商品数量，包含新品** | **4**    |
+| **newProducts**       | **Integer**  | **新品数量**           | **1**    |
+| **newUnits**          | **Integer**  | **新品销量**           | **45**   |
+| **newRevenue**        | **Float**    | **新品销售额**         | **2342** |
+| **newUnitsRatio**     | **Float**    | **新品销量占比**       | **4.3**  |
+| **newRevenueRatio**   | **Float**    | **新品销售额占比**     | **4**    |
+| **avgPrice**          | **Float**    | **平均价格**           | **6.19** |
+| **ratings**           | **Integer**  | **评分数** | **5695** |
+| **rating**| **Float**    | **评分值** | **4.8**  |
+| **reviews**           | **Integer**  | **评论数** | **234**  |
+| **totalUnits**        | **Integer**  | **总销量** | **32342**|
+| **totalRevenue**      | **Float**    | **总销额** | **18837.35**         |
+| **totalUnitsRatio**   | **Float**    | **总销量占比**         | **0.4478**           |
+| **totalRevenueRatio** | **Float**    | **总销额占比**         | **0.3052**           |
 
-#### Request example
+#### **请求示例**
 
 ```
-curl 'https://api.sellersprite.com/v1/keyword-research' \
--H 'secret-key: your secret key' \
--H 'content-type: application/json;charset=UTF-8' \
---data-raw $'{"marketplace":"US","month":"202203"}' \
+    curl 'https://api.sellersprite.com/v1/market/seller' \
+-H 'Content-Type: application/json;charset=UTF-8' \
+-H 'secret-key: 你的密钥' \
+--data-raw $'{\n  "marketplace":"US",\n  "nodeIdPath":"1064954:1069242:1069784:1069820:1069838:1069828"\n}' \
 --compressed
 ```
 
-### Keyword Research Category
+        ## **卖家类型分布**
 
-* Request URI：**GET** /v1/keyword-research/department
+**请求 URL:/v1/market/seller/type，请求方式 POST**
 
-#### Request parameter
+#### **请求参数**
 
-| Name        | Type   | Description      | Example       | Required |
-| ------------- | -------- | ------------------ | --------------- | ---------- |
-| marketplace | String | marketplace code | see table 1.2 | ✓       |
+| **参数名称**    | **参数类型** | **参数说明**     | **举例**        | **是否必传** |
+| ----------------- | -------------- | ------------------------------------------------------ | ----------------------------------------------------- | -------------- |
+| **marketplace** | **String**   | **市场 id**      | **见表 1.2**    | **✓**       |
+|  **month**      | **String**   | **筛选日期,默认最近30天，最早查询时间为2021年7月份** | **见表 1.1**    |  |
+| **topN**        | **Integer**  | **头部Listing数量**          | **10**          |  |
+| **newProduct**  | **Integer**  | **新品定义**     | **6**           |  |
+| **nodeIdPath**  | **String**   | **节点 id 路径字符串**       | **1064954:1069242:1069784:1069820:1069838:1069828** | **✓**       |
 
-#### Response parameter
+#### **响应参数**
 
-| Name  | Type   | Description      | Example                        |
-| ------- | -------- | ------------------ | -------------------------------- |
-| code  | String | department name  | automotive                     |
-| label | String | department label | Automotive Parts & Accessories |
+| **参数名称**   | **参数类型** | **参数说明**     | **举例**       |
+| ---------------- | -------------- | ------------------ | ---------------- |
+| **label**      | **String**   | **类型说明**     | **Amazon自营** |
+| **asinNum**    | **Integer**  | **ASIN数量**     | **4**          |
+| **asinRatio**  | **Float**    | **ASIN数量占比** | **0.03**       |
+| **units**      | **Integer**  | **月销量**       | **79875**      |
+| **unitsRatio** | **Float**    | **月销量占比**   | **0.0345**     |
+| **ratings**    | **Integer**  | **评分数**       | **6607**       |
+| **rating**     | **Float**    | **评分值**       | **4.7**        |
+| **productNum** | **Integer**  | **商品总数**     | **3**          |
 
-#### Request example
+####
+
+#### **请求示例**
 
 ```
-curl 'https://api.sellersprite.com/v1/keyword-research/department?marketplace=US' \
--H 'secret-key: your secret key' \
--H 'content-type: application/json;charset=UTF-8' \
+    curl 'https://api.sellersprite.com/v1/market/seller/type' \
+-H 'Content-Type: application/json;charset=UTF-8' \
+-H 'secret-key: 你的密钥' \
+--data-raw $'{\n  "marketplace":"US",\n  "nodeIdPath":"1064954:1069242:1069784:1069820:1069838:1069828"\n}' \
 --compressed
 ```
 
-### ABA Search Terms
+        ## **卖家所属地分布**
 
-* Request URI：**POST** /v1/aba/research
+**请求 URL:/v1/market/seller/location，请求方式 POST**
 
-#### Request parameter
+#### **请求参数**
 
-| Name                  | Type     | Description                                                                                                            | Example                                                        | Required |
-| ----------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------- | ---------- |
-| marketplace           | String   |                                                                                                                       | See table 1.2                                                  | ✓       |
-| reverseType           | String   | [W,M]W:weekM:monthDefault M                                                                                            |                                                                | #       |
-| date                  | String   | Works with reverseTypeWhen reverseType=W or empty, query the latest week.When reverseType=M, query the last 30 days. | Weekly queries are limited to Saturday's date, e.g., 20230610. |          |
-| departments           | List     | Department collection                                                                                                  | ["automotive","baby-products"]                                 |          |
-| keywordList           | List     |                                                                                                                       | ["phone","stand"]                                              |          |
-| asins                 | List     |                                                                                                                       |                                                                |          |
-| excludeKeywords       | String   |                                                                                                                       | portable                                                       |          |
-| includeKeywords       | String   |                                                                                                                       |                                                                |          |
-| exactFlag             | Boolean  | Whether to use exact queries                                                                                           | true                                                           |          |
-| rankGrowthValue       | Integer  |                                                                                                                       |                                                                |          |
-| rankGrowthRate        | Double   |                                                                                                                       |                                                                |          |
-| minRankGrowthRate     | Double   |                                                                                                                       |                                                                |          |
-| maxRankGrowthRate     | Double   |                                                                                                                       |                                                                |          |
-| rankGrowthType        | String   | Type of growth timeW1:last weekW2:last 2 weeksW3:last 3 weeksW4:last 4 weeks                                           | W1                                                             |          |
-| minSearchRank         | Integer  |                                                                                                                       |                                                                |          |
-| maxSearchRank         | Integer  |                                                                                                                       |                                                                |         |
-| minSearches           | Integer  |                                                                                                                       |                                                                |         |
-| maxSearches           | Integer  |                                                                                                                       |                                                                |         |
-| minMonopolyClickRate  | Double   |                                                                                                                       |                                                                |         |
-| maxMonopolyClickRate  | Double   |                                                                                                                       |                                                                |         |
-| minConversionRate     | Double   |                                                                                                                       |                                                                |         |
-| maxConversionRate     | Double   |                                                                                                                       |                                                                |         |
-| minWordCount          | Integer  |                                                                                                                       |                                                                |         |
-| maxWordCount          | Integer  |                                                                                                                       |                                                                |         |
-| minSPR                | Integer  |                                                                                                                       |                                                                |         |
-| maxSPR                | Integer  |                                                                                                                       |                                                                |         |
-| minTitleDensity       | Integer  |                                                                                                                       |                                                                |         |
-| maxTitleDensity       | Integer  |                                                                                                                       |                                                                |         |
-| searchModel           | Integer  | Search Mode：1：hot2：abnormal3：growth4：rapidly soaring5：potential6：long tail                                      | 1                                                              |         |
-| page                  | Integer  | Base on 1                                                                                                              | Default 1                                                      |         |
-| size                  | Integer  |                                                                                                                       | Default 50                                                     |          |
-| order                 | Object   |                                                                                                                       |                                                                |          |
-| └field               | String   |                                                                                                                       | See table 1.9                                                  |          |
-| └desc                | boolean  |                                                                                                                       | Default true                                                   |         |
+| **参数名称**    | **参数类型** | **参数说明**     | **举例**        | **是否必传** |
+| ----------------- | -------------- | ------------------------------------------------------ | ----------------------------------------------------- | -------------- |
+| **marketplace** | **String**   | **市场 id**      | **见表 1.2**    | **✓**       |
+|  **month**      | **String**   | **筛选日期,默认最近30天，最早查询时间为2021年7月份** | **见表 1.1**    |  |
+| **topN**        | **Integer**  | **头部Listing数量**          | **10**          |  |
+| **newProduct**  | **Integer**  | **新品定义**     | **6**           |  |
+| **nodeIdPath**  | **String**   | **节点 id 路径字符串**       | **1064954:1069242:1069784:1069820:1069838:1069828** | **✓**       |
 
-#### Response parameter
+#### **响应参数**
 
-| Name                   | Type    | Description                    | Example                       |
-| ------------------------ | --------- | -------------------------------- | ------------------------------- |
-| marketplace            | String  |                               | US                            |
-| keyword                | String  |                               | portable charger              |
-| keywordCn              | Integer | Keyword Chinese translation    | 便携式充电器                  |
-| keywordJp              | String  | Keyword Japanese translation   |                               |
-| departments            | List    |                               | ["Cell Phones & Accessories"] |
-| searchRank             | Integer |                               | 62                            |
-| searchRankCv           | Integer |                               | 19                            |
-| searchRankCr           | Double  |                               | 0.2346                        |
-| searches               | Integer |                               |                               |
-| purchases              | Integer |Purchase quantity              | 2492                          |
-| purchaseRate           | Double  |Purchase rate                  | 0.0054                        |
-| searchRankGrowthValue  | Integer |                               |                               |
-| searchRankGrowthRate   | Double  |                               |                               |
-| cvsShareRate           | Double  |                               |                               |
-| titleDensityExact      | Integer |                               |                               |
-| cprExact               | Integer |                               |                               |
-| w1SearchRank           | Integer | Last week search rank          |                               |
-| w1RankGrowthValue      | Integer | Last week rank growth          |                               |
-| w1RankGrowthRate       | Double  | Last week rank growth rate     |                               |
-| w4SearchRank           | Integer | Last 4 weeks search rank       |                               |
-| w4RankGrowthValue      | Integer | Last 4 weeks rank growth       |                               |
-| w4RankGrowthRate       | Double  | Last 4 weeks rank growth rate  |                               |
-| w12SearchRank          | Integer | Last 12 weeks search rank      |                               |
-| w12RankGrowthValue     | Integer | Last 12 weeks rank growth      |                               |
-| w12RankGrowthRate      | Double  | Last 12 weeks rank growth rate |                               |
-| top3Brands             | List    |                               |                               |
-| bid                    | Float   |                               |                               |
-| bidMax                 | Float   |                               |                               |
-| bidMin                 | Float   |                               |                               |
-| top3AsinDtoList        | List    | First three clicks asin        |                               |
-| -asin                  | String  | asin                           |                               |
-| -imageUrl              | String  |                               |                               |
-| -clickRate             | Double  |                               |                               |
-| -conversionRate        | Double  |                               |                               |
-| sumClickRate           | Double  | Percentage of top three hits   | 54.2                          |
-| sumConversionRate      | Double  | Total share of conversions     | 43.5                          |
+| **参数名称**   | **参数类型** | **参数说明**       | **举例**           |
+| ---------------- | -------------- | -------------------- | -------------------- |
+| **label**      | **String**   | **类型说明**       | **美国**           |
+| **country**    | **String**   | **国家**           | **美国**           |
+| **asins**      | **List**     | **包含的asin列表** | **["B00P19MFYE"]** |
+| **products**   | **Integer**  | **产品数**         | **3**  |
+| **revenue**    | **Float**    | **销售额**         | **47492.83**       |
+| **units**      | **Integer**  | **销量**           | **4107**           |
+| **unitsRatio** | **Float**    | **销量占比**       | **0.7313**         |
 
-#### Request example
+####
 
-````
-curl 'https://api.sellersprite.com/v1/aba/research' \
--H 'secret-key:  your secret key' \
--H 'content-type: application/json;charset=UTF-8' \
---data-raw $'{"marketplace":"US","rankGrowthType":"W1","date":"20220129"}' \
---compressed
-````
-
-### Related Products Stat
-
-* Request URI：**GET**  /v1/traffic/listing/stat
-
-#### Request parameter
-
-| Name        | Type   | Description                    | Example | Required |
-| ------------- | -------- | -------------------------------- | --------- | ---------- |
-| marketplace | String | marketplace code,see table 1.2 | US      | ✓       |
-| asinList    | List   | Collection of query ASINs      |        |         |
-
-#### Response parameter
-
-| Name          | Type    | Description                             | Example    |
-| --------------- | --------- | ----------------------------------------- | ------------ |
-| marketplace   | String  | marketplace code                        | US         |
-| asin          | String  | asin                                    | B07Z82895W |
-| relations     | Integer | the number of related asin              | 1848       |
-| freeRelations | Integer | associated traffic without sponsored    | 1414       |
-| paidRelations | Integer | associated traffic with sponsored       | 286        |
-| calcTime      | Long    | last calculated time                    |            |
-| items         | List    | result set                              |            |
-| └relation    | String  | relation type，see table2.2,ignore case | vav        |
-| └count       | Integer | the number of relation                  | 3          |
-
-#### Request example
+#### **请求示例**
 
 ```
-curl 'https://api.sellersprite.com/v1/traffic/listing/stat \
--H 'secret-key: your secret key' \
--H 'content-type: application/json;charset=UTF-8' \
---data-raw $'{"marketplace":"US","asinList":["B07Z82895W"]}' \
+    curl 'https://api.sellersprite.com/v1/market/seller/location' \
+-H 'Content-Type: application/json;charset=UTF-8' \
+-H 'secret-key: 你的密钥' \
+--data-raw $'{\n  "marketplace":"US",\n  "nodeIdPath":"1064954:1069242:1069784:1069820:1069838:1069828"\n}' \
 --compressed
 ```
 
-### Related Products
+        ## **商品需求趋势**
 
-* Request URI：**POST**  /v1/traffic/listing/page
+**请求 URL:/v1/market/performance，请求方式 POST**
 
-#### Request parameter
+#### **请求参数**
 
-| Name        | Type    | Description                                             | Example       | Required |
-| ------------- | --------- | --------------------------------------------------------- | --------------- | ---------- |
-| marketplace | String  | marketplace code,see table 1.2                          | US            | ✓       |
-| asinList    | List    | Collection of asin                                      | [B07Z82895W]  | ✓       |
-| relations   | List    | Collection of relation type，see table 2.2，default vav | [vav,bab]     |         |
-| variations  | Boolean | Whether to query variation ASINs                        |              |         |
-| page        | Integer | Base on 1                                               | Default 1     |         |
-| size        | Integer |                                                        | Default 50    |         |
-| order       | Object  |                                                        |               |         |
-| └field     | String  |                                                        | See table 2.2 |         |
-| └desc      | boolean |                                                        | Default true  |         |
+| **参数名称**    | **参数类型** | **参数说明**     | **举例**        | **是否必传** |
+| ----------------- | -------------- | ------------------------------------------------------ | ----------------------------------------------------- | -------------- |
+| **marketplace** | **String**   | **市场 id**      | **见表 1.2**    | **✓**       |
+|  **month**      | **String**   | **筛选日期,默认最近30天，最早查询时间为2021年7月份** | **见表 1.1**    |  |
+| **topN**        | **Integer**  | **头部Listing数量**          | **10**          |  |
+| **newProduct**  | **Integer**  | **新品定义**     | **6**           |  |
+| **nodeIdPath**  | **String**   | **节点 id 路径字符串**       | **1064954:1069242:1069784:1069820:1069838:1069828** | **✓**       |
 
-#### Response parameter
+#### **返回参数**
 
-| Name           | Type    | Description                                | Example                                                                                                                                 |
-| ---------------- | --------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| asin           | String  | asin                                       | B078J8VPVW                                                                                                                              |
-| brand          | String  |                                            | Pampers                                                                                                                                 |
-| brandUrl       | String  |                                            | [https://www.amazon.com/s?k=HP](https://www.amazon.com/s?k=HP)                                                                             |
-| imageUrl       | String  |                                            | [https://images-na.ssl-images-amazon.com/images/I/51axlzme6aL .AC_US200.jpg](https://images-na.ssl-images-amazon.com/images/I/51axlzme6aL) |
-| title          | String  |                                            | Diapers Size 2, 186 Count - Pampers Swaddlers Disposable Baby Diapers, ONE MONTH SUPPLY                                                 |
-| parent         | String  | parent asin                                | B081RGNL17                                                                                                                              |
-| nodeId         | Long    | product node id                            | 3741281                                                                                                                                 |
-| nodeIdPath     | String  | complete node id paths, separated by colon | 2619525011:3741271:3741281                                                                                                              |
-| nodeLabelPath  | String  |                                            | Baby Products:Diapering:Disposable Diapers                                                                                              |
-| bsrId          | String  | bsr id                                     | office-products                                                                                                                         |
-| bsr            | Integer | bsr rank                                   | 1                                                                                                                                       |
-| units          | Integer | monthly sales volume                       | 26289                                                                                                                                   |
-| unitsCr        | Float   | monthly sales volume growth rate           | -46.3                                                                                                                                   |
-| revenue        | Float   | monthly sales amount                       | 1693537.4                                                                                                                               |
-| price          | Float   |                                            | 64.42                                                                                                                                   |
-| profit         | Float   |                                            | 63.92                                                                                                                                   |
-| fba            | Float   |                                            | 13.58                                                                                                                                   |
-| ratings        | Integer |                                            | 32004                                                                                                                                   |
-| ratingsRate    | Float   | retention rate                             | 40.57                                                                                                                                   |
-| rating         | Float   |                                            | 4.8                                                                                                                                     |
-| ratingsCv      | Integer | number of monthly growth in ratings        | 10666                                                                                                                                   |
-| ratingDelta    | Integer | number of new comments in the last 30 days | 0                                                                                                                                       |
-| availableDate  | Long    | shelf time,millisecond format              | 1454083200000                                                                                                                           |
-| fulfillment    | String  |                                            | AMZ or FBA or FBM                                                                                                                       |
-| variations     | Integer |                                            | 7                                                                                                                                       |
-| sellers        | Integer |                                            | 7                                                                                                                                       |
-| sellerId       | String  |                                            | A1Y8BVAASXO4R7                                                                                                                          |
-| sellerName     | String  |                                            | Amazon                                                                                                                                  |
-| sellerNation   | String  |                                            | see table 1.5                                                                                                                           |
-| badge          | Badge   | badge object                               |                                                                                                                                         |
-| └bestSeller   | String  | whether to contains best-seller            | Y/N                                                                                                                                     |
-| └amazonChoice | String  | whether to contains Amazon's choice        | Y/N                                                                                                                                     |
-| └newRelease   | String  | whether to contains newRelease             | Y/N                                                                                                                                     |
-| └ebc          | String  | whether to contains A+                     | Y/N                                                                                                                                     |
-| └video        | String  | whether to contains video                  | Y/N                                                                                                                                     |
-| weight         | String  |                                            | 8.88 pounds                                                                                                                             |
-| dimension      | String  |                                            | 13.3 x 15.8 x 10.6 inches                                                                                                               |
-| dimensionType  | String  |                                            | ST,0V                                                                                                                                   |
-| sku            | String  |                                            | ["Color: Beige","Size: 47 inches"]                                                                                                      |
+| **参数名称**     | **参数类型** | **参数说明**       | **举例**       |
+| ------------------------------ | -------------- | -------------------------------- | ---------------- |
+| **asinCount**    | **String**   | **asin数量**       | **22187**      |
+| **returnRatio**  | **String**   | **退货率，百分比** | **1.38**       |
+| **searchToPurchaseRatio**    | **List**     | **搜索购买比，千分比**         | **3.17875**    |
+| **avgReturnRatio**           | **Integer**  | **类目平均退货率，百分比**     | **2.72**       |
+| **avgSearchToPurchaseRatio** | **Float**    | **类目平均搜索购买比，千分比** | **2.6**        |
+| **items**        | **List**     | **月浏览趋势**     |    |
+| **└**date       | **String**   | **时间，yyyy-MM-dd格式**       | **2022-09-10** |
+| **└**glanceViews| **Integer**  | **浏览量**         | **2**          |
 
-#### Request example
+#### **请求示例**
 
 ```
-curl 'https://api.sellersprite.com/v1/traffic/listing' \
--H 'secret-key: your secret key' \
--H 'content-type: application/json;charset=UTF-8' \
---data-raw $'{"marketplace":"US","asinList":["B07Z82895W"]}' \
+    curl 'https://api.sellersprite.com/v1/market/performance' \
+-H 'Content-Type: application/json;charset=UTF-8' \
+-H 'secret-key: 你的密钥' \
+--data-raw $'{\n  "marketplace":"US",\n  "nodeIdPath":"1064954:1069242:1069784:1069820:1069838:1069828"\n}' \
 --compressed
 ```
 
-### Keyword Distribution
+        ## **上架时间分布**
 
-* Request URI：**POST** /v1/traffic/source
+**请求 URL:/v1/market/shelf/time，请求方式 POST**
 
-#### Request parameter
+#### **请求参数**
 
-| Name        | Type    | Description                                                                                                                 | Example       | Required |
-| ------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------- | --------------- | ---------- |
-| marketplace | String  | marketplace code,see table 1.2                                                                                              | US            | ✓       |
-| q           | String  | The query asin,or keywords                                                                                                  | B07Z82895W    | ✓       |
-| month       | String  | query month, yyyyMM format, default last 30 days                                                                            | 202210        | ✓       |
-| page        | Integer |                                                                                         | 1            | ✓       |
-| size        | Integer |                                                                                            |  20   | ✓       |
-| order       | Object  |                                                                            |         | ✓       |
-| -field      | String  | sort field | See table 2.4 |         |
-| -desc       | Boolean | True or false                                                                                                               |              |         |
+| **参数名称**    | **参数类型** | **参数说明**     | **举例**        | **是否必传** |
+| ----------------- | -------------- | ------------------------------------------------------ | ----------------------------------------------------- | -------------- |
+| **marketplace** | **String**   | **市场 id**      | **见表 1.2**    | **✓**       |
+|  **month**      | **String**   | **筛选日期,默认最近30天，最早查询时间为2021年7月份** | **见表 1.1**    |  |
+| **topN**        | **Integer**  | **头部Listing数量**          | **10**          |  |
+| **newProduct**  | **Integer**  | **新品定义**     | **6**           |  |
+| **nodeIdPath**  | **String**   | **节点 id 路径字符串**       | **1064954:1069242:1069784:1069820:1069838:1069828** | **✓**       |
 
-#### Response parameter
+#### **返回参数**
 
-| Name              | Type             | Description              | Example                                                                                                                       |
-| ------------------- | ------------------ | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| keywords          | Integer          | All traffic terms | 1423                                                                                                                    |
-| searchKeywords    | Integer          | Natural search terms      |        23                                                                                                                      |
-| acKeywords        | Integer          | AC Recommendation     |        43                                                                                                                      |
-| editorialKeywords | Integer          | ER Recommendation      |     234                                                                                                                         |
-| fourStarsKeywords | Integer          | 4-star recommendation        |    234                                                                                                                 |
-| hrKeywords        | Integer          | HR Recommendation   |                    234                                                                                                          |
-| adKeywords        | Integer          | SP advertising slogan       |             214                                                                                                                |
-| videoKeywords     | Integer          | Video advertising slogans   |              453                                                                                                                |
-| brandKeywords     | Integer          | Brand advertising slogan |                 223                                                                                                             |
-| badgeLabels       | List             | Overview of traffic sources   | ["SEARCH", "OFFICIAL", "AD"]                                                                                                  |
-| badgeDetails      | Map |         Traffic source details   | {"SEARCH": ["NATURAL_SEARCHING"],"OFFICIAL": ["AMAZON_CHOICE"]} |
-| asinInfo          | Object           |  Asin related information    |                                                                                                                              |
-| -asin             | String            |  asin                   |            B078J8VPVW                                                                                                  |
-| -asinUrl          | String            |  asin url                   |           https://www.amazon.com/dp/B08GHW4TBS                                                       |
-| -currency         | String            |  Currency code               |      $                                                                                                                        |
-| -price            | Float            |    price                |         23                                                                                                                     |
-| -rating           | Float            |   score                   |        32                                                                                                                      |
-| -reviews          | Integer          |  Score evaluation        |          354                                                                                                                    |
-| -sku              | String            |     SKU                    |    ["Color: Beige","Size: 47 inches"]                   |
-| -title            | String            |      title                    |                       |
-| -variations       | Integer          | Number of variants |                    2                                                                                                          |
+| **参数名称**   | **参数类型** | **参数说明**       | **举例**           |
+| ---------------- | -------------- | -------------------- | -------------------- |
+| **label**      | **String**   | **类型说明**       | **3年以上**        |
+| **shelfTime**  | **String**   | **上架时间**       | **3年以上**        |
+| **asins**      | **List**     | **包含的asin列表** | **["B00P19MFYE"]** |
+| **products**   | **Integer**  | **产品数**         | **B07Z82895W**     |
+| **revenue**    | **Float**    | **销售额**         | **40846.76**       |
+| **units**      | **Integer**  | **销量**           | **4684**           |
+| **unitsRatio** | **Float**    | **销量占比**       | **0.834**          |
 
-#### Request example
+####
+
+#### **请求示例**
 
 ```
-curl 'https://api.sellersprite.com/v1/traffic/source \
--H 'secret-key: Your Key' \
--H 'content-type: application/json;charset=UTF-8' \
---data-raw $'{"marketplace":"US","q":"B07Z82895W","month":"202210"}' \
+    curl 'https://api.sellersprite.com/v1/market/shelf/time' \
+-H 'Content-Type: application/json;charset=UTF-8' \
+-H 'secret-key: 你的密钥' \
+--data-raw $'{\n  "marketplace":"US",\n  "nodeIdPath":"1064954:1069242:1069784:1069820:1069838:1069828"\n}' \
 --compressed
 ```
 
-### BSR Sales Estimator
+        ## **上架趋势分布**
 
-* Request URI：**GET** /v1/sales/prediction/bsr
+**请求 URL:/v1/market/shelf/trend，请求方式 POST**
 
-#### Request parameter
+#### **请求参数**
 
-| Name            | Type         | Description                       | Example       | Required |
-| ----------------- | -------------- | ---------------------------------- | ----------------- | -------------- |
-| marketplace | String   | marketplace,see table 1.2                 | US          | ✓       |
-| bsr                 | Integer  | Ranking of major categories | 1024        | ✓       |
-| categoryId  | String   | First level category node, **Product node** interface return | 11260432011 | ✓     |
+| **参数名称**    | **参数类型** | **参数说明**     | **举例**        | **是否必传** |
+| ----------------- | -------------- | ------------------------------------------------------ | ----------------------------------------------------- | -------------- |
+| **marketplace** | **String**   | **市场 id**      | **见表 1.2**    | **✓**       |
+|  **month**      | **String**   | **筛选日期,默认最近30天，最早查询时间为2021年7月份** | **见表 1.1**    |  |
+| **topN**        | **Integer**  | **头部Listing数量**          | **10**          |  |
+| **newProduct**  | **Integer**  | **新品定义**     | **6**           |  |
+| **nodeIdPath**  | **String**   | **节点 id 路径字符串**       | **1064954:1069242:1069784:1069820:1069838:1069828** | **✓**       |
 
-#### Response parameter
+#### **返回参数**
 
-| Name              | Type             | Description              | Example                                                                                |
-| ------------------- | ------------------ | -------------------------- | --------------------------------------------------------------------------------- |
-| marketplace     | String  | marketplace         | US         |
-| --------------------- | ------------- | ------------------ | ---------------- |
-| bsr             | Integer | 1            | B07Z82895W |
-| categoryLabel   | String  | Category name | 2685       |
-| estDailySales   | Integer | Forecast daily sales| 99         |
-| estMonthSales   | Integer | Forecast 30 day sales | 2965       |
-| itemList        | List    | detail         |                |
-| └bsr           | Integer | bsr          | 1          |
-| └estDailySales | Integer | Forecast daily sales   | 99         |
-| └estMonthSales | Integer |Forecast 30 day sales | 2965       |
+| **参数名称**   | **参数类型** | **参数说明**       | **举例**           |
+| ---------------- | -------------- | -------------------- | -------------------- |
+| **label**      | **String**   | **类型说明**       | **2014**           |
+| **year**       | **String**   | **年份，yyyy格式** | **2014**           |
+| **asins**      | **List**     | **包含的asin列表** | **["B00P19MFYE"]** |
+| **products**   | **Integer**  | **产品数**         | **1**  |
+| **revenue**    | **Float**    | **销售额**         | **2515**           |
+| **units**      | **Integer**  | **销量**           | **18837.35**       |
+| **unitsRatio** | **Float**    | **销量占比**       | **0.4478**         |
 
-#### Request example
+####
 
-```
-curl 'https://api.sellersprite.com/v1/sales/prediction/bsr?
-bsr=2&categoryId=11260432011&marketplace=US' \
-  -H 'secret-key: Your Key' \
-  -H 'content-type: application/json;charset=UTF-8' \
-  --compressed
-```
-### ASIN Sales Estimator
-
-* Request URI：**GET** /v1/sales/prediction/asin
-
-#### Request parameter
-
-| Name            | Type         | Description                       | Example       | Required |
-| ----------------- | -------------- | ---------------------------------- | ----------------- | -------------- |
-| marketplace | String   | marketplace,see table 1.2                 | US          | ✓       |
-| asin          | String  | asin                                    | B07Z82895W | ✓       |
-
-#### Response parameter
-
-| Name              | Type             | Description              | Example                                                                                |
-| ------------------- | ------------------ | -------------------------- | --------------------------------------------------------------------------------- |
-| asinDetail      | Object  | asin detail       |                                                                                                                                                                               |
-| --------------------- | ------------- | -------------------- | ------------------------------------------------------------------------------------- |
-| └asin          | String  | asin           | B00CFM8DI2                                                                                                                                                                |
-| └title         | String  | title           | Boot Bananas Original Shoe Deodorizer  | 
-| └brand         | String  | brand           | Boot Bananas                                                                                                                                                              |
-| └availableDate | Long    | Listing time       | 1397001600000                                                                                                                                                             |
-| └category      | String  | Category name      | Clothing, Shoes & Jewelry                                                                                                                                                 |
-| └categoryId    | String  | Category  Id| 7141123011                                                                                                                                                                |
-| └imageUrl      | String  | image url        | https://images-na.ssl-images-amazon.com/images/I/41AGxmiW-vL._AC_US600_.jpg                                                                                               |
-| └ratings       | Integer | Score evaluation         | 32004                                                                                                                                                                     |
-| └rating        | Float   | rating value        | 4.6                                                                                                                                                                       |
-| dailyItemList   | List    | Daily sales forecast details |                                                                                                                                                                               |
-| └date          | String  | date           | 2023-04-19                                                                                                                                                                |
-| └bsr           | Integer | bsr            | 48614                                                                                                                                                                     |
-| └sales         | Integer | sales           | 14                                                                                                                                                                        |
-| └amount        | Float   | sales volume          | 200                                                                                                                                                                       |
-| └price         | Float   | price           | 20                                                                                                                                                                        |
-| monthItemList   | List    | Monthly Sales Forecast Details |                                                                                                                                                                               |
-| └date          | String  | date           | 2023-04                                                                                                                                                                   |
-| └sales         | Integer | sales           | 14                                                                                                                                                                        |
-| └amount        | Float   | sales volume | 200                                                                                                                                                                       |
-| └price         | Float   | price           | 20                                                                                                                                                                        |
-
-#### Request example
+#### **请求示例**
 
 ```
-curl 'https://api.sellersprite.com/v1/sales/prediction/asin?
-asin=B08C7HDF1F&marketplace=US' \
-  -H 'secret-key: You Key' \
-  -H 'content-type: application/json;charset=UTF-8' \
-  --compressed
+    curl 'https://api.sellersprite.com/v1/market/shelf/trend' \
+-H 'Content-Type: application/json;charset=UTF-8' \
+-H 'secret-key: 你的密钥' \
+--data-raw $'{\n  "marketplace":"US",\n  "nodeIdPath":"1064954:1069242:1069784:1069820:1069838:1069828"\n}' \
+--compressed
 ```
 
-### OCR
+        ## **评分数分布**
 
-* Request URI：**GET** /v1/ocr/identify
-* Request Content-Type:multipart/form-data
+**请求 URL:/v1/market/ratings，请求方式 POST**
 
-#### Request parameter
+#### **请求参数**
 
-| Name            | Type         | Description                       | Example       | Required |
-| ----------------- | -------------- | ---------------------------------- | ----------------- | -------------- |
-| type     | Integer  | 0：Remote Pictures；1：Base64 string；2：Picture files   | 2                                                                                                                                                   | ✓       |
-| fn       | String   | Language types to be recognized: CHINESE Or LATIN| CHINESE                                                                                                                                             | ✓       |
-| url      | String   | remote url                                     | |              |
-| base64   | String   | Base64 string                                |                                                                                                                                                         |              |
-| image    | File     | Uploaded files                                 | C:\fakepath\photo.jpeg
+| **参数名称**    | **参数类型** | **参数说明**     | **举例**        | **是否必传** |
+| ----------------- | -------------- | ------------------------------------------------------ | ----------------------------------------------------- | -------------- |
+| **marketplace** | **String**   | **市场 id**      | **见表 1.2**    | **✓**       |
+|  **month**      | **String**   | **筛选日期,默认最近30天，最早查询时间为2021年7月份** | **见表 1.1**    |  |
+| **topN**        | **Integer**  | **头部Listing数量**          | **10**          |  |
+| **newProduct**  | **Integer**  | **新品定义**     | **6**           |  |
+| **nodeIdPath**  | **String**   | **节点 id 路径字符串**       | **1064954:1069242:1069784:1069820:1069838:1069828** | **✓**       |
 
-#### Response parameter
+#### **返回参数**
 
-| Name              | Type             | Description              | Example                                                                                   |
-| ------------------- | ------------------ | -------------------------- | ------------------------------------------------------------------- |
-| data          | String          | Recognized text | sellersprite                                                                                                                    |
-| code    | String          |      status code                    |      OK                                                                                                                        |
-| message        | String          |                          |                                                                                                                              |
+| **参数名称**   | **参数类型** | **参数说明**       | **举例**           |
+| ---------------- | -------------- | -------------------- | -------------------- |
+| **label**      | **String**   | **类型说明**       | **500以上**        |
+| **asins**      | **List**     | **包含的asin列表** | **5**  |
+| **products**   | **Integer**  | **产品数**         | **["B00P19MFYE"]** |
+| **revenue**    | **Float**    | **销售额**         | **61714.24**       |
+| **units**      | **Integer**  | **销量**           | **5616**           |
+| **unitsRatio** | **Float**    | **销量占比**       | **0.9743**         |
 
-#### Request example
+#### **请求示例**
 
 ```
-curl 'https://api.sellersprite.com/v1/ocr/identify' \
-  -H 'secret-key:  Your Key' \
-  -H 'content-type: multipart/form-data' \
-  -F 'image=@/home/image/photo.jpeg' -F 'base64=' -F 'fn=CHINESE' -F 'type=2' -F 'url=' \
-  --compressed
+    curl 'https://api.sellersprite.com/v1/market/ratings' \
+-H 'Content-Type: application/json;charset=UTF-8' \
+-H 'secret-key: 你的密钥' \
+--data-raw $'{\n  "marketplace":"US",\n  "nodeIdPath":"1064954:1069242:1069784:1069820:1069838:1069828"\n}' \
+--compressed
 ```
 
-### Appendix
+        ##
 
-#### Table 1.1 Query month
+        ## **评分值分布**
 
-| Value              | description           |
-| -------------------- | ----------------------- |
-| nearly             | last 30 days          |
-| formated as yyyyMM | example:202202202213  |
+**请求 URL:/v1/market/rating，请求方式 POST**
 
-#### Table 1.2 Marketplace code
+#### **请求参数**
 
-| Value | Description    |
-| ------- | ---------------- |
-| US    | United States  |
-| UK    | United Kingdom |
-| DE    | Germany        |
-| FR    | France         |
-| JP    | Japan          |
-| CA    | Canada         |
-| IT    | Italy          |
-| ES    | Spain          |
+| **参数名称**    | **参数类型** | **参数说明**     | **举例**        | **是否必传** |
+| ----------------- | -------------- | ------------------------------------------------------ | ----------------------------------------------------- | -------------- |
+| **marketplace** | **String**   | **市场 id**      | **见表 1.2**    | **✓**       |
+|  **month**      | **String**   | **筛选日期,默认最近30天，最早查询时间为2021年7月份** | **见表 1.1**    |  |
+| **topN**        | **Integer**  | **头部Listing数量**          | **10**          |  |
+| **newProduct**  | **Integer**  | **新品定义**     | **6**           |  |
+| **nodeIdPath**  | **String**   | **节点 id 路径字符串**       | **1064954:1069242:1069784:1069820:1069838:1069828** | **✓**       |
 
-#### Table 1.3 Release date
+#### **返回参数**
 
-| Value | Description   |
-| ------- | --------------- |
-| null  | no limitation |
-| 1     | last 30 days  |
-| 3     | last 3 months |
-| 6     | last 6 months |
-| 12    | last 1 year   |
-| 24    | last 2 years  |
+| **参数名称**   | **参数类型** | **参数说明**       | **举例**           |
+| ---------------- | -------------- | -------------------- | -------------------- |
+| **label**      | **String**   | **类型说明**       | **4.5以上**        |
+| **asins**      | **List**     | **包含的asin列表** | **["B00P19MFYE"]** |
+| **products**   | **Integer**  | **产品数**         | **5**  |
+| **revenue**    | **Float**    | **销售额**         | **59934.22**       |
+| **units**      | **Integer**  | **销量**           | **5418**           |
+| **unitsRatio** | **Float**    | **销量占比**       | **0.9647**         |
 
-#### Table 1.4 Product size
+#### **请求示例**
 
-* U.S. Market
+```
+    curl 'https://api.sellersprite.com/v1/market/rating' \
+-H 'Content-Type: application/json;charset=UTF-8' \
+-H 'secret-key: 你的密钥' \
+--data-raw $'{\n  "marketplace":"US",\n  "nodeIdPath":"1064954:1069242:1069784:1069820:1069838:1069828"\n}' \
+--compressed
+```
 
-| Value | Description          |
-| ------- | ---------------------- |
-| ST    | Small standard size  |
-| LS    | Large standard size  |
-| SO    | Small oversize       |
-| MO    | Medium oversize      |
-| LO    | Large oversize       |
-| SP    | Special large pieces |
-| O     | Other                |
+        ## **价格分布**
 
-* Japanese Market
+**请求 URL:/v1/market/price，请求方式 POST**
 
-| Value | Description      |
-| ------- | ------------------ |
-| SM    | small            |
-| ST    | standard         |
-| OV    | oversize         |
-| SS    | Extra large size |
-| O     | Other            |
+#### **请求参数**
 
-* UK, France, Germany, Italy, Spain markets
+| **参数名称**    | **参数类型** | **参数说明**     | **举例**        | **是否必传** |
+| ----------------- | -------------- | ------------------------------------------------------ | ----------------------------------------------------- | -------------- |
+| **marketplace** | **String**   | **市场 id**      | **见表 1.2**    | **✓**       |
+|  **month**      | **String**   | **筛选日期,默认最近30天，最早查询时间为2021年7月份** | **见表 1.1**    |  |
+| **topN**        | **Integer**  | **头部Listing数量**          | **10**          |  |
+| **newProduct**  | **Integer**  | **新品定义**     | **6**           |  |
+| **nodeIdPath**  | **String**   | **节点 id 路径字符串**       | **1064954:1069242:1069784:1069820:1069838:1069828** | **✓**       |
 
-| Value | Description       |
-| ------- | ------------------- |
-| SL    | Small envelope    |
-| NL    | Standard envelope |
-| LL    | Large envelope    |
-| SD    | Standard package  |
-| SB    | Small oversize    |
-| NB    | Standard oversize |
-| LB    | Large oversize    |
-| O     | Other             |
+#### **返回参数**
 
-* Canada Market
+| **参数名称**   | **参数类型** | **参数说明**       | **举例**           |
+| ---------------- | -------------- | -------------------- | -------------------- |
+| **label**      | **String**   | **类型说明**       | **5-10**           |
+| **asins**      | **List**     | **包含的asin列表** | **["B00P19MFYE"]** |
+| **products**   | **Integer**  | **产品数**         | **3**  |
+| **revenue**    | **Float**    | **销售额**         | **33058.76**       |
+| **units**      | **Integer**  | **销量**           | **4024**           |
+| **unitsRatio** | **Float**    | **销量占比**       | **0.7165**         |
 
-| Value | Description |
-| ------- | ------------- |
-| EN    | Envelope    |
-| ST    | Standard    |
-| OS    | Oversize    |
-| O     | Other       |
+#### **请求示例**
 
-#### Table 1.5 Seller's Nationality
+```
+    curl 'https://api.sellersprite.com/v1/market/price' \
+-H 'Content-Type: application/json;charset=UTF-8' \
+-H 'secret-key: 你的密钥' \
+--data-raw $'{\n  "marketplace":"US",\n  "nodeIdPath":"1064954:1069242:1069784:1069820:1069838:1069828"\n}' \
+--compressed
+```
 
-| Value | Description     |
-| ------- | ----------------- |
-| CN    | China           |
-| HK    | Hong Kong,China |
-| US    | United States   |
-| JP    | Japan           |
-| DE    | Germany         |
-| FR    | France          |
+        ## **A+视频分布**
 
-See link for 2-character codes for other countries：[http://www.mamicode.com/info-detail-1583748.html](http://www.mamicode.com/info-detail-1583748.html)
+**请求 URL:/v1/market/ebc，请求方式 POST**
 
-#### Table 1.6 Product research and competitor lookup sorting fields
+#### **请求参数**
 
-| Value                | Description                             |
-| ---------------------- | ----------------------------------------- |
-| total_units          | monthly sales volume                    |
-| total_amount         | monthly sales amount                    |
-| bsr_rank             | bsr rank                                |
-| price                |                                         |
-| rating               |                                         |
-| reviews              |                                         |
-| profit               |                                         |
-| reviews_rate         |                                         |
-| available_date       |                                         |
-| questions            | Q & A                                   |
-| total_units_growth   | monthly sales volume growth rate        |
-| total_amount_growth  | monthly sales amount growth rate        |
-| reviews_increasement |                                         |
-| bsr_rank_cv          | number of BSR growth in the last 7 days |
-| bsr_rank_cr          | last 7 days BSR growth rate             |
+| **参数名称**    | **参数类型** | **参数说明**     | **举例**        | **是否必传** |
+| ----------------- | -------------- | ------------------------------------------------------ | ----------------------------------------------------- | -------------- |
+| **marketplace** | **String**   | **市场 id**      | **见表 1.2**    | **✓**       |
+|  **month**      | **String**   | **筛选日期,默认最近30天，最早查询时间为2021年7月份** | **见表 1.1**    |  |
+| **topN**        | **Integer**  | **头部Listing数量**          | **10**          |  |
+| **newProduct**  | **Integer**  | **新品定义**     | **6**           |  |
+| **nodeIdPath**  | **String**   | **节点 id 路径字符串**       | **1064954:1069242:1069784:1069820:1069838:1069828** | **✓**       |
 
-#### Table 1.7 Marketplace Granularity
+#### **返回参数**
 
-| Value       | Description                  |
-| ------------- | ------------------------------ |
-| N           | normal                       |
-| S1,S2,S3    | January to March peak season |
-| S4,S5,S6    | April to June peak season    |
-| S7,S8,S9    | July-September peak season   |
-| S10,S11,S12 | October-December peak season |
-| I           | Continuous Growth Markets    |
-| D           | Continued recession market   |
+| **参数名称**      | **参数类型** | **参数说明**         | **举例**       |
+| ------------------- | -------------- | ---------------------- | ---------------- |
+| **label**         | **String**   | **类型说明**         | **有A+有视频** |
+| **products**      | **Integer**  | **产品数**           | **1**          |
+| **productsRatio** | **Float**    | **类目名称**产品占比 | **20**         |
+| **units**         | **Integer**  | **销量** | **1311**       |
+| **unitsRatio**    | **Float**    | **销量占比**         | **23.34**      |
 
-#### Table 1.8 Keyword research sorting fields
+#### **请求示例**
 
-| Value                 | Description |
-| ----------------------- | ------------- |
-| searches              |             |
-| keywordsIsHide        |             |
-| searches_growth       |             |
-| yearly_growth_rate    |             |
-| growth_rate_trend_min |             |
-| monopoly_click_rate   |             |
-| goods_value           |             |
+```
+    curl 'https://api.sellersprite.com/v1/market/ebc' \
+-H 'Content-Type: application/json;charset=UTF-8' \
+-H 'secret-key: 你的密钥' \
+--data-raw $'{\n  "marketplace":"US",\n  "nodeIdPath":"1064954:1069242:1069784:1069820:1069838:1069828"\n}' \
+--compressed
+```
 
-#### Table 1.9 Keyword research trends sorting fields
+        ## **附录**
 
-| Value               | Description |
-| --------------------- | ------------- |
-| searchfrequencyrank |             |
-| n1RankGrowthValue   |             |
-| n1RankGrowthRate    |             |
-| monopolyClickRate   |             |
+#### **表 1.1 查询日期**
 
-#### Table 1.10 Reverse ASIN exposure position
+| **参数值**        | **说明**   |
+| ------------------- | ------------------------------------ |
+| **nearly**        | **最近 30 天**         |
+| **格式为 yyyyMM** | **具体某一月，代表某一个月的日期** |
 
-| Value                    | Description |
-| -------------------------- | ------------- |
-| naturalSearching         |             |
-| amazonChoice             |             |
-| editorialRecommendations |             |
-| fourStar                 |             |
-| highlyRated              |             |
-| sponsorBrand             |             |
-| sponsorVideo             |             |
-| ads                      |             |
+#### **表 1.2 市场**
 
-#### Table 2.0 Reverse ASIN share type
+| **参数值** | **说明**     |
+| ------------ | -------------- |
+| **US**     | **美国站**   |
+| **UK**     | **英国站**   |
+| **DE**     | **德国站**   |
+| **FR**     | **法国站**   |
+| **JP**     | **日本站**   |
+| **CA**     | **加拿大站** |
+| **IT**     | **意大利**   |
+| **ES**     | **西班牙**   |
 
-| Value           | Description                        |
-| ----------------- | ------------------------------------ |
-| primary         | primary traffic share type         |
-| precise         | precise traffic share type         |
-| preciseLongTail | preciseLongTail traffic share type |
+| **参数值** | **说明**     |
+| ------------ | -------------- |
+| **EN**     | **信封装**   |
+| **ST**     | **标准**     |
+| **OS**     | **大件**     |
+| **O**      | **其他尺寸** |
 
-#### Table 2.1 Reverse ASIN conversion type
+#### **表 1.3 卖家所属地**
 
-| Value     | Description                       |
-| ----------- | ----------------------------------- |
-| excellent | excellent traffic conversion type |
-| stable    | stable traffic conversion type    |
-| lost      | lost traffic conversion type      |
-| invalid   | invalid traffic conversion type   |
+| **参数值** | **说明**         |
+| ------------ | ------------------ |
+| **CN**     | **中国**         |
+| **HK**     | **中国香港特区** |
+| **US**     | **美国**         |
+| **JP**     | **日本**         |
+| **DE**     | **德国**         |
+| **FR**     | **法国**         |
 
-#### Table 2.2 Related Products association type
+**其他国家二字码见链接：**[http://www.mamicode.com/info-detail-1583748.html](http://www.mamicode.com/info-detail-1583748.html)
 
-| Value | Description               |
-| ------- | --------------------------- |
-| mib   | Make it bundle            |
-| fbt   | frequency bought together |
-| csi   | compare similar items     |
-| cob   | consider our brands       |
-| mie   | more items explore        |
-| bab   | bought also bought        |
-| vav   | viewd also viewd          |
-| avp   | also viewd product        |
-| bav   | buy after viewing         |
-| asf   | also shoped for           |
-| cpf   | climate pledge friendly   |
-| bca   | brands category amazon    |
-| fsa   | four star above           |
-| sp    | sponsored products        |
+#### **表 1.4 选产品和查竞品排序字段**
 
-#### Table 2.3 Reverse ASIN list sorting field
-
-| Value             | Description |
-| ------------------- | ------------- |
-| rankPosition      |             |
-| adPosition        |             |
-| createdTime       |             |
-| searchesRank      |             |
-| searches          |             |
-| purchases         |             |
-| purchaseRate      |             |
-| products          |             |
-| supplyDemandRatio |             |
-| latest1daysAds    |             |
-| bid               |             |
-| trafficPercentage |             |
-
-#### Table 2.4 Keyword Distribution list sorting field
-
-| Value       | Description |
-| ------------- | ------------- |
-| keyword     |             |
-| nk          |             |
-| ac          |             |
-| er          |             |
-| fs          |             |
-| hr          |             |
-| spb         |             |
-| spv         |             |
-| ads         |             |
-| updatedTime |             |
-
-#### Table 2.5 Reverse Multiple ASINs sorting field
-
-| **Value**            | **Description**       |
-| ----------------------- | ---------------- |
-| trafficPercentage |   Related ASINs |
-| relationAsin      | Related ASINs   |
-| searchesRank      | ABA Rank/W  |
-| searches          |    M. Searches|
-| purchases         |  M. Purchase  |
-| purchaseRate      | Purchase Rate     |
-| spr               | spr        |
-| titleDensity      | Title Density   |
-| products          | Products     |
-| supplyDemandRatio | DSR     |
-| adProduct         | Sponsored ASINs |
-| monopolyClickRate | Click Concentration |
-| bid               | PPC Bid    |
+| **参数值**   | **说明**           |
+| -------------------------- | -------------------- |
+| **total_units**          | **月销量**         |
+| **total_amount**         | **月销售额**       |
+| **bsr_rank** | **bsr排名**        |
+| **price**    | **价格**           |
+| **rating**   | **评分**           |
+| **reviews**  | **评分数**         |
+| **profit**   | **毛利率**         |
+| **reviews_rate**         | **留评率**         |
+| **available_date**       | **上架时间**       |
+| **questions**| **Q & A**          |
+| **total_units_growth**   | **月销量增长率**   |
+| **total_amount_growth**  | **月销售额增长率** |
+| **reviews_increasement** | **月新增评分数**   |
+| **bsr_rank_cv**          | **近7天BSR增长数** |
+| **bsr_rank_cr**          | **近7天BSR增长率** |
