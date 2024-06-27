@@ -419,12 +419,12 @@ Request URI: POST /v1/market/seller/type
 ```
 curl 'https://api.sellersprite.com/v1/market/seller/type' \
 -H 'Content-Type: application/json;charset=UTF-8' \
--H 'secret-key: 你的密钥' \
+-H 'secret-key: your secret key' \
 --data-raw $'{\n  "marketplace":"US",\n  "nodeIdPath":"1064954:1069242:1069784:1069820:1069838:1069828"\n}' \
 --compressed
 ```
 
-### 卖家所属地分布
+### Distribution of seller's location
 
 Request URI: POST /v1/market/seller/location
 
@@ -457,7 +457,7 @@ Request URI: POST /v1/market/seller/location
 ```
 curl 'https://api.sellersprite.com/v1/market/seller/location' \
 -H 'Content-Type: application/json;charset=UTF-8' \
--H 'secret-key: 你的密钥' \
+-H 'secret-key: your secret key' \
 --data-raw $'{\n  "marketplace":"US",\n  "nodeIdPath":"1064954:1069242:1069784:1069820:1069838:1069828"\n}' \
 --compressed
 ```
@@ -494,7 +494,7 @@ Request URI: POST /v1/market/performance
 ```
 curl 'https://api.sellersprite.com/v1/market/performance' \
 -H 'Content-Type: application/json;charset=UTF-8' \
--H 'secret-key: 你的密钥' \
+-H 'secret-key: your secret key' \
 --data-raw $'{\n  "marketplace":"US",\n  "nodeIdPath":"1064954:1069242:1069784:1069820:1069838:1069828"\n}' \
 --compressed
 ```
@@ -532,7 +532,7 @@ Request URI: POST /v1/market/shelf/time
 ```
 curl 'https://api.sellersprite.com/v1/market/shelf/time' \
 -H 'Content-Type: application/json;charset=UTF-8' \
--H 'secret-key: 你的密钥' \
+-H 'secret-key: your secret key' \
 --data-raw $'{\n  "marketplace":"US",\n  "nodeIdPath":"1064954:1069242:1069784:1069820:1069838:1069828"\n}' \
 --compressed
 ```
@@ -570,7 +570,7 @@ Request URI: POST /v1/market/shelf/trend
 ```
 curl 'https://api.sellersprite.com/v1/market/shelf/trend' \
 -H 'Content-Type: application/json;charset=UTF-8' \
--H 'secret-key: 你的密钥' \
+-H 'secret-key: your secret key' \
 --data-raw $'{\n  "marketplace":"US",\n  "nodeIdPath":"1064954:1069242:1069784:1069820:1069838:1069828"\n}' \
 --compressed
 ```
@@ -606,12 +606,12 @@ Request URI: POST /v1/market/ratings
 ```
 curl 'https://api.sellersprite.com/v1/market/ratings' \
 -H 'Content-Type: application/json;charset=UTF-8' \
--H 'secret-key: 你的密钥' \
+-H 'secret-key: your secret key' \
 --data-raw $'{\n  "marketplace":"US",\n  "nodeIdPath":"1064954:1069242:1069784:1069820:1069838:1069828"\n}' \
 --compressed
 ```
 
-### 评分值分布
+### Score distribution
 
 Request URI: POST /v1/market/rating
 
@@ -641,12 +641,12 @@ Request URI: POST /v1/market/rating
 ```
 curl 'https://api.sellersprite.com/v1/market/rating' \
 -H 'Content-Type: application/json;charset=UTF-8' \
--H 'secret-key: 你的密钥' \
+-H 'secret-key: your secret key' \
 --data-raw $'{\n  "marketplace":"US",\n  "nodeIdPath":"1064954:1069242:1069784:1069820:1069838:1069828"\n}' \
 --compressed
 ```
 
-### 价格分布
+### Price distribution
 
 Request URI: POST /v1/market/price
 
@@ -676,7 +676,7 @@ Request URI: POST /v1/market/price
 ```
 curl 'https://api.sellersprite.com/v1/market/price' \
 -H 'Content-Type: application/json;charset=UTF-8' \
--H 'secret-key: 你的密钥' \
+-H 'secret-key: your secret key' \
 --data-raw $'{\n  "marketplace":"US",\n  "nodeIdPath":"1064954:1069242:1069784:1069820:1069838:1069828"\n}' \
 --compressed
 ```
@@ -710,14 +710,12 @@ Request URI: POST /v1/market/ebc
 ```
 curl 'https://api.sellersprite.com/v1/market/ebc' \
 -H 'Content-Type: application/json;charset=UTF-8' \
--H 'secret-key: 你的密钥' \
+-H 'secret-key: your secret key' \
 --data-raw $'{\n  "marketplace":"US",\n  "nodeIdPath":"1064954:1069242:1069784:1069820:1069838:1069828"\n}' \
 --compressed
 ```
 
 ## Appendix
-
-#### 表 1.1 查询日期
 
 #### Table 1.1 Query month
 
@@ -725,8 +723,6 @@ curl 'https://api.sellersprite.com/v1/market/ebc' \
 | -------------------- | ----------------------- |
 | nearly             | last 30 days          |
 | formated as yyyyMM | example:202202202213  |
-
-#### 表 1.2 市场
 
 #### Table 1.2 Marketplace code
 
