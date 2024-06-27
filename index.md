@@ -36,59 +36,86 @@
 | ERROR_VISIT_MAX          | visits exceeded       | interface access has reached the daily access or monthly access limit   |
 | ERROR_SECRET_KEY_INVALID | secret key invalid    |                                                                         |
 
-### Product research
+### market research
 
-* Request URI：POST /v1/product/research
+* Request URI：POST /v1/market/research
 
 #### Request parameter
 
 | Name            | Type    | Introduction                                                                                | Example                                                      | Required |
 | ----------------- | --------- | --------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | ---------- |
-| marketplace     | String  | marketplace code                                                                            | see table 1.2                                                | ✓       |
-| month           | String  | The filter date is the last 30 days by default, and the earliest query time is January 2020 | see table 1.1                                                |          |
-| keyword         | String  |                                                                                             | N95                                                          |          |
-| excludeKeywords | String  | Keywords that need to be excluded                                                           | portable                                                     |          |
-| minPrice        | Float   |                                                                                             | 10                                                           |          |
-| maxPrice        | Float   |                                                                                             | 30                                                           |          |
-| minRating       | Float   |                                                                                             | 1.0                                                          |          |
-| maxRating       | Float   |                                                                                             | 5.0                                                          |          |
-| minRatings      | Integer |                                                                                             | 1                                                            |          |
-| maxRatings      | Integer |                                                                                             | 90                                                           |          |
-| minRatingsCv    | Integer | Minimum number of new ratings per month                                                     | 1                                                            |          |
-| maxRatingsCv    | Integer | Maximum number of new ratings per month                                                     | 5                                                            |          |
-| minSellers      | Integer |                                                                                             | 3                                                            |          |
-| maxSellers      | Integer |                                                                                             | 10                                                           |          |
-| minBsr          | Integer |                                                                                             | 50                                                           |          |
-| maxBsr          | Integer |                                                                                             | 1                                                            |          |
-| minBsrCv        | Integer | BSR minimum increase                                                                        | 3                                                            |          |
-| maxBsrCv        | Integer | BSR Maximum increase                                                                        | 5                                                            |          |
-| minBsrCr        | Float   | BSR minimum growth rate                                                                     | 30                                                           |          |
-| maxBsrCr        | Float   | BSR Maximum growth rate                                                                     | 60                                                           |          |
-| minUnits        | Integer |                                                                                             | 20                                                           |          |
-| maxUnits        | Integer |                                                                                             | 50                                                           |          |
-| minRevenue      | Float   |                                                                                             | 60                                                           |          |
-| maxRevenue      | Float   |                                                                                             | 200                                                          |          |
-| minRevenueCr    | Float   | Minimum monthly revenue growth rate                                                         | 20                                                           |          |
-| maxRevenueCr    | Float   | Maximum monthly revenue growth rate                                                         | 30                                                           |          |
-| minUnitsCr      | Float   | Minimum monthly sales growth rate                                                           | 20                                                           |          |
-| maxUnitsCr      | Float   | Maximum monthly sales growth rate                                                           | 30                                                           |          |
-| nodeIdPath      | String  | complete node id paths, separated by colon                                                  | see product node interface                                   |          |
-| availableMonth  | Integer |                                                                                             | see table 1.3，unlimited by default                          |          |
-| dimensionType   | String  | A collection of size types, separated by commas, unlimited by default                       | see table 1.4                                                |          |
-| minFba          | Float   |                                                                                             | 10                                                           |          |
-| maxFba          | Float   |                                                                                             | 20                                                           |          |
-| minLqs          | Float   |                                                                                             | 0                                                            |          |
-| maxLqs          | Float   |                                                                                             | 10                                                           |          |
-| sellerNation    | String  | The seller's place of origin is not restricted by default                                   | see table 1.5                                                |          |
-| badgeBS         | String  | whether to include best seller                                                              | If true, the result returns those containing Best-Seller     |          |
-| badgeAC         | String  | whether to include Amazon's Choice                                                          | If true, the result returns those containing Amazon's Choice |          |
-| fulfillment     | String  | shipping method                                                                             | AMZ or FBA or FBM，The default is empty and unlimited        |          |
-| variation       | String  | whether to query variations                                                                 | if true,query variations                                     |          |
-| page            | Integer | default 1                                                                                   |                                                              |          |
-| size            | Integer | default 50                                                                                  |                                                              |          |
-| order           | Object  |                                                                                             |                                                              |          |
-| └field         | String  |                                                                                             | see table1.6                                                 |          |
-| └desc          | boolean | default descending                                                                          |                                                              |          |
+ | marketplace             | String   | marketplace code                                             | see table 1.2                           | ✓       |
+            | month                   | String   | The filter date is the last 30 days by default, and the earliest query time is July 2021 | see table 1.1                           |              |
+            | topNum                  | Integer  | Number of header listings                                  | 10                                 |              |
+            | newProduct              | Integer  | New Product Definition                                         | 6                                  |              |
+            | nodeIdPath              | String   | Category                                             | 172282:281407                      |              |
+            | departmentKeyword       | String   | Category  keyword                                       | Electronics:Accessories & Supplies |              |
+            | minAvgUnits             | Integer  | Minimum monthly average sales volume                                     | 100                                |              |
+            | maxAvgUnits             | Integer  | The highest average monthly sales volume                                     | 10000                              |              |
+            | minAvgRevenue           | Float    | Minimum monthly average sales revenue                                   | 100                                |              |
+            | maxAvgRevenue           | Float    | Maximum monthly average sales revenue                                   | 900                                |              |
+            | minAvgRatings           | Integer  | Minimum average rating                                   | 100                                |              |
+            | maxAvgRatings           | Integer  | Maximum average rating                                   | 500                                |              |
+            | minAvgRating            | Float    | Minimum average score                                   | 2.5                                |              |
+            | maxAvgRating            | Float    | Maximum average rating                                   | 3.0                                |              |
+            | minAvgBsr               | Integer  | Lowest average BSR ranking                                  | 50                                 |              |
+            | maxAvgBsr               | Integer  | The highest average BSR ranking                                  | 100                                |              |
+            | minAvgPrice             | Float    | Minimum average price                                     | 30                                 |              |
+            | maxAvgPrice             | Float    | Maximum average price                                     | 50                                 |              |
+            | minWeight               | Float    | Minimum weight                                         | 30                                 |              |
+            | maxWeight               | Float    | Maximum weight                                         | 60                                 |              |
+            | minVolume               | Float    | Minimum volume                                         | 20                                 |              |
+            | maxVolume               | Float    | Maximum volume                                         | 50                                 |              |
+            | minAvgProfit            | Float    | Minimum average gross profit margin                                   | 20                                 |              |
+            | maxAvgProfit            | Float    | Maximum average gross profit margin                                   | 70                                 |              |
+            | minTopAvgUnits          | Integer  | Minimum monthly average sales of the first part                                 | 200                                |              |
+            | maxTopAvgUnits          | Integer  | The highest average monthly sales of the top tier                                 | 300                                |              |
+            | minTopAvgRevenue        | Float    | Lowest monthly average sales revenue                               | 2000                               |              |
+            | maxTopAvgRevenue        | Float    | The highest monthly average sales revenue in the top tier                               | 3000                               |              |
+            | minTopAvgBsr            | Integer  | Lowest head average BSR                                  | 68                                 |              |
+            | maxTopAvgBsr            | Integer  | Maximum Head Average BSR                                  | 998                                |              |
+            | minGoodsCount           | Integer  | Minimum quantity of goods                                     | 40                                 |              |
+            | maxGoodsCount           | Integer  | Maximum quantity of goods                                     | 90                                 |              |
+            | minBrands               | Integer  | Minimum number of brands                                     | 10                                 |              |
+            | maxBrands               | Integer  | Maximum number of brands                                     | 20                                 |              |
+            | minSellers              | Integer  | Minimum number of sellers                                     | 6                                  |              |
+            | maxSellers              | Integer  | Maximum number of sellers                                     | 10                                 |              |
+            | minAvgSellers           | Float    | Minimum average number of sellers                                 | 4.4                                |              |
+            | maxAvgSellers           | Float    | Maximum average number of sellers                                 | 10.4                               |              |
+            | minGoodsCrn             | Float    | Minimum product concentration                                   | 45                                 |              |
+            | maxGoodsCrn             | Float    | Maximum product concentration                                   | 55                                 |              |
+            | minBrandCrn             | Float    | Minimum brand concentration                                   | 45                                 |              |
+            | maxBrandCrn             | Float    | Maximum brand concentration                                   | 55                                 |              |
+            | maxSellerCrn            | Float    | Minimum seller concentration                                   | 45                                 |              |
+            | minSellerCrn            | Float    | Concentration of the largest sellers                                   | 55                                 |              |
+            | minEbcProportion        | Float    | Minimum A+quantity proportion                                   | 34                                 |              |
+            | maxEbcProportion        | Float    | Maximum proportion of A+quantity                                | 54                                 |              |
+            | minFbaProportion        | Float    | Minimum FBA proportion                                      | 34                                 |              |
+            | maxFbaProportion        | Float    | Maximum proportion of FBA                                      | 54                                 |              |
+            | minFbmProportion        | Float    | Minimum FBM proportion                                      | 34                                 |              |
+            | maxFbmProportion        | Float    | Maximum proportion of FBM                                      | 54                                 |              |
+            | minAmazonSelfProportion | Float    | Minimum Amazon self operated proportion                               | 34                                 |              |
+            | maxAmazonSelfProportion | Float    | Maximum proportion of self operated Amazon                               | 56                                 |              |
+            | sellerLocation          | String   | Seller's location，see table 1.3                              | US,GB                              |              |
+            | minNewProportion        | Float    | Minimum proportion of new products                                 | 34                                 |              |
+            | maxNewProportion        | Float    | Maximum proportion of new products                                 | 56                                 |              |
+            | minNewCount             | Integer  | Minimum New Product Quantity                                     | 4                                  |              |
+            | maxNewCount             | Integer  | Maximum number of new products                                     | 20                                 |              |
+            | minNewAvgRatings        | Integer  | Minimum average rating for new products                               | 23                                 |              |
+            | maxNewAvgRatings        | Integer  | Maximum average rating score for new products                               | 554                                |              |
+            | minNewAvgPrice          | Float    | Minimum average price of new products                                 | 34                                 |              |
+            | maxNewAvgPrice          | Float    | Maximum average price of new products                                 | 45                                 |              |
+            | minNewAvgRating         | Float    | Minimum average star rating for new products                                 | 4.0                                |              |
+            | maxNewAvgRating         | Float    | Maximum average star rating for new products                                 | 4.5                                |              |
+            | minNewAvgUnits          | Float    | Minimum monthly average sales of new products                                 | 400                                |              |
+            | maxNewAvgUnits          | Float    | The highest monthly average sales of new products                                 | 800                                |              |
+            | minNewAvgRevenue        | Float    | Minimum monthly average sales of new products                               | 900                                |              |
+            | maxNewAvgRevenue        | Float    | The highest monthly average sales of new products                               | 2000                               |              |
+            | page                    | Integer  | Page numbers, starting from 1                                  | default 1                            |              |
+            | size                    | Integer  | Number of entries per page                                         | default 50，max 200                |              |
+            | order                   | Object   | sort                                             |                                        |              |
+            | └field                 | String   | sort field                                         | see table 1.4                            |              |
+            | └desc                  | boolean  | True is in descending order, false is in ascending order                           | default desc                           |              |
 
 #### Response parameter
 
