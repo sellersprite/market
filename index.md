@@ -160,13 +160,12 @@ f### Request a gateway
 | └image   | String   | ASIN image link     | [https://images-na.ssl-images-amazon.com/images/I/51+5VVLcXSL.\_AC\_US200\_.jpg](https://images-na.ssl-images-amazon.com/images/I/51+5VVLcXSL._AC_US200_.jpg) |
 | returnRatio           | Float    | Return rate           | 3.51   |
 | avgReturnRatio        | Float    | Average return rate category | 5.54   |
-| searchToPurchaseRatio | Float    | Search purchase ratio| 0.94926|
-|
+| searchToPurchaseRatio | Float    | Search purchase ratio| 0.94926| |
 
 #### Request example
 
 ```
-    curl 'https://api.sellersprite.com/v1/market/research' \
+curl 'https://api.sellersprite.com/v1/market/research' \
 -H 'Content-Type: application/json;charset=UTF-8' \
 -H 'secret-key: your secret key' \
 --data-raw $'{\n  "marketplace":"US",\n  "size":20,\n  "page":1\n}' \
@@ -176,7 +175,7 @@ f### Request a gateway
 ### Category statistics
 
 * Request URI：POST /v1/market/statistics
-  
+
 #### Request parameter
 
 | Name        | Type    | Introduction        | Example        | Required |
@@ -237,7 +236,7 @@ f### Request a gateway
 #### Request example
 
 ```
-    curl 'https://api.sellersprite.com/v1/market/statistics' \
+curl 'https://api.sellersprite.com/v1/market/statistics' \
 -H 'Content-Type: application/json;charset=UTF-8' \
 -H 'secret-key: your secret key' \
 --data-raw $'{\n  "marketplace":"US",\n  "nodeIdPath":"1064954:1069242:1069784:1069820:1069838:1069828"\n}' \
