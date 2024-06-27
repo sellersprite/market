@@ -121,134 +121,126 @@
 
 | Name           | Type    | Description                                | Example                                                                                                                                 |
 | ---------------- | --------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| asin           | String  | asin                                       | B078J8VPVW                                                                                                                              |
-| brand          | String  |                                            | Pampers                                                                                                                                 |
-| brandUrl       | String  |                                            | [https://www.amazon.com/s?k=HP](https://www.amazon.com/s?k=HP)                                                                             |
-| imageUrl       | String  |                                            | [https://images-na.ssl-images-amazon.com/images/I/51axlzme6aL .AC_US200.jpg](https://images-na.ssl-images-amazon.com/images/I/51axlzme6aL) |
-| title          | String  |                                            | Diapers Size 2, 186 Count - Pampers Swaddlers Disposable Baby Diapers, ONE MONTH SUPPLY                                                 |
-| parent         | String  |                                            | B081RGNL17                                                                                                                              |
-| nodeId         | Long    |                                            | 3741281                                                                                                                                 |
-| nodeIdPath     | String  | complete node id paths, separated by colon | 2619525011:3741271:3741281                                                                                                              |
-| nodeLabelPath  | String  |                                            | Baby Products:Diapering:Disposable Diapers                                                                                              |
-| bsrId          | String  |                                            | office-products                                                                                                                         |
-| bsr            | Integer | bsr rank                                   | 1                                                                                                                                       |
-| units          | Integer | monthly sales                              | 26289                                                                                                                                   |
-| unitsGr        | Float   | Monthly sales growth rate                  | -46.3                                                                                                                                   |
-| revenue        | Float   |                                            | 1693537.4                                                                                                                               |
-| price          | Float   |                                            | 64.42                                                                                                                                   |
-| profit         | Float   |                                            | 63.92                                                                                                                                   |
-| fba            | Float   |                                            | 13.58                                                                                                                                   |
-| ratings        | Integer |                                            | 32004                                                                                                                                   |
-| ratingsRate    | Float   |                                            | 40.57                                                                                                                                   |
-| rating         | Float   |                                            | 4.8                                                                                                                                     |
-| ratingsCv      | Integer | ratings of monthly growths                 | 10666                                                                                                                                   |
-| ratingDelta    | Integer | the number of rating in the last 30 days   | 0                                                                                                                                       |
-| availableDate  | Long    |                                            | 1454083200000                                                                                                                           |
-| fulfillment    | String  |                                            | AMZ or FBA or FBM                                                                                                                       |
-| variations     | Integer |                                            | 7                                                                                                                                       |
-| sellers        | Integer |                                            | 7                                                                                                                                       |
-| sellerId       | String  |                                            | A1Y8BVAASXO4R7                                                                                                                          |
-| sellerName     | String  |                                            | Amazon                                                                                                                                  |
-| sellerNation   | String  |                                            | see table 1.5                                                                                                                           |
-| badge          | Badge   | badge object                               |                                                                                                                                         |
-| └bestSeller   | String  | whether to contains best-seller            | Y/N                                                                                                                                     |
-| └amazonChoice | String  | whether to contains Amazon's choice        | Y/N                                                                                                                                     |
-| └newRelease   | String  | whether to contains newRelease             | Y/N                                                                                                                                     |
-| └ebc          | String  | whether to contains A+                     | Y/N                                                                                                                                     |
-| └video        | String  | whether to contains video                  | Y/N                                                                                                                                     |
-| weight         | String  |                                            | 8.88 pounds                                                                                                                             |
-| dimension      | String  |                                            | 13.3 x 15.8 x 10.6 inches                                                                                                               |
-| dimensionsType | String  |                                            | ST,0V                                                                                                                                   |
-| sku            | String  |                                            | ["Color: Beige","Size: 47 inches"]                                                                                                      |
+| marketplace           | String   | marketplace code                     | US                                                                                                                                                     |
+            | currency              | String   | The currency type of this market             | USD                                                                                                                                                    |
+            | nodeId                | String   | category ID                       | 3732981                                                                                                                                                |
+            | nodeLabelName         | String   | category name                     | Mattresses                                                                                                                                             |
+            | nodeIdPath            | String   | category id path                   | 1055398:1063306:1063308:3732961:3732981                                                                                                                |
+            | nodeLabelPath         | String   | category name path                 | Home & Kitchen:Furniture:Bedroom Furniture:Mattresses & Box Springs:Mattresses                                                                         |
+            | nodeLabelLocale       | String   | Node Name Translation                 | 床垫                                                                                                                                                   |
+            | nodeLabelPathLocale   | String   | Node Name Path Translation             | 家居用品 厨房:家具:家具卧室:床垫:床垫                                                                                                                  |
+            | totalProducts         | Integer  | Total number of products                     | 1000                                                                                                                                                   |
+            | ranking               | Integer  | rank                         | 1                                                                                                                                                      |
+            | topProducts           | Integer  | Sample quantity                     | 100                                                                                                                                                    |
+            | brands                | Integer  | Number of brands                     | 34                                                                                                                                                     |
+            | sellers               | Integer  | Number of sellers                     | 60                                                                                                                                                     |
+            | totalUnits            | Integer  | Total monthly sales                     | 539009                                                                                                                                                 |
+            | totalRevenue          | Float    | Total monthly sales revenue                   | 179950610.38                                                                                                                                           |
+            | avgUnits              | Integer  | Monthly average sales volume                     | 5390                                                                                                                                                   |
+            | avgRevenue            | Float    | Monthly average sales revenue                   | 1799506                                                                                                                                                |
+            | avgPrice              | Float    | average price                     | 296.11                                                                                                                                                 |
+            | avgRatings            | Integer  | Average rating score                   | 14591                                                                                                                                                  |
+            | avgRating             | Float    | Average rating value                   | 4.5                                                                                                                                                    |
+            | avgBsr                | Integer  | Average BSR                      | 198077                                                                                                                                                 |
+            | baseAvgVolume         | Float    | Average volume(cm³)               | 529430.46                                                                                                                                              |
+            | avgVolume             | Float    | Average volume(in³)               | 32307.87                                                                                                                                               |
+            | baseAvgWeight         | Float    | Average weight(g)                  | 35301.19                                                                                                                                               |
+            | avgWeight             | Float    | Average weight(pound)              | 77.8259                                                                                                                                                |
+            | avgProfit             | Float    | Average profit margin                   | 68.76                                                                                                                                                  |
+            | avgSellers            | Float    | Average number of sellers                   | 3.3                                                                                                                                                    |
+            | ebcProportion         | Float    | A+Product proportion, percentage            | 80                                                                                                                                                     |
+            | amazonSelfProportion  | Float    | Amazon's self operated proportion, percentage        | 55                                                                                                                                                     |
+            | fbaProportion         | Float    | FBA proportion, percentage              | 22                                                                                                                                                     |
+            | fbmProportion         | Float    | FBM proportion, percentage               | 14                                                                                                                                                     |
+            | sellerNation          | String   | Most sellers belong to code，see table 1.3 | US                                                                                                                                                     |
+            | sellerNationLabel     | String   | Most sellers belong to label         | 美国                                                                                                                                                   |
+            | sellerProportion      | Float    | Most sellers belong to           | 59.3                                                                                                                                                   |
+            | top10Images           | List     | Pictures of the top 10 products               |                                                                                                                                                            |
+            | └asin                | String   | asin                         | B01IU6RJYA                                                                                                                                             |
+            | └image               | String   | ASIN image link                 | [https://images-na.ssl-images-amazon.com/images/I/51+5VVLcXSL.\_AC\_US200\_.jpg](https://images-na.ssl-images-amazon.com/images/I/51+5VVLcXSL._AC_US200_.jpg) |
+            | returnRatio           | Float    | Return rate                       | 3.51                                                                                                                                                   |
+            | avgReturnRatio        | Float    | Average return rate category             | 5.54                                                                                                                                                   |
+            | searchToPurchaseRatio | Float    | Search purchase ratio            | 0.94926                                                                                                                                                |
+                                                                                                    |
 
 #### Request example
 
 ```
-curl 'https://api.sellersprite.com/v1/product/research' \
--H 'secret-key: your secret key' \
--H 'content-type: application/json;charset=UTF-8' \
---data-raw $'{"marketplace": "US",\n "excludeKeywords":"HP",\n "maxPrice":432}' \
---compressed
+curl 'https://api.sellersprite.com/v1/market/research' \
+  -H 'Content-Type: application/json;charset=UTF-8' \
+  -H 'secret-key: your secret key' \
+  --data-raw $'{\n  "marketplace":"US",\n  "size":20,\n  "page":1\n}' \
+  --compressed
 ```
 
-### Competitor lookup
+### Category statistics
 
-* Request URI：POST /v1/product/competitor-lookup
-
+* Request URI：POST /v1/market/statistics
+  
 #### Request parameter
 
 | Name        | Type    | Introduction                                                                                | Example                    | Required |
 | ------------- | --------- | --------------------------------------------------------------------------------------------- | ---------------------------- | ---------- |
-| marketplace | String  | marketplace id                                                                              | see table 1.2              | ✓       |
-| month       | String  | The filter date is the last 30 days by default, and the earliest query time is January 2020 | see table 1.1              |          |
-| brand       | String  |                                                                                             | WWDOLL                     |          |
-| sellerName  | String  |                                                                                             | Chengde Technology Co.     |          |
-| asins       | List    | asin collection,the maximum is 50                                                           | ["B08MT3JR3F"]             |          |
-| nodeIdPath  | String  | complete node id paths, separated by colon                                                  | see product node interface |          |
-| keyword     | String  |                                                                                             | N95                        |          |
-| variation   | String  | whether to query variations                                                                 | Y/N,default N              |          |
-| page        | Integer | one-based page index                                                                        | default 1                  |          |
-| size        | Integer | the size of the page to be returned.                                                        | default 50                 |          |
-| order       | Object  |                                                                                             |                            |          |
-| └field     | String  | sort field                                                                                  | See table 1.6              |          |
-| └desc      | boolean | sort direction                                                                              | true/false,default false   |          |
-
+| marketplace | String   | marketplace code                                          | see table 1.2                                        | ✓       |
+            |  month      | String   | The filter date is the last 30 days by default, and the earliest query time is July 2021 | see table 1.1                                        |              |
+            | topN        | Integer  | Number of header listings                                  | 10                                              |              |
+            | newProduct  | Integer  | New Product Definition                                         | 6                                               |              |
+            | nodeIdPath  | String   | Node ID path string                               | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
 #### Response parameter
 
 | Name           | Type    | Description                                               | Example                                                                                                                                 |
 | ---------------- | --------- | ----------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| asin           | String  | asin                                                      | B078J8VPVW                                                                                                                              |
-| brand          | String  |                                                           | Pampers                                                                                                                                 |
-| brandUrl       | String  |                                                           | [https://www.amazon.com/s?k=HP](https://www.amazon.com/s?k=HP)                                                                             |
-| imageUrl       | String  |                                                           | [https://images-na.ssl-images-amazon.com/images/I/51axlzme6aL .AC_US200.jpg](https://images-na.ssl-images-amazon.com/images/I/51axlzme6aL) |
-| title          | String  |                                                           | Diapers Size 2, 186 Count - Pampers Swaddlers Disposable Baby Diapers, ONE MONTH SUPPLY                                                 |
-| parent         | String  |                                                           | B081RGNL17                                                                                                                              |
-| nodeId         | Long    |                                                           | 3741281                                                                                                                                 |
-| nodeIdPath     | String  | complete node id paths, separated by colon                | 2619525011:3741271:3741281                                                                                                              |
-| nodeLabelPath  | String  |                                                           | Baby Products:Diapering:Disposable Diapers                                                                                              |
-| bsrId          | String  |                                                           | office-products                                                                                                                         |
-| bsr            | Integer |                                                           | 1                                                                                                                                       |
-| units          | Integer | monthly sales                                             | 26289                                                                                                                                   |
-| unitsGr        | Float   | monthly sales growth rate                                 | -46.3                                                                                                                                   |
-| revenue        | Float   |                                                           | 1693537.4                                                                                                                               |
-| price          | Float   |                                                           | 64.42                                                                                                                                   |
-| profit         | Float   |                                                           | 63.92                                                                                                                                   |
-| fba            | Float   |                                                           | 13.58                                                                                                                                   |
-| ratings        | Integer |                                                           | 32004                                                                                                                                   |
-| ratingsRate    | Float   |                                                           | 40.57                                                                                                                                   |
-| rating         | Float   |                                                           | 4.8                                                                                                                                     |
-| ratingsCv      | Integer | ratings increase                                          | 10666                                                                                                                                   |
-| ratingDelta    | Integer | the number of rating in the last 30 days                  | 0                                                                                                                                       |
-| availableDate  | Long    |                                                           | 1454083200000                                                                                                                           |
-| fulfillment    | String  | shipping method                                           | AMZ or FBA or FBM，The default is empty and unlimited                                                                                   |
-| variations     | Integer |                                                           | 7                                                                                                                                       |
-| sellers        | Integer |                                                           | 7                                                                                                                                       |
-| sellerId       | String  |                                                           | A1Y8BVAASXO4R7                                                                                                                          |
-| sellerName     | String  |                                                           | Amazon                                                                                                                                  |
-| sellerNation   | String  | the seller's place of origin is not restricted by default | see table 1.5                                                                                                                           |
-| badge          | Badge   | badge object                                              |                                                                                                                                         |
-| └bestSeller   | String  | whether to contains best-seller                           | Y/N                                                                                                                                     |
-| └amazonChoice | String  | whether to contains Amazon's choice                       | Y/N                                                                                                                                     |
-| └newRelease   | String  | whether to contains newRelease                            | Y/N                                                                                                                                     |
-| └ebc          | String  | whether to contains A+                                    | Y/N                                                                                                                                     |
-| └video        | String  | whether to contains video                                 | Y/N                                                                                                                                     |
-| weight         | String  |                                                           | 8.88 pounds                                                                                                                             |
-| dimension      | String  |                                                           | 13.3 x 15.8 x 10.6 inches                                                                                                               |
-| dimensionsType | String  |                                                           | ST,0V                                                                                                                                   |
-| sku            | String  |                                                           | ["Color: Beige","Size: 47 inches"]                                                                                                      |
-| subcategories  | List    |                                                           |                                                                                                                                         |
-| └code         | String  |                                                           | 1063242                                                                                                                                 |
-| └rank         | Integer |                                                           | 1                                                                                                                                       |
-| └label        | String  |                                                           | Bath Rugs                                                                                                                               |
+ | marketplace          | String   | marketplace code                             | US                                                                                                                            |
+            | currency             | String   | The currency type of this market                     | USD                                                                                                                           |
+            | nodeIdPath           | String   | category ID                           | 1064954:1069242:1069784:1069820:1069838:1069828                                                                               |
+            | nodeLabelPath        | String   | category name                         | Office Products:Office & School Supplies:Writing & Correction Supplies:Pens & Refills:Rollerball Pens:Gel Ink Rollerball Pens |
+            | nodeLabelLocale      | String   | Node Name Translation                         | 办公产品:办公室:写作:钢笔:滚珠笔:中性笔                                                                                       |
+            | countryCode          | String   | National two simplified codes                           | US                                                                                                                            |
+            | totalProducts        | Integer  | Total number of products                             | 5127                                                                                                                          |
+            | products             | Integer  | Number of sample products                           | 100                                                                                                                           |
+            | brands               | Integer  | Number of brands                               | 4                                                                                                                             |
+            | sellers              | Integer  | Number of sellers                               | 58                                                                                                                            |
+            | avgBsr               | Integer  | Average BSR                              | 41970                                                                                                                         |
+            | baseAvgVolume        | Float    | Average volume(cm³)                       | 819942.68                                                                                                                     |
+            | avgVolume            | Float    | Average volume(in³)                       | 50035.97                                                                                                                      |
+            | baseAvgWeight        | Float    | Average weight(g)                          | 2460.95                                                                                                                       |
+            | avgWeight            | Float    | Average weight(pound)                      | 5.4255                                                                                                                        |
+            | avgProfit            | Float    | Average profit margin                           | 66.03                                                                                                                         |
+            | avgUnits             | Integer  | Monthly average sales volume                             | 26255                                                                                                                         |
+            | avgRevenue           | Float    | Monthly average sales revenue                           | 344369                                                                                                                        |
+            | avgPrice             | Float    | average price                             | 13.91                                                                                                                         |
+            | avgRatingsCv         | Integer  | Average monthly comment growth                     | 0                                                                                                                             |
+            | avgRatings           | Integer  | Average rating score                           | 19071                                                                                                                         |
+            | avgRating            | Float    | Average star rating                             | 4.7                                                                                                                           |
+            | avgSellers           | Float    | Average number of sellers                           | 5.2                                                                                                                           |
+            | hlProducts           | Integer  | Number of top N product samples in the header listing           | 5                                                                                                                             |
+            | hlAvgBsr             | Integer  | The average BSR of the top N products in the top listing          | 13126                                                                                                                         |
+            | hlAvgUnits           | Integer  | The top N products in the top listing have an average monthly sales volume         | 1123                                                                                                                          |
+            | hlAvgRevenue         | Float    | The monthly average sales revenue of the top N products in the top listing       | 12342.85                                                                                                                      |
+            | hlAvgPrice           | Float    | The average price of the top N products in the top listing         | 11.77                                                                                                                         |
+            | hlAvgRatingsCv       | Integer  | The average growth rate of monthly reviews for the top N products in the top listing | 0                                                                                                                             |
+            | hlAvgRatings         | Integer  | The average number of comments on the top N products in the top listing       | 2794                                                                                                                          |
+            | hlAvgRating          | Float    | The average star rating of the top N products in the top listing         | 4.7                                                                                                                           |
+            | newProducts          | Integer  | Number of new products                             | 67                                                                                                                            |
+            | newProductProportion | Float    | Proportion of new product quantity                         | 67                                                                                                                            |
+            | newAvgPrice          | Float    | Average price of new products                         | 14.14                                                                                                                         |
+            | newAvgRatings        | Integer  | Average rating score for new products                       | 24295                                                                                                                         |
+            | minNewRatings        | Integer  | Minimum New Product Review Score                       | 24                                                                                                                            |
+            | maxNewRatings        | Integer  | Highest New Product Review Score                       | 6432                                                                                                                          |
+            | newAvgRating         | Float    | Average star rating of new products                         | 4.7                                                                                                                           |
+            | newAvgUnits          | Integer  | Monthly average sales of new products                         | 26425                                                                                                                         |
+            | newAvgRevenue        | Float    | Monthly average sales revenue of new products                       | 350209.91                                                                                                                     |
+            | firstShelfDate       | String   | First listing date of the product                     | 2014-10-30                                                                                                                    |
+            | lastShelfDate        | String   | Latest listing date of the product                     | 2021-04-28                                                                                                                    |
 
 #### Request example
 
 ```
-curl 'https://api.sellersprite.com/v1/product/competitor-lookup' \
--H 'secret-key: your secret key' \
--H 'content-type: application/json;charset=UTF-8' \
---data-raw $'{"marketplace": "US",\n "brand":"Gorilla Grip"\n }' \
---compressed
+curl 'https://api.sellersprite.com/v1/market/statistics' \
+  -H 'Content-Type: application/json;charset=UTF-8' \
+  -H 'secret-key: your secret key' \
+  --data-raw $'{\n  "marketplace":"US",\n  "nodeIdPath":"1064954:1069242:1069784:1069820:1069838:1069828"\n}' \
+  --compressed
 ```
 
 ### Product node
