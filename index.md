@@ -181,7 +181,7 @@ curl 'https://api.sellersprite.com/v1/market/research' \
 | Name        | Type    | Introduction        | Example        | Required |
 | ----------------- | --------- | --------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | ---------- |
 | marketplace | String   | marketplace code       | see table 1.2| ✓       |
-|  month      | String   | The filter date is the last 30 days by default, and the earliest query time is July 2021 | see table 1.1|  |
+| month      | String   | The filter date is the last 30 days by default, and the earliest query time is July 2021 | see table 1.1|  |
 | topN        | Integer  | Number of header listings          | 10          |  |
 | newProduct  | Integer  | New Product Definition     | 6           |  |
 | nodeIdPath  | String   | Node ID path string       | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
@@ -299,47 +299,47 @@ Request URI: POST /v1/market/brand
 
 | Name| Type    | Introduction        | Example      | Required |
 | ----------------- | --------- | --------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | ---------- |
-| marketplace | String   | 市场 id      | 见表 1.2    | ✓       |
-|  month      | String   | 筛选日期,默认最近30天，最早查询时间为2021年7月份 | 见表 1.1    |  |
-| topN        | Integer  | 头部Listing数量          | 10          |  |
-| newProduct  | Integer  | 新品定义     | 6           |  |
-| nodeIdPath  | String   | 节点 id 路径字符串       | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
+| marketplace | String   | marketplace code       | see table 1.2| ✓       |
+| month       | String   | The filter date is the last 30 days by default, and the earliest query time is July 2021 | see table 1.1|  |
+| topN        | Integer  | Number of header listings          | 10          |  |
+| newProduct  | Integer  | New Product Definition     | 6           |  |
+| nodeIdPath  | String   | Node ID path string       | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
 
 #### Response parameter
 
 | Name           | Type    | Description        | Example         |
 | ---------------- | --------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| brand | String   | 品牌名称           | PILOT          |
-| ranking           | Integer  | 排名   | 1  |
-| asins | List     | 包含的商品ASIN集合 | ["B00P19MFYE"] |
-| products          | Integer  | 商品数量，包含新品 | 4  |
-| newProducts       | Integer  | 新品数量           | 1  |
-| newUnits          | Integer  | 新品销量           | 45 |
-| newRevenue        | Float    | 新品销售额         | 2342           |
-| newUnitsRatio     | Float    | 新品销量占比       | 4.3|
-| newRevenueRatio   | Float    | 新品销售额占比     | 4  |
-| avgPrice          | Float    | 平均价格           | 6.19           |
-| ratings           | Integer  | 评分数 | 5695           |
-| rating| Float    | 评分值 | 4.8|
-| reviews           | Integer  | 评论数 | 234|
-| totalUnits        | Integer  | 总销量 | 32342          |
-| totalRevenue      | Float    | 总销额 | 18837.35       |
-| totalUnitsRatio   | Float    | 总销量占比         | 0.4478         |
-| totalRevenueRatio | Float    | 总销额占比         | 0.3052         |
+| brand | String   | brand           | PILOT          |
+| ranking           | Integer  | rank   | 1  |
+| asins | List     | The set of ASINs for the included products | ["B00P19MFYE"] |
+| products          | Integer  | Product quantity, including new products | 4  |
+| newProducts       | Integer  | Number of new products           | 1  |
+| newUnits          | Integer  | New product sales           | 45 |
+| newRevenue        | Float    | New product sales         | 2342           |
+| newUnitsRatio     | Float    | New product sales proportion       | 4.3|
+| newRevenueRatio   | Float    | New product sales proportion     | 4  |
+| avgPrice          | Float    | average price           | 6.19           |
+| ratings           | Integer  | Score evaluation | 5695           |
+| rating| Float    | Rating value | 4.8|
+| reviews           | Integer  | Number of comments | 234|
+| totalUnits        | Integer  | Total sales volume | 32342          |
+| totalRevenue      | Float    | Total sales | 18837.35       |
+| totalUnitsRatio   | Float    | Total sales proportion         | 0.4478         |
+| totalRevenueRatio | Float    | Proportion of total sales         | 0.3052         |
 
 ####
 
 #### Request example
 
 ```
-    curl 'https://api.sellersprite.com/v1/market/brand' \
+curl 'https://api.sellersprite.com/v1/market/brand' \
 -H 'Content-Type: application/json;charset=UTF-8' \
--H 'secret-key: 你的密钥' \
+-H 'secret-key: your secret key' \
 --data-raw $'{\n  "marketplace":"US",\n  "nodeIdPath":"1064954:1069242:1069784:1069820:1069838:1069828"\n}' \
 --compressed
 ```
 
-### 卖家集中度
+### Seller concentration
 
 Request URI: POST /v1/market/seller
 
@@ -347,45 +347,45 @@ Request URI: POST /v1/market/seller
 
 | Name| Type    | Introduction        | Example      | Required |
 | ----------------- | --------- | --------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | ---------- |
-| marketplace | String   | 市场 id      | 见表 1.2    | ✓       |
-|  month      | String   | 筛选日期,默认最近30天，最早查询时间为2021年7月份 | 见表 1.1    |  |
-| topN        | Integer  | 头部Listing数量          | 10          |  |
-| newProduct  | Integer  | 新品定义     | 6           |  |
-| nodeIdPath  | String   | 节点 id 路径字符串       | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
+| marketplace | String   | marketplace code       | see table 1.2| ✓       |
+| month       | String   | The filter date is the last 30 days by default, and the earliest query time is July 2021 | see table 1.1|  |
+| topN        | Integer  | Number of header listings          | 10          |  |
+| newProduct  | Integer  | New Product Definition     | 6           |  |
+| nodeIdPath  | String   | Node ID path string       | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
 
 #### Response parameter
 
 | Name           | Type    | Description        | Example         |
 | ---------------- | --------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| name  | String   | 卖家名称           | JA Wholesale LLC |
-| ranking           | Integer  | 排名   | 1    |
-| asinSet           | List     | 包含的商品ASIN集合 | ["B00P19MFYE"]   |
-| products          | Integer  | 商品数量，包含新品 | 4    |
-| newProducts       | Integer  | 新品数量           | 1    |
-| newUnits          | Integer  | 新品销量           | 45   |
-| newRevenue        | Float    | 新品销售额         | 2342 |
-| newUnitsRatio     | Float    | 新品销量占比       | 4.3  |
-| newRevenueRatio   | Float    | 新品销售额占比     | 4    |
-| avgPrice          | Float    | 平均价格           | 6.19 |
-| ratings           | Integer  | 评分数 | 5695 |
-| rating| Float    | 评分值 | 4.8  |
-| reviews           | Integer  | 评论数 | 234  |
-| totalUnits        | Integer  | 总销量 | 32342|
-| totalRevenue      | Float    | 总销额 | 18837.35         |
-| totalUnitsRatio   | Float    | 总销量占比         | 0.4478           |
-| totalRevenueRatio | Float    | 总销额占比         | 0.3052           |
+| name  | String   | seller name           | JA Wholesale LLC |
+| ranking           | Integer  | rank   | 1    |
+| asinSet           | List     | The set of ASINs for the included products | ["B00P19MFYE"]   |
+| products          | Integer  | Product quantity, including new products | 4    |
+| newProducts       | Integer  | Number of new products           | 1    |
+| newUnits          | Integer  | New product sales           | 45   |
+| newRevenue        | Float    | New product sales         | 2342 |
+| newUnitsRatio     | Float    | New product sales proportion       | 4.3  |
+| newRevenueRatio   | Float    | New product sales proportion     | 4    |
+| avgPrice          | Float    | Average price | 6.19 |
+| ratings           | Integer  | Score evaluation | 5695 |
+| rating| Float    | Rating value | 4.8  |
+| reviews           | Integer  | Number of comments | 234  |
+| totalUnits        | Integer  | Total sales volume | 32342|
+| totalRevenue      | Float    | Total sales | 18837.35         |
+| totalUnitsRatio   | Float    | Total sales proportion         | 0.4478           |
+| totalRevenueRatio | Float    | Proportion of total sales         | 0.3052           |
 
 #### Request example
 
 ```
 curl 'https://api.sellersprite.com/v1/market/seller' \
 -H 'Content-Type: application/json;charset=UTF-8' \
--H 'secret-key: 你的密钥' \
+-H 'secret-key: your secret key' \
 --data-raw $'{\n  "marketplace":"US",\n  "nodeIdPath":"1064954:1069242:1069784:1069820:1069838:1069828"\n}' \
 --compressed
 ```
 
-### 卖家类型分布
+### Distribution of seller types
 
 Request URI: POST /v1/market/seller/type
 
@@ -393,24 +393,24 @@ Request URI: POST /v1/market/seller/type
 
 | Name| Type    | Introduction        | Example      | Required |
 | ----------------- | --------- | --------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | ---------- |
-| marketplace | String   | 市场 id      | 见表 1.2    | ✓       |
-|  month      | String   | 筛选日期,默认最近30天，最早查询时间为2021年7月份 | 见表 1.1    |  |
-| topN        | Integer  | 头部Listing数量          | 10          |  |
-| newProduct  | Integer  | 新品定义     | 6           |  |
-| nodeIdPath  | String   | 节点 id 路径字符串       | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
+| marketplace | String   | marketplace code       | see table 1.2| ✓       |
+| month       | String   | The filter date is the last 30 days by default, and the earliest query time is July 2021 | see table 1.1|  |
+| topN        | Integer  | Number of header listings          | 10          |  |
+| newProduct  | Integer  | New Product Definition     | 6           |  |
+| nodeIdPath  | String   | Node ID path string       | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
 
 #### Response parameter
 
 | Name           | Type    | Description        | Example         |
 | ---------------- | --------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| label      | String   | 类型说明     | Amazon自营 |
-| asinNum    | Integer  | ASIN数量     | 4          |
-| asinRatio  | Float    | ASIN数量占比 | 0.03       |
-| units      | Integer  | 月销量       | 79875      |
-| unitsRatio | Float    | 月销量占比   | 0.0345     |
-| ratings    | Integer  | 评分数       | 6607       |
-| rating     | Float    | 评分值       | 4.7        |
-| productNum | Integer  | 商品总数     | 3          |
+| label      | String   | Type Description     | Amazon self operated |
+| asinNum    | Integer  | Number of ASINs     | 4          |
+| asinRatio  | Float    | The proportion of ASIN quantity | 0.03       |
+| units      | Integer  | Monthly sales volume       | 79875      |
+| unitsRatio | Float    | Monthly sales proportion   | 0.0345     |
+| ratings    | Integer  | Score evaluation       | 6607       |
+| rating     | Float    | Rating value       | 4.7        |
+| productNum | Integer  | Total number of products     | 3          |
 
 ####
 
@@ -432,23 +432,23 @@ Request URI: POST /v1/market/seller/location
 
 | Name| Type    | Introduction        | Example      | Required |
 | ----------------- | --------- | --------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | ---------- |
-| marketplace | String   | 市场 id      | 见表 1.2    | ✓       |
-|  month      | String   | 筛选日期,默认最近30天，最早查询时间为2021年7月份 | 见表 1.1    |  |
-| topN        | Integer  | 头部Listing数量          | 10          |  |
-| newProduct  | Integer  | 新品定义     | 6           |  |
-| nodeIdPath  | String   | 节点 id 路径字符串       | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
+| marketplace | String   | marketplace code       | see table 1.2| ✓       |
+| month       | String   | The filter date is the last 30 days by default, and the earliest query time is July 2021 | see table 1.1|  |
+| topN        | Integer  | Number of header listings          | 10          |  |
+| newProduct  | Integer  | New Product Definition     | 6           |  |
+| nodeIdPath  | String   | Node ID path string       | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
 
 #### Response parameter
 
 | Name           | Type    | Description        | Example         |
 | ---------------- | --------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| label      | String   | 类型说明       | 美国           |
-| country    | String   | 国家           | 美国           |
-| asins      | List     | 包含的asin列表 | ["B00P19MFYE"] |
-| products   | Integer  | 产品数         | 3  |
-| revenue    | Float    | 销售额         | 47492.83       |
-| units      | Integer  | 销量           | 4107           |
-| unitsRatio | Float    | 销量占比       | 0.7313         |
+| label      | String   | Type Description       | 美国           |
+| country    | String   | country           | 美国           |
+| asins      | List     | List of ASINs included | ["B00P19MFYE"] |
+| products   | Integer  | Number of products         | 3  |
+| revenue    | Float    | value of sales         | 47492.83       |
+| units      | Integer  | sales volume           | 4107           |
+| unitsRatio | Float    | Sales proportion       | 0.7313         |
 
 ####
 
@@ -462,7 +462,7 @@ curl 'https://api.sellersprite.com/v1/market/seller/location' \
 --compressed
 ```
 
-### 商品需求趋势
+### Product demand trend
 
 Request URI: POST /v1/market/performance
 
@@ -470,24 +470,24 @@ Request URI: POST /v1/market/performance
 
 | Name| Type    | Introduction        | Example      | Required |
 | ----------------- | --------- | --------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | ---------- |
-| marketplace | String   | 市场 id      | 见表 1.2    | ✓       |
-|  month      | String   | 筛选日期,默认最近30天，最早查询时间为2021年7月份 | 见表 1.1    |  |
-| topN        | Integer  | 头部Listing数量          | 10          |  |
-| newProduct  | Integer  | 新品定义     | 6           |  |
-| nodeIdPath  | String   | 节点 id 路径字符串       | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
+| marketplace | String   | marketplace code       | see table 1.2| ✓       |
+| month       | String   | The filter date is the last 30 days by default, and the earliest query time is July 2021 | see table 1.1|  |
+| topN        | Integer  | Number of header listings          | 10          |  |
+| newProduct  | Integer  | New Product Definition     | 6           |  |
+| nodeIdPath  | String   | Node ID path string       | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
 
 #### Response parameter
 
 | Name           | Type    | Description        | Example         |
 | ---------------- | --------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| asinCount    | String   | asin数量       | 22187      |
-| returnRatio  | String   | 退货率，百分比 | 1.38       |
-| searchToPurchaseRatio    | List     | 搜索购买比，千分比         | 3.17875    |
-| avgReturnRatio           | Integer  | 类目平均退货率，百分比     | 2.72       |
-| avgSearchToPurchaseRatio | Float    | 类目平均搜索购买比，千分比 | 2.6        |
-| items        | List     | 月浏览趋势     |    |
-| └date       | String   | 时间，yyyy-MM-dd格式       | 2022-09-10 |
-| └glanceViews| Integer  | 浏览量         | 2          |
+| asinCount    | String   | Number of ASINs       | 22187      |
+| returnRatio  | String   | Return rate, percentage | 1.38       |
+| searchToPurchaseRatio    | List     | Search purchase ratio         | 3.17875    |
+| avgReturnRatio           | Integer  | Average return rate of categories, percentage     | 2.72       |
+| avgSearchToPurchaseRatio | Float    | Average search to purchase ratio of categories, percentage per thousand | 2.6        |
+| items        | List     | Monthly browsing trends     |    |
+| └date       | String   | Time, yyyy MM dd format       | 2022-09-10 |
+| └glanceViews| Integer  | View volume         | 2          |
 
 #### Request example
 
@@ -499,7 +499,7 @@ curl 'https://api.sellersprite.com/v1/market/performance' \
 --compressed
 ```
 
-### 上架时间分布
+### Distribution of listing time
 
 Request URI: POST /v1/market/shelf/time
 
@@ -507,23 +507,23 @@ Request URI: POST /v1/market/shelf/time
 
 | Name| Type    | Introduction        | Example      | Required |
 | ----------------- | --------- | --------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | ---------- |
-| marketplace | String   | 市场 id      | 见表 1.2    | ✓       |
-|  month      | String   | 筛选日期,默认最近30天，最早查询时间为2021年7月份 | 见表 1.1    |  |
-| topN        | Integer  | 头部Listing数量          | 10          |  |
-| newProduct  | Integer  | 新品定义     | 6           |  |
-| nodeIdPath  | String   | 节点 id 路径字符串       | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
+| marketplace | String   | marketplace code       | see table 1.2| ✓       |
+| month       | String   | The filter date is the last 30 days by default, and the earliest query time is July 2021 | see table 1.1|  |
+| topN        | Integer  | Number of header listings          | 10          |  |
+| newProduct  | Integer  | New Product Definition     | 6           |  |
+| nodeIdPath  | String   | Node ID path string       | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
 
 #### Response parameter
 
 | Name           | Type    | Description        | Example         |
 | ---------------- | --------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| label      | String   | 类型说明       | 3年以上        |
-| shelfTime  | String   | 上架时间       | 3年以上        |
-| asins      | List     | 包含的asin列表 | ["B00P19MFYE"] |
-| products   | Integer  | 产品数         | B07Z82895W     |
-| revenue    | Float    | 销售额         | 40846.76       |
-| units      | Integer  | 销量           | 4684           |
-| unitsRatio | Float    | 销量占比       | 0.834          |
+| label      | String   | Type Description       |         |
+| shelfTime  | String   | Listing time       | 3年以上        |
+| asins      | List     | List of ASINs included | ["B00P19MFYE"] |
+| products   | Integer  | Number of products         | B07Z82895W     |
+| revenue    | Float    | value of sales         | 47492.83       |
+| units      | Integer  | sales volume           | 4107           |
+| unitsRatio | Float    | Sales proportion       | 0.7313         |
 
 ####
 
@@ -537,7 +537,7 @@ curl 'https://api.sellersprite.com/v1/market/shelf/time' \
 --compressed
 ```
 
-### 上架趋势分布
+### Distribution of Listing Trends
 
 Request URI: POST /v1/market/shelf/trend
 
@@ -545,23 +545,23 @@ Request URI: POST /v1/market/shelf/trend
 
 | Name| Type    | Introduction        | Example      | Required |
 | ----------------- | --------- | --------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | ---------- |
-| marketplace | String   | 市场 id      | 见表 1.2    | ✓       |
-|  month      | String   | 筛选日期,默认最近30天，最早查询时间为2021年7月份 | 见表 1.1    |  |
-| topN        | Integer  | 头部Listing数量          | 10          |  |
-| newProduct  | Integer  | 新品定义     | 6           |  |
-| nodeIdPath  | String   | 节点 id 路径字符串       | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
+| marketplace | String   | marketplace code       | see table 1.2| ✓       |
+| month       | String   | The filter date is the last 30 days by default, and the earliest query time is July 2021 | see table 1.1|  |
+| topN        | Integer  | Number of header listings          | 10          |  |
+| newProduct  | Integer  | New Product Definition     | 6           |  |
+| nodeIdPath  | String   | Node ID path string       | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
 
 #### Response parameter
 
 | Name           | Type    | Description        | Example         |
 | ---------------- | --------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| label      | String   | 类型说明       | 2014           |
-| year       | String   | 年份，yyyy格式 | 2014           |
-| asins      | List     | 包含的asin列表 | ["B00P19MFYE"] |
-| products   | Integer  | 产品数         | 1  |
-| revenue    | Float    | 销售额         | 2515           |
-| units      | Integer  | 销量           | 18837.35       |
-| unitsRatio | Float    | 销量占比       | 0.4478         |
+| label      | String   | Type Description       |            |
+| year       | String   | Year, in yyyy format | 2014           |
+| asins      | List     | List of ASINs included | ["B00P19MFYE"] |
+| products   | Integer  | Number of products         | 1  |
+| revenue    | Float    | value of sales         | 47492.83       |
+| units      | Integer  | sales volume           | 4107           |
+| unitsRatio | Float    | Sales proportion       | 0.7313         |
 
 ####
 
@@ -575,7 +575,7 @@ curl 'https://api.sellersprite.com/v1/market/shelf/trend' \
 --compressed
 ```
 
-### 评分数分布
+### Score distribution
 
 Request URI: POST /v1/market/ratings
 
@@ -583,22 +583,23 @@ Request URI: POST /v1/market/ratings
 
 | Name| Type    | Introduction        | Example      | Required |
 | ----------------- | --------- | --------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | ---------- |
-| marketplace | String   | 市场 id      | 见表 1.2    | ✓       |
-|  month      | String   | 筛选日期,默认最近30天，最早查询时间为2021年7月份 | 见表 1.1    |  |
-| topN        | Integer  | 头部Listing数量          | 10          |  |
-| newProduct  | Integer  | 新品定义     | 6           |  |
-| nodeIdPath  | String   | 节点 id 路径字符串       | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
+| marketplace | String   | marketplace code       | see table 1.2| ✓       |
+| month       | String   | The filter date is the last 30 days by default, and the earliest query time is July 2021 | see table 1.1|  |
+| topN        | Integer  | Number of header listings          | 10          |  |
+| newProduct  | Integer  | New Product Definition     | 6           |  |
+| nodeIdPath  | String   | Node ID path string       | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
+
 
 #### Response parameter
 
 | Name           | Type    | Description        | Example         |
 | ---------------- | --------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| label      | String   | 类型说明       | 500以上        |
-| asins      | List     | 包含的asin列表 | 5  |
-| products   | Integer  | 产品数         | ["B00P19MFYE"] |
-| revenue    | Float    | 销售额         | 61714.24       |
-| units      | Integer  | 销量           | 5616           |
-| unitsRatio | Float    | 销量占比       | 0.9743         |
+| label      | String   | Type Description       |            |
+| asins      | List     | List of ASINs included | ["B00P19MFYE"] |
+| products   | Integer  | Number of products         | 1  |
+| revenue    | Float    | value of sales         | 47492.83       |
+| units      | Integer  | sales volume           | 4107           |
+| unitsRatio | Float    | Sales proportion       | 0.7313         |
 
 #### Request example
 
@@ -618,22 +619,22 @@ Request URI: POST /v1/market/rating
 
 | Name| Type    | Introduction        | Example      | Required |
 | ----------------- | --------- | --------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | ---------- |
-| marketplace | String   | 市场 id      | 见表 1.2    | ✓       |
-|  month      | String   | 筛选日期,默认最近30天，最早查询时间为2021年7月份 | 见表 1.1    |  |
-| topN        | Integer  | 头部Listing数量          | 10          |  |
-| newProduct  | Integer  | 新品定义     | 6           |  |
-| nodeIdPath  | String   | 节点 id 路径字符串       | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
+| marketplace | String   | marketplace code       | see table 1.2| ✓       |
+| month       | String   | The filter date is the last 30 days by default, and the earliest query time is July 2021 | see table 1.1|  |
+| topN        | Integer  | Number of header listings          | 10          |  |
+| newProduct  | Integer  | New Product Definition     | 6           |  |
+| nodeIdPath  | String   | Node ID path string       | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
 
 #### Response parameter
 
 | Name           | Type    | Description        | Example         |
 | ---------------- | --------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| label      | String   | 类型说明       | 4.5以上        |
-| asins      | List     | 包含的asin列表 | ["B00P19MFYE"] |
-| products   | Integer  | 产品数         | 5  |
-| revenue    | Float    | 销售额         | 59934.22       |
-| units      | Integer  | 销量           | 5418           |
-| unitsRatio | Float    | 销量占比       | 0.9647         |
+| label      | String   | Type Description       |            |
+| asins      | List     | List of ASINs included | ["B00P19MFYE"] |
+| products   | Integer  | Number of products         | 1  |
+| revenue    | Float    | value of sales         | 47492.83       |
+| units      | Integer  | sales volume           | 4107           |
+| unitsRatio | Float    | Sales proportion       | 0.7313         |
 
 #### Request example
 
@@ -653,22 +654,22 @@ Request URI: POST /v1/market/price
 
 | Name| Type    | Introduction        | Example      | Required |
 | ----------------- | --------- | --------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | ---------- |
-| marketplace | String   | 市场 id      | 见表 1.2    | ✓       |
-|  month      | String   | 筛选日期,默认最近30天，最早查询时间为2021年7月份 | 见表 1.1    |  |
-| topN        | Integer  | 头部Listing数量          | 10          |  |
-| newProduct  | Integer  | 新品定义     | 6           |  |
-| nodeIdPath  | String   | 节点 id 路径字符串       | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
+| marketplace | String   | marketplace code       | see table 1.2| ✓       |
+| month       | String   | The filter date is the last 30 days by default, and the earliest query time is July 2021 | see table 1.1|  |
+| topN        | Integer  | Number of header listings          | 10          |  |
+| newProduct  | Integer  | New Product Definition     | 6           |  |
+| nodeIdPath  | String   | Node ID path string       | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
 
 #### Response parameter
 
 | Name           | Type    | Description        | Example         |
 | ---------------- | --------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| label      | String   | 类型说明       | 5-10           |
-| asins      | List     | 包含的asin列表 | ["B00P19MFYE"] |
-| products   | Integer  | 产品数         | 3  |
-| revenue    | Float    | 销售额         | 33058.76       |
-| units      | Integer  | 销量           | 4024           |
-| unitsRatio | Float    | 销量占比       | 0.7165         |
+| label      | String   | Type Description       |            |
+| asins      | List     | List of ASINs included | ["B00P19MFYE"] |
+| products   | Integer  | Number of products         | 1  |
+| revenue    | Float    | value of sales         | 47492.83       |
+| units      | Integer  | sales volume           | 4107           |
+| unitsRatio | Float    | Sales proportion       | 0.7313         |
 
 #### Request example
 
@@ -680,7 +681,7 @@ curl 'https://api.sellersprite.com/v1/market/price' \
 --compressed
 ```
 
-### A+视频分布
+### A+Video Distribution
 
 Request URI: POST /v1/market/ebc
 
@@ -688,21 +689,21 @@ Request URI: POST /v1/market/ebc
 
 | Name| Type    | Introduction        | Example      | Required |
 | ----------------- | --------- | --------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | ---------- |
-| marketplace | String   | 市场 id      | 见表 1.2    | ✓       |
-|  month      | String   | 筛选日期,默认最近30天，最早查询时间为2021年7月份 | 见表 1.1    |  |
-| topN        | Integer  | 头部Listing数量          | 10          |  |
-| newProduct  | Integer  | 新品定义     | 6           |  |
-| nodeIdPath  | String   | 节点 id 路径字符串       | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
+| marketplace | String   | marketplace code       | see table 1.2| ✓       |
+| month       | String   | The filter date is the last 30 days by default, and the earliest query time is July 2021 | see table 1.1|  |
+| topN        | Integer  | Number of header listings          | 10          |  |
+| newProduct  | Integer  | New Product Definition     | 6           |  |
+| nodeIdPath  | String   | Node ID path string       | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
 
 #### Response parameter
 
 | Name           | Type    | Description        | Example         |
 | ---------------- | --------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| label         | String   | 类型说明         | 有A+有视频 |
-| products      | Integer  | 产品数           | 1          |
-| productsRatio | Float    | 类目名称产品占比 | 20         |
-| units         | Integer  | 销量 | 1311       |
-| unitsRatio    | Float    | 销量占比         | 23.34      |
+| label      | String   | Type Description       |            |
+| products   | Integer  | Number of products         | 1  |
+| revenue    | Float    | value of sales         | 47492.83       |
+| units      | Integer  | sales volume           | 4107           |
+| unitsRatio | Float    | Sales proportion       | 0.7313         |
 
 #### Request example
 
@@ -714,64 +715,41 @@ curl 'https://api.sellersprite.com/v1/market/ebc' \
 --compressed
 ```
 
-        ## 附录
+## Appendix
 
 #### 表 1.1 查询日期
 
-| 参数值        | 说明   |
-| ------------------- | ------------------------------------ |
-| nearly        | 最近 30 天         |
-| 格式为 yyyyMM | 具体某一月，代表某一个月的日期 |
+#### Table 1.1 Query month
+
+| Value              | description           |
+| -------------------- | ----------------------- |
+| nearly             | last 30 days          |
+| formated as yyyyMM | example:202202202213  |
 
 #### 表 1.2 市场
 
-| 参数值 | 说明     |
-| ------------ | -------------- |
-| US     | 美国站   |
-| UK     | 英国站   |
-| DE     | 德国站   |
-| FR     | 法国站   |
-| JP     | 日本站   |
-| CA     | 加拿大站 |
-| IT     | 意大利   |
-| ES     | 西班牙   |
+#### Table 1.2 Marketplace code
 
-| 参数值 | 说明     |
-| ------------ | -------------- |
-| EN     | 信封装   |
-| ST     | 标准     |
-| OS     | 大件     |
-| O      | 其他尺寸 |
+| Value | Description    |
+| ------- | ---------------- |
+| US    | United States  |
+| UK    | United Kingdom |
+| DE    | Germany        |
+| FR    | France         |
+| JP    | Japan          |
+| CA    | Canada         |
+| IT    | Italy          |
+| ES    | Spain          |
 
-#### 表 1.3 卖家所属地
+#### Table 1.3 Seller's Nationality
 
-| 参数值 | 说明         |
-| ------------ | ------------------ |
-| CN     | 中国         |
-| HK     | 中国香港特区 |
-| US     | 美国         |
-| JP     | 日本         |
-| DE     | 德国         |
-| FR     | 法国         |
+| Value | Description     |
+| ------- | ----------------- |
+| CN    | China           |
+| HK    | Hong Kong,China |
+| US    | United States   |
+| JP    | Japan           |
+| DE    | Germany         |
+| FR    | France          |
 
-其他国家二字码见链接：[http://www.mamicode.com/info-detail-1583748.html](http://www.mamicode.com/info-detail-1583748.html)
-
-#### 表 1.4 选产品和查竞品排序字段
-
-| 参数值   | 说明           |
-| -------------------------- | -------------------- |
-| total_units          | 月销量         |
-| total_amount         | 月销售额       |
-| bsr_rank | bsr排名        |
-| price    | 价格           |
-| rating   | 评分           |
-| reviews  | 评分数         |
-| profit   | 毛利率         |
-| reviews_rate         | 留评率         |
-| available_date       | 上架时间       |
-| questions| Q & A          |
-| total_units_growth   | 月销量增长率   |
-| total_amount_growth  | 月销售额增长率 |
-| reviews_increasement | 月新增评分数   |
-| bsr_rank_cv          | 近7天BSR增长数 |
-| bsr_rank_cr          | 近7天BSR增长率 |
+See link for 2-character codes for other countries：[http://www.mamicode.com/info-detail-1583748.html](http://www.mamicode.com/info-detail-1583748.html)
