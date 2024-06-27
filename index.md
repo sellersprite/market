@@ -245,7 +245,7 @@ curl 'https://api.sellersprite.com/v1/market/statistics' \
 
 ### Product concentration
 
-* Request URI：**GET** /v1/market/goods
+* Request URI：GET /v1/market/goods
 
 #### Request parameter
 
@@ -284,52 +284,52 @@ curl 'https://api.sellersprite.com/v1/market/statistics' \
 #### Request example
 
 ```
-    curl 'https://api.sellersprite.com/v1/market/goods' \
+curl 'https://api.sellersprite.com/v1/market/goods' \
 -H 'Content-Type: application/json;charset=UTF-8' \
 -H 'secret-key: your secret key' \
 --data-raw $'{\n  "marketplace":"US",\n  "nodeIdPath":"1064954:1069242:1069784:1069820:1069838:1069828"\n}' \
 --compressed
 ```
 
-## **品牌集中度**
+### Brand concentration
 
-**请求 URL:/v1/market/brand，请求方式 POST**
+Request URI: POST /v1/market/brand
 
-#### **请求参数**
+#### Request parameter
 
-| **参数名称**    | **参数类型** | **参数说明**     | **举例**        | **是否必传** |
+| 参数名称    | 参数类型 | 参数说明     | 举例        | 是否必传 |
 | ----------------- | -------------- | ------------------------------------------------------ | ----------------------------------------------------- | -------------- |
-| **marketplace** | **String**   | **市场 id**      | **见表 1.2**    | **✓**       |
-|  **month**      | **String**   | **筛选日期,默认最近30天，最早查询时间为2021年7月份** | **见表 1.1**    |  |
-| **topN**        | **Integer**  | **头部Listing数量**          | **10**          |  |
-| **newProduct**  | **Integer**  | **新品定义**     | **6**           |  |
-| **nodeIdPath**  | **String**   | **节点 id 路径字符串**       | **1064954:1069242:1069784:1069820:1069838:1069828** | **✓**       |
+| marketplace | String   | 市场 id      | 见表 1.2    | ✓       |
+|  month      | String   | 筛选日期,默认最近30天，最早查询时间为2021年7月份 | 见表 1.1    |  |
+| topN        | Integer  | 头部Listing数量          | 10          |  |
+| newProduct  | Integer  | 新品定义     | 6           |  |
+| nodeIdPath  | String   | 节点 id 路径字符串       | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
 
-#### **响应参数**
+#### 响应参数
 
-| **参数名称**          | **参数类型** | **参数说明**           | **举例**           |
+| 参数名称          | 参数类型 | 参数说明           | 举例           |
 | ----------------------- | -------------- | ------------------------ | -------------------- |
-| **brand** | **String**   | **品牌名称**           | **PILOT**          |
-| **ranking**           | **Integer**  | **排名**   | **1**  |
-| **asins** | **List**     | **包含的商品ASIN集合** | **["B00P19MFYE"]** |
-| **products**          | **Integer**  | **商品数量，包含新品** | **4**  |
-| **newProducts**       | **Integer**  | **新品数量**           | **1**  |
-| **newUnits**          | **Integer**  | **新品销量**           | **45** |
-| **newRevenue**        | **Float**    | **新品销售额**         | **2342**           |
-| **newUnitsRatio**     | **Float**    | **新品销量占比**       | **4.3**|
-| **newRevenueRatio**   | **Float**    | **新品销售额占比**     | **4**  |
-| **avgPrice**          | **Float**    | **平均价格**           | **6.19**           |
-| **ratings**           | **Integer**  | **评分数** | **5695**           |
-| **rating**| **Float**    | **评分值** | **4.8**|
-| **reviews**           | **Integer**  | **评论数** | **234**|
-| **totalUnits**        | **Integer**  | **总销量** | **32342**          |
-| **totalRevenue**      | **Float**    | **总销额** | **18837.35**       |
-| **totalUnitsRatio**   | **Float**    | **总销量占比**         | **0.4478**         |
-| **totalRevenueRatio** | **Float**    | **总销额占比**         | **0.3052**         |
+| brand | String   | 品牌名称           | PILOT          |
+| ranking           | Integer  | 排名   | 1  |
+| asins | List     | 包含的商品ASIN集合 | ["B00P19MFYE"] |
+| products          | Integer  | 商品数量，包含新品 | 4  |
+| newProducts       | Integer  | 新品数量           | 1  |
+| newUnits          | Integer  | 新品销量           | 45 |
+| newRevenue        | Float    | 新品销售额         | 2342           |
+| newUnitsRatio     | Float    | 新品销量占比       | 4.3|
+| newRevenueRatio   | Float    | 新品销售额占比     | 4  |
+| avgPrice          | Float    | 平均价格           | 6.19           |
+| ratings           | Integer  | 评分数 | 5695           |
+| rating| Float    | 评分值 | 4.8|
+| reviews           | Integer  | 评论数 | 234|
+| totalUnits        | Integer  | 总销量 | 32342          |
+| totalRevenue      | Float    | 总销额 | 18837.35       |
+| totalUnitsRatio   | Float    | 总销量占比         | 0.4478         |
+| totalRevenueRatio | Float    | 总销额占比         | 0.3052         |
 
 ####
 
-#### **请求示例**
+#### Request example
 
 ```
     curl 'https://api.sellersprite.com/v1/market/brand' \
@@ -339,441 +339,439 @@ curl 'https://api.sellersprite.com/v1/market/statistics' \
 --compressed
 ```
 
-### **卖家集中度**
+### 卖家集中度
 
-**请求 URL:/v1/market/seller，请求方式 POST**
+Request URI: POST /v1/market/seller
 
-#### **请求参数**
+#### Request parameter
 
-| **参数名称**    | **参数类型** | **参数说明**     | **举例**        | **是否必传** |
+| 参数名称    | 参数类型 | 参数说明     | 举例        | 是否必传 |
 | ----------------- | -------------- | ------------------------------------------------------ | ----------------------------------------------------- | -------------- |
-| **marketplace** | **String**   | **市场 id**      | **见表 1.2**    | **✓**       |
-|  **month**      | **String**   | **筛选日期,默认最近30天，最早查询时间为2021年7月份** | **见表 1.1**    |  |
-| **topN**        | **Integer**  | **头部Listing数量**          | **10**          |  |
-| **newProduct**  | **Integer**  | **新品定义**     | **6**           |  |
-| **nodeIdPath**  | **String**   | **节点 id 路径字符串**       | **1064954:1069242:1069784:1069820:1069838:1069828** | **✓**       |
+| marketplace | String   | 市场 id      | 见表 1.2    | ✓       |
+|  month      | String   | 筛选日期,默认最近30天，最早查询时间为2021年7月份 | 见表 1.1    |  |
+| topN        | Integer  | 头部Listing数量          | 10          |  |
+| newProduct  | Integer  | 新品定义     | 6           |  |
+| nodeIdPath  | String   | 节点 id 路径字符串       | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
 
-#### **返回参数**
+#### Response parameter
 
-| **参数名称**          | **参数类型** | **参数说明**           | **举例** |
+| 参数名称          | 参数类型 | 参数说明           | 举例 |
 | ----------------------- | -------------- | ------------------------ | ---------------------- |
-| **name**  | **String**   | **卖家名称**           | **JA Wholesale LLC** |
-| **ranking**           | **Integer**  | **排名**   | **1**    |
-| **asinSet**           | **List**     | **包含的商品ASIN集合** | **["B00P19MFYE"]**   |
-| **products**          | **Integer**  | **商品数量，包含新品** | **4**    |
-| **newProducts**       | **Integer**  | **新品数量**           | **1**    |
-| **newUnits**          | **Integer**  | **新品销量**           | **45**   |
-| **newRevenue**        | **Float**    | **新品销售额**         | **2342** |
-| **newUnitsRatio**     | **Float**    | **新品销量占比**       | **4.3**  |
-| **newRevenueRatio**   | **Float**    | **新品销售额占比**     | **4**    |
-| **avgPrice**          | **Float**    | **平均价格**           | **6.19** |
-| **ratings**           | **Integer**  | **评分数** | **5695** |
-| **rating**| **Float**    | **评分值** | **4.8**  |
-| **reviews**           | **Integer**  | **评论数** | **234**  |
-| **totalUnits**        | **Integer**  | **总销量** | **32342**|
-| **totalRevenue**      | **Float**    | **总销额** | **18837.35**         |
-| **totalUnitsRatio**   | **Float**    | **总销量占比**         | **0.4478**           |
-| **totalRevenueRatio** | **Float**    | **总销额占比**         | **0.3052**           |
+| name  | String   | 卖家名称           | JA Wholesale LLC |
+| ranking           | Integer  | 排名   | 1    |
+| asinSet           | List     | 包含的商品ASIN集合 | ["B00P19MFYE"]   |
+| products          | Integer  | 商品数量，包含新品 | 4    |
+| newProducts       | Integer  | 新品数量           | 1    |
+| newUnits          | Integer  | 新品销量           | 45   |
+| newRevenue        | Float    | 新品销售额         | 2342 |
+| newUnitsRatio     | Float    | 新品销量占比       | 4.3  |
+| newRevenueRatio   | Float    | 新品销售额占比     | 4    |
+| avgPrice          | Float    | 平均价格           | 6.19 |
+| ratings           | Integer  | 评分数 | 5695 |
+| rating| Float    | 评分值 | 4.8  |
+| reviews           | Integer  | 评论数 | 234  |
+| totalUnits        | Integer  | 总销量 | 32342|
+| totalRevenue      | Float    | 总销额 | 18837.35         |
+| totalUnitsRatio   | Float    | 总销量占比         | 0.4478           |
+| totalRevenueRatio | Float    | 总销额占比         | 0.3052           |
 
-#### **请求示例**
+#### Request example
 
 ```
-    curl 'https://api.sellersprite.com/v1/market/seller' \
+curl 'https://api.sellersprite.com/v1/market/seller' \
 -H 'Content-Type: application/json;charset=UTF-8' \
 -H 'secret-key: 你的密钥' \
 --data-raw $'{\n  "marketplace":"US",\n  "nodeIdPath":"1064954:1069242:1069784:1069820:1069838:1069828"\n}' \
 --compressed
 ```
 
-        ## **卖家类型分布**
+### 卖家类型分布
 
-**请求 URL:/v1/market/seller/type，请求方式 POST**
+Request URI: POST /v1/market/seller/type
 
-#### **请求参数**
+#### Request parameter
 
-| **参数名称**    | **参数类型** | **参数说明**     | **举例**        | **是否必传** |
+| 参数名称    | 参数类型 | 参数说明     | 举例        | 是否必传 |
 | ----------------- | -------------- | ------------------------------------------------------ | ----------------------------------------------------- | -------------- |
-| **marketplace** | **String**   | **市场 id**      | **见表 1.2**    | **✓**       |
-|  **month**      | **String**   | **筛选日期,默认最近30天，最早查询时间为2021年7月份** | **见表 1.1**    |  |
-| **topN**        | **Integer**  | **头部Listing数量**          | **10**          |  |
-| **newProduct**  | **Integer**  | **新品定义**     | **6**           |  |
-| **nodeIdPath**  | **String**   | **节点 id 路径字符串**       | **1064954:1069242:1069784:1069820:1069838:1069828** | **✓**       |
+| marketplace | String   | 市场 id      | 见表 1.2    | ✓       |
+|  month      | String   | 筛选日期,默认最近30天，最早查询时间为2021年7月份 | 见表 1.1    |  |
+| topN        | Integer  | 头部Listing数量          | 10          |  |
+| newProduct  | Integer  | 新品定义     | 6           |  |
+| nodeIdPath  | String   | 节点 id 路径字符串       | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
 
-#### **响应参数**
+#### 响应参数
 
-| **参数名称**   | **参数类型** | **参数说明**     | **举例**       |
+| 参数名称   | 参数类型 | 参数说明     | 举例       |
 | ---------------- | -------------- | ------------------ | ---------------- |
-| **label**      | **String**   | **类型说明**     | **Amazon自营** |
-| **asinNum**    | **Integer**  | **ASIN数量**     | **4**          |
-| **asinRatio**  | **Float**    | **ASIN数量占比** | **0.03**       |
-| **units**      | **Integer**  | **月销量**       | **79875**      |
-| **unitsRatio** | **Float**    | **月销量占比**   | **0.0345**     |
-| **ratings**    | **Integer**  | **评分数**       | **6607**       |
-| **rating**     | **Float**    | **评分值**       | **4.7**        |
-| **productNum** | **Integer**  | **商品总数**     | **3**          |
+| label      | String   | 类型说明     | Amazon自营 |
+| asinNum    | Integer  | ASIN数量     | 4          |
+| asinRatio  | Float    | ASIN数量占比 | 0.03       |
+| units      | Integer  | 月销量       | 79875      |
+| unitsRatio | Float    | 月销量占比   | 0.0345     |
+| ratings    | Integer  | 评分数       | 6607       |
+| rating     | Float    | 评分值       | 4.7        |
+| productNum | Integer  | 商品总数     | 3          |
 
 ####
 
-#### **请求示例**
+#### Request example
 
 ```
-    curl 'https://api.sellersprite.com/v1/market/seller/type' \
+curl 'https://api.sellersprite.com/v1/market/seller/type' \
 -H 'Content-Type: application/json;charset=UTF-8' \
 -H 'secret-key: 你的密钥' \
 --data-raw $'{\n  "marketplace":"US",\n  "nodeIdPath":"1064954:1069242:1069784:1069820:1069838:1069828"\n}' \
 --compressed
 ```
 
-        ## **卖家所属地分布**
+### 卖家所属地分布
 
-**请求 URL:/v1/market/seller/location，请求方式 POST**
+Request URI: POST /v1/market/seller/location
 
-#### **请求参数**
+#### Request parameter
 
-| **参数名称**    | **参数类型** | **参数说明**     | **举例**        | **是否必传** |
+| 参数名称    | 参数类型 | 参数说明     | 举例        | 是否必传 |
 | ----------------- | -------------- | ------------------------------------------------------ | ----------------------------------------------------- | -------------- |
-| **marketplace** | **String**   | **市场 id**      | **见表 1.2**    | **✓**       |
-|  **month**      | **String**   | **筛选日期,默认最近30天，最早查询时间为2021年7月份** | **见表 1.1**    |  |
-| **topN**        | **Integer**  | **头部Listing数量**          | **10**          |  |
-| **newProduct**  | **Integer**  | **新品定义**     | **6**           |  |
-| **nodeIdPath**  | **String**   | **节点 id 路径字符串**       | **1064954:1069242:1069784:1069820:1069838:1069828** | **✓**       |
+| marketplace | String   | 市场 id      | 见表 1.2    | ✓       |
+|  month      | String   | 筛选日期,默认最近30天，最早查询时间为2021年7月份 | 见表 1.1    |  |
+| topN        | Integer  | 头部Listing数量          | 10          |  |
+| newProduct  | Integer  | 新品定义     | 6           |  |
+| nodeIdPath  | String   | 节点 id 路径字符串       | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
 
-#### **响应参数**
+#### 响应参数
 
-| **参数名称**   | **参数类型** | **参数说明**       | **举例**           |
+| 参数名称   | 参数类型 | 参数说明       | 举例           |
 | ---------------- | -------------- | -------------------- | -------------------- |
-| **label**      | **String**   | **类型说明**       | **美国**           |
-| **country**    | **String**   | **国家**           | **美国**           |
-| **asins**      | **List**     | **包含的asin列表** | **["B00P19MFYE"]** |
-| **products**   | **Integer**  | **产品数**         | **3**  |
-| **revenue**    | **Float**    | **销售额**         | **47492.83**       |
-| **units**      | **Integer**  | **销量**           | **4107**           |
-| **unitsRatio** | **Float**    | **销量占比**       | **0.7313**         |
+| label      | String   | 类型说明       | 美国           |
+| country    | String   | 国家           | 美国           |
+| asins      | List     | 包含的asin列表 | ["B00P19MFYE"] |
+| products   | Integer  | 产品数         | 3  |
+| revenue    | Float    | 销售额         | 47492.83       |
+| units      | Integer  | 销量           | 4107           |
+| unitsRatio | Float    | 销量占比       | 0.7313         |
 
 ####
 
-#### **请求示例**
+#### Request example
 
 ```
-    curl 'https://api.sellersprite.com/v1/market/seller/location' \
+curl 'https://api.sellersprite.com/v1/market/seller/location' \
 -H 'Content-Type: application/json;charset=UTF-8' \
 -H 'secret-key: 你的密钥' \
 --data-raw $'{\n  "marketplace":"US",\n  "nodeIdPath":"1064954:1069242:1069784:1069820:1069838:1069828"\n}' \
 --compressed
 ```
 
-        ## **商品需求趋势**
+### 商品需求趋势
 
-**请求 URL:/v1/market/performance，请求方式 POST**
+Request URI: POST /v1/market/performance
 
-#### **请求参数**
+#### Request parameter
 
-| **参数名称**    | **参数类型** | **参数说明**     | **举例**        | **是否必传** |
+| 参数名称    | 参数类型 | 参数说明     | 举例        | 是否必传 |
 | ----------------- | -------------- | ------------------------------------------------------ | ----------------------------------------------------- | -------------- |
-| **marketplace** | **String**   | **市场 id**      | **见表 1.2**    | **✓**       |
-|  **month**      | **String**   | **筛选日期,默认最近30天，最早查询时间为2021年7月份** | **见表 1.1**    |  |
-| **topN**        | **Integer**  | **头部Listing数量**          | **10**          |  |
-| **newProduct**  | **Integer**  | **新品定义**     | **6**           |  |
-| **nodeIdPath**  | **String**   | **节点 id 路径字符串**       | **1064954:1069242:1069784:1069820:1069838:1069828** | **✓**       |
+| marketplace | String   | 市场 id      | 见表 1.2    | ✓       |
+|  month      | String   | 筛选日期,默认最近30天，最早查询时间为2021年7月份 | 见表 1.1    |  |
+| topN        | Integer  | 头部Listing数量          | 10          |  |
+| newProduct  | Integer  | 新品定义     | 6           |  |
+| nodeIdPath  | String   | 节点 id 路径字符串       | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
 
-#### **返回参数**
+#### Response parameter
 
-| **参数名称**     | **参数类型** | **参数说明**       | **举例**       |
+| 参数名称     | 参数类型 | 参数说明       | 举例       |
 | ------------------------------ | -------------- | -------------------------------- | ---------------- |
-| **asinCount**    | **String**   | **asin数量**       | **22187**      |
-| **returnRatio**  | **String**   | **退货率，百分比** | **1.38**       |
-| **searchToPurchaseRatio**    | **List**     | **搜索购买比，千分比**         | **3.17875**    |
-| **avgReturnRatio**           | **Integer**  | **类目平均退货率，百分比**     | **2.72**       |
-| **avgSearchToPurchaseRatio** | **Float**    | **类目平均搜索购买比，千分比** | **2.6**        |
-| **items**        | **List**     | **月浏览趋势**     |    |
-| **└**date       | **String**   | **时间，yyyy-MM-dd格式**       | **2022-09-10** |
-| **└**glanceViews| **Integer**  | **浏览量**         | **2**          |
+| asinCount    | String   | asin数量       | 22187      |
+| returnRatio  | String   | 退货率，百分比 | 1.38       |
+| searchToPurchaseRatio    | List     | 搜索购买比，千分比         | 3.17875    |
+| avgReturnRatio           | Integer  | 类目平均退货率，百分比     | 2.72       |
+| avgSearchToPurchaseRatio | Float    | 类目平均搜索购买比，千分比 | 2.6        |
+| items        | List     | 月浏览趋势     |    |
+| └date       | String   | 时间，yyyy-MM-dd格式       | 2022-09-10 |
+| └glanceViews| Integer  | 浏览量         | 2          |
 
-#### **请求示例**
+#### Request example
 
 ```
-    curl 'https://api.sellersprite.com/v1/market/performance' \
+curl 'https://api.sellersprite.com/v1/market/performance' \
 -H 'Content-Type: application/json;charset=UTF-8' \
 -H 'secret-key: 你的密钥' \
 --data-raw $'{\n  "marketplace":"US",\n  "nodeIdPath":"1064954:1069242:1069784:1069820:1069838:1069828"\n}' \
 --compressed
 ```
 
-        ## **上架时间分布**
+### 上架时间分布
 
-**请求 URL:/v1/market/shelf/time，请求方式 POST**
+Request URI: POST /v1/market/shelf/time
 
-#### **请求参数**
+#### Request parameter
 
-| **参数名称**    | **参数类型** | **参数说明**     | **举例**        | **是否必传** |
+| 参数名称    | 参数类型 | 参数说明     | 举例        | 是否必传 |
 | ----------------- | -------------- | ------------------------------------------------------ | ----------------------------------------------------- | -------------- |
-| **marketplace** | **String**   | **市场 id**      | **见表 1.2**    | **✓**       |
-|  **month**      | **String**   | **筛选日期,默认最近30天，最早查询时间为2021年7月份** | **见表 1.1**    |  |
-| **topN**        | **Integer**  | **头部Listing数量**          | **10**          |  |
-| **newProduct**  | **Integer**  | **新品定义**     | **6**           |  |
-| **nodeIdPath**  | **String**   | **节点 id 路径字符串**       | **1064954:1069242:1069784:1069820:1069838:1069828** | **✓**       |
+| marketplace | String   | 市场 id      | 见表 1.2    | ✓       |
+|  month      | String   | 筛选日期,默认最近30天，最早查询时间为2021年7月份 | 见表 1.1    |  |
+| topN        | Integer  | 头部Listing数量          | 10          |  |
+| newProduct  | Integer  | 新品定义     | 6           |  |
+| nodeIdPath  | String   | 节点 id 路径字符串       | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
 
-#### **返回参数**
+#### Response parameter
 
-| **参数名称**   | **参数类型** | **参数说明**       | **举例**           |
+| 参数名称   | 参数类型 | 参数说明       | 举例           |
 | ---------------- | -------------- | -------------------- | -------------------- |
-| **label**      | **String**   | **类型说明**       | **3年以上**        |
-| **shelfTime**  | **String**   | **上架时间**       | **3年以上**        |
-| **asins**      | **List**     | **包含的asin列表** | **["B00P19MFYE"]** |
-| **products**   | **Integer**  | **产品数**         | **B07Z82895W**     |
-| **revenue**    | **Float**    | **销售额**         | **40846.76**       |
-| **units**      | **Integer**  | **销量**           | **4684**           |
-| **unitsRatio** | **Float**    | **销量占比**       | **0.834**          |
+| label      | String   | 类型说明       | 3年以上        |
+| shelfTime  | String   | 上架时间       | 3年以上        |
+| asins      | List     | 包含的asin列表 | ["B00P19MFYE"] |
+| products   | Integer  | 产品数         | B07Z82895W     |
+| revenue    | Float    | 销售额         | 40846.76       |
+| units      | Integer  | 销量           | 4684           |
+| unitsRatio | Float    | 销量占比       | 0.834          |
 
 ####
 
-#### **请求示例**
+#### Request example
 
 ```
-    curl 'https://api.sellersprite.com/v1/market/shelf/time' \
+curl 'https://api.sellersprite.com/v1/market/shelf/time' \
 -H 'Content-Type: application/json;charset=UTF-8' \
 -H 'secret-key: 你的密钥' \
 --data-raw $'{\n  "marketplace":"US",\n  "nodeIdPath":"1064954:1069242:1069784:1069820:1069838:1069828"\n}' \
 --compressed
 ```
 
-        ## **上架趋势分布**
+### 上架趋势分布
 
-**请求 URL:/v1/market/shelf/trend，请求方式 POST**
+Request URI: POST /v1/market/shelf/trend
 
-#### **请求参数**
+#### Request parameter
 
-| **参数名称**    | **参数类型** | **参数说明**     | **举例**        | **是否必传** |
+| 参数名称    | 参数类型 | 参数说明     | 举例        | 是否必传 |
 | ----------------- | -------------- | ------------------------------------------------------ | ----------------------------------------------------- | -------------- |
-| **marketplace** | **String**   | **市场 id**      | **见表 1.2**    | **✓**       |
-|  **month**      | **String**   | **筛选日期,默认最近30天，最早查询时间为2021年7月份** | **见表 1.1**    |  |
-| **topN**        | **Integer**  | **头部Listing数量**          | **10**          |  |
-| **newProduct**  | **Integer**  | **新品定义**     | **6**           |  |
-| **nodeIdPath**  | **String**   | **节点 id 路径字符串**       | **1064954:1069242:1069784:1069820:1069838:1069828** | **✓**       |
+| marketplace | String   | 市场 id      | 见表 1.2    | ✓       |
+|  month      | String   | 筛选日期,默认最近30天，最早查询时间为2021年7月份 | 见表 1.1    |  |
+| topN        | Integer  | 头部Listing数量          | 10          |  |
+| newProduct  | Integer  | 新品定义     | 6           |  |
+| nodeIdPath  | String   | 节点 id 路径字符串       | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
 
-#### **返回参数**
+#### Response parameter
 
-| **参数名称**   | **参数类型** | **参数说明**       | **举例**           |
+| 参数名称   | 参数类型 | 参数说明       | 举例           |
 | ---------------- | -------------- | -------------------- | -------------------- |
-| **label**      | **String**   | **类型说明**       | **2014**           |
-| **year**       | **String**   | **年份，yyyy格式** | **2014**           |
-| **asins**      | **List**     | **包含的asin列表** | **["B00P19MFYE"]** |
-| **products**   | **Integer**  | **产品数**         | **1**  |
-| **revenue**    | **Float**    | **销售额**         | **2515**           |
-| **units**      | **Integer**  | **销量**           | **18837.35**       |
-| **unitsRatio** | **Float**    | **销量占比**       | **0.4478**         |
+| label      | String   | 类型说明       | 2014           |
+| year       | String   | 年份，yyyy格式 | 2014           |
+| asins      | List     | 包含的asin列表 | ["B00P19MFYE"] |
+| products   | Integer  | 产品数         | 1  |
+| revenue    | Float    | 销售额         | 2515           |
+| units      | Integer  | 销量           | 18837.35       |
+| unitsRatio | Float    | 销量占比       | 0.4478         |
 
 ####
 
-#### **请求示例**
+#### Request example
 
 ```
-    curl 'https://api.sellersprite.com/v1/market/shelf/trend' \
+curl 'https://api.sellersprite.com/v1/market/shelf/trend' \
 -H 'Content-Type: application/json;charset=UTF-8' \
 -H 'secret-key: 你的密钥' \
 --data-raw $'{\n  "marketplace":"US",\n  "nodeIdPath":"1064954:1069242:1069784:1069820:1069838:1069828"\n}' \
 --compressed
 ```
 
-        ## **评分数分布**
+### 评分数分布
 
-**请求 URL:/v1/market/ratings，请求方式 POST**
+Request URI: POST /v1/market/ratings
 
-#### **请求参数**
+#### Request parameter
 
-| **参数名称**    | **参数类型** | **参数说明**     | **举例**        | **是否必传** |
+| 参数名称    | 参数类型 | 参数说明     | 举例        | 是否必传 |
 | ----------------- | -------------- | ------------------------------------------------------ | ----------------------------------------------------- | -------------- |
-| **marketplace** | **String**   | **市场 id**      | **见表 1.2**    | **✓**       |
-|  **month**      | **String**   | **筛选日期,默认最近30天，最早查询时间为2021年7月份** | **见表 1.1**    |  |
-| **topN**        | **Integer**  | **头部Listing数量**          | **10**          |  |
-| **newProduct**  | **Integer**  | **新品定义**     | **6**           |  |
-| **nodeIdPath**  | **String**   | **节点 id 路径字符串**       | **1064954:1069242:1069784:1069820:1069838:1069828** | **✓**       |
+| marketplace | String   | 市场 id      | 见表 1.2    | ✓       |
+|  month      | String   | 筛选日期,默认最近30天，最早查询时间为2021年7月份 | 见表 1.1    |  |
+| topN        | Integer  | 头部Listing数量          | 10          |  |
+| newProduct  | Integer  | 新品定义     | 6           |  |
+| nodeIdPath  | String   | 节点 id 路径字符串       | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
 
-#### **返回参数**
+#### Response parameter
 
-| **参数名称**   | **参数类型** | **参数说明**       | **举例**           |
+| 参数名称   | 参数类型 | 参数说明       | 举例           |
 | ---------------- | -------------- | -------------------- | -------------------- |
-| **label**      | **String**   | **类型说明**       | **500以上**        |
-| **asins**      | **List**     | **包含的asin列表** | **5**  |
-| **products**   | **Integer**  | **产品数**         | **["B00P19MFYE"]** |
-| **revenue**    | **Float**    | **销售额**         | **61714.24**       |
-| **units**      | **Integer**  | **销量**           | **5616**           |
-| **unitsRatio** | **Float**    | **销量占比**       | **0.9743**         |
+| label      | String   | 类型说明       | 500以上        |
+| asins      | List     | 包含的asin列表 | 5  |
+| products   | Integer  | 产品数         | ["B00P19MFYE"] |
+| revenue    | Float    | 销售额         | 61714.24       |
+| units      | Integer  | 销量           | 5616           |
+| unitsRatio | Float    | 销量占比       | 0.9743         |
 
-#### **请求示例**
+#### Request example
 
 ```
-    curl 'https://api.sellersprite.com/v1/market/ratings' \
+curl 'https://api.sellersprite.com/v1/market/ratings' \
 -H 'Content-Type: application/json;charset=UTF-8' \
 -H 'secret-key: 你的密钥' \
 --data-raw $'{\n  "marketplace":"US",\n  "nodeIdPath":"1064954:1069242:1069784:1069820:1069838:1069828"\n}' \
 --compressed
 ```
 
-        ##
+### 评分值分布
 
-        ## **评分值分布**
+Request URI: POST /v1/market/rating
 
-**请求 URL:/v1/market/rating，请求方式 POST**
+#### Request parameter
 
-#### **请求参数**
-
-| **参数名称**    | **参数类型** | **参数说明**     | **举例**        | **是否必传** |
+| 参数名称    | 参数类型 | 参数说明     | 举例        | 是否必传 |
 | ----------------- | -------------- | ------------------------------------------------------ | ----------------------------------------------------- | -------------- |
-| **marketplace** | **String**   | **市场 id**      | **见表 1.2**    | **✓**       |
-|  **month**      | **String**   | **筛选日期,默认最近30天，最早查询时间为2021年7月份** | **见表 1.1**    |  |
-| **topN**        | **Integer**  | **头部Listing数量**          | **10**          |  |
-| **newProduct**  | **Integer**  | **新品定义**     | **6**           |  |
-| **nodeIdPath**  | **String**   | **节点 id 路径字符串**       | **1064954:1069242:1069784:1069820:1069838:1069828** | **✓**       |
+| marketplace | String   | 市场 id      | 见表 1.2    | ✓       |
+|  month      | String   | 筛选日期,默认最近30天，最早查询时间为2021年7月份 | 见表 1.1    |  |
+| topN        | Integer  | 头部Listing数量          | 10          |  |
+| newProduct  | Integer  | 新品定义     | 6           |  |
+| nodeIdPath  | String   | 节点 id 路径字符串       | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
 
-#### **返回参数**
+#### Response parameter
 
-| **参数名称**   | **参数类型** | **参数说明**       | **举例**           |
+| 参数名称   | 参数类型 | 参数说明       | 举例           |
 | ---------------- | -------------- | -------------------- | -------------------- |
-| **label**      | **String**   | **类型说明**       | **4.5以上**        |
-| **asins**      | **List**     | **包含的asin列表** | **["B00P19MFYE"]** |
-| **products**   | **Integer**  | **产品数**         | **5**  |
-| **revenue**    | **Float**    | **销售额**         | **59934.22**       |
-| **units**      | **Integer**  | **销量**           | **5418**           |
-| **unitsRatio** | **Float**    | **销量占比**       | **0.9647**         |
+| label      | String   | 类型说明       | 4.5以上        |
+| asins      | List     | 包含的asin列表 | ["B00P19MFYE"] |
+| products   | Integer  | 产品数         | 5  |
+| revenue    | Float    | 销售额         | 59934.22       |
+| units      | Integer  | 销量           | 5418           |
+| unitsRatio | Float    | 销量占比       | 0.9647         |
 
-#### **请求示例**
+#### Request example
 
 ```
-    curl 'https://api.sellersprite.com/v1/market/rating' \
+curl 'https://api.sellersprite.com/v1/market/rating' \
 -H 'Content-Type: application/json;charset=UTF-8' \
 -H 'secret-key: 你的密钥' \
 --data-raw $'{\n  "marketplace":"US",\n  "nodeIdPath":"1064954:1069242:1069784:1069820:1069838:1069828"\n}' \
 --compressed
 ```
 
-        ## **价格分布**
+### 价格分布
 
-**请求 URL:/v1/market/price，请求方式 POST**
+Request URI: POST /v1/market/price
 
-#### **请求参数**
+#### Request parameter
 
-| **参数名称**    | **参数类型** | **参数说明**     | **举例**        | **是否必传** |
+| 参数名称    | 参数类型 | 参数说明     | 举例        | 是否必传 |
 | ----------------- | -------------- | ------------------------------------------------------ | ----------------------------------------------------- | -------------- |
-| **marketplace** | **String**   | **市场 id**      | **见表 1.2**    | **✓**       |
-|  **month**      | **String**   | **筛选日期,默认最近30天，最早查询时间为2021年7月份** | **见表 1.1**    |  |
-| **topN**        | **Integer**  | **头部Listing数量**          | **10**          |  |
-| **newProduct**  | **Integer**  | **新品定义**     | **6**           |  |
-| **nodeIdPath**  | **String**   | **节点 id 路径字符串**       | **1064954:1069242:1069784:1069820:1069838:1069828** | **✓**       |
+| marketplace | String   | 市场 id      | 见表 1.2    | ✓       |
+|  month      | String   | 筛选日期,默认最近30天，最早查询时间为2021年7月份 | 见表 1.1    |  |
+| topN        | Integer  | 头部Listing数量          | 10          |  |
+| newProduct  | Integer  | 新品定义     | 6           |  |
+| nodeIdPath  | String   | 节点 id 路径字符串       | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
 
-#### **返回参数**
+#### Response parameter
 
-| **参数名称**   | **参数类型** | **参数说明**       | **举例**           |
+| 参数名称   | 参数类型 | 参数说明       | 举例           |
 | ---------------- | -------------- | -------------------- | -------------------- |
-| **label**      | **String**   | **类型说明**       | **5-10**           |
-| **asins**      | **List**     | **包含的asin列表** | **["B00P19MFYE"]** |
-| **products**   | **Integer**  | **产品数**         | **3**  |
-| **revenue**    | **Float**    | **销售额**         | **33058.76**       |
-| **units**      | **Integer**  | **销量**           | **4024**           |
-| **unitsRatio** | **Float**    | **销量占比**       | **0.7165**         |
+| label      | String   | 类型说明       | 5-10           |
+| asins      | List     | 包含的asin列表 | ["B00P19MFYE"] |
+| products   | Integer  | 产品数         | 3  |
+| revenue    | Float    | 销售额         | 33058.76       |
+| units      | Integer  | 销量           | 4024           |
+| unitsRatio | Float    | 销量占比       | 0.7165         |
 
-#### **请求示例**
+#### Request example
 
 ```
-    curl 'https://api.sellersprite.com/v1/market/price' \
+curl 'https://api.sellersprite.com/v1/market/price' \
 -H 'Content-Type: application/json;charset=UTF-8' \
 -H 'secret-key: 你的密钥' \
 --data-raw $'{\n  "marketplace":"US",\n  "nodeIdPath":"1064954:1069242:1069784:1069820:1069838:1069828"\n}' \
 --compressed
 ```
 
-        ## **A+视频分布**
+### A+视频分布
 
-**请求 URL:/v1/market/ebc，请求方式 POST**
+Request URI: POST /v1/market/ebc
 
-#### **请求参数**
+#### Request parameter
 
-| **参数名称**    | **参数类型** | **参数说明**     | **举例**        | **是否必传** |
+| 参数名称    | 参数类型 | 参数说明     | 举例        | 是否必传 |
 | ----------------- | -------------- | ------------------------------------------------------ | ----------------------------------------------------- | -------------- |
-| **marketplace** | **String**   | **市场 id**      | **见表 1.2**    | **✓**       |
-|  **month**      | **String**   | **筛选日期,默认最近30天，最早查询时间为2021年7月份** | **见表 1.1**    |  |
-| **topN**        | **Integer**  | **头部Listing数量**          | **10**          |  |
-| **newProduct**  | **Integer**  | **新品定义**     | **6**           |  |
-| **nodeIdPath**  | **String**   | **节点 id 路径字符串**       | **1064954:1069242:1069784:1069820:1069838:1069828** | **✓**       |
+| marketplace | String   | 市场 id      | 见表 1.2    | ✓       |
+|  month      | String   | 筛选日期,默认最近30天，最早查询时间为2021年7月份 | 见表 1.1    |  |
+| topN        | Integer  | 头部Listing数量          | 10          |  |
+| newProduct  | Integer  | 新品定义     | 6           |  |
+| nodeIdPath  | String   | 节点 id 路径字符串       | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
 
-#### **返回参数**
+#### Response parameter
 
-| **参数名称**      | **参数类型** | **参数说明**         | **举例**       |
+| 参数名称      | 参数类型 | 参数说明         | 举例       |
 | ------------------- | -------------- | ---------------------- | ---------------- |
-| **label**         | **String**   | **类型说明**         | **有A+有视频** |
-| **products**      | **Integer**  | **产品数**           | **1**          |
-| **productsRatio** | **Float**    | **类目名称**产品占比 | **20**         |
-| **units**         | **Integer**  | **销量** | **1311**       |
-| **unitsRatio**    | **Float**    | **销量占比**         | **23.34**      |
+| label         | String   | 类型说明         | 有A+有视频 |
+| products      | Integer  | 产品数           | 1          |
+| productsRatio | Float    | 类目名称产品占比 | 20         |
+| units         | Integer  | 销量 | 1311       |
+| unitsRatio    | Float    | 销量占比         | 23.34      |
 
-#### **请求示例**
+#### Request example
 
 ```
-    curl 'https://api.sellersprite.com/v1/market/ebc' \
+curl 'https://api.sellersprite.com/v1/market/ebc' \
 -H 'Content-Type: application/json;charset=UTF-8' \
 -H 'secret-key: 你的密钥' \
 --data-raw $'{\n  "marketplace":"US",\n  "nodeIdPath":"1064954:1069242:1069784:1069820:1069838:1069828"\n}' \
 --compressed
 ```
 
-        ## **附录**
+        ## 附录
 
-#### **表 1.1 查询日期**
+#### 表 1.1 查询日期
 
-| **参数值**        | **说明**   |
+| 参数值        | 说明   |
 | ------------------- | ------------------------------------ |
-| **nearly**        | **最近 30 天**         |
-| **格式为 yyyyMM** | **具体某一月，代表某一个月的日期** |
+| nearly        | 最近 30 天         |
+| 格式为 yyyyMM | 具体某一月，代表某一个月的日期 |
 
-#### **表 1.2 市场**
+#### 表 1.2 市场
 
-| **参数值** | **说明**     |
+| 参数值 | 说明     |
 | ------------ | -------------- |
-| **US**     | **美国站**   |
-| **UK**     | **英国站**   |
-| **DE**     | **德国站**   |
-| **FR**     | **法国站**   |
-| **JP**     | **日本站**   |
-| **CA**     | **加拿大站** |
-| **IT**     | **意大利**   |
-| **ES**     | **西班牙**   |
+| US     | 美国站   |
+| UK     | 英国站   |
+| DE     | 德国站   |
+| FR     | 法国站   |
+| JP     | 日本站   |
+| CA     | 加拿大站 |
+| IT     | 意大利   |
+| ES     | 西班牙   |
 
-| **参数值** | **说明**     |
+| 参数值 | 说明     |
 | ------------ | -------------- |
-| **EN**     | **信封装**   |
-| **ST**     | **标准**     |
-| **OS**     | **大件**     |
-| **O**      | **其他尺寸** |
+| EN     | 信封装   |
+| ST     | 标准     |
+| OS     | 大件     |
+| O      | 其他尺寸 |
 
-#### **表 1.3 卖家所属地**
+#### 表 1.3 卖家所属地
 
-| **参数值** | **说明**         |
+| 参数值 | 说明         |
 | ------------ | ------------------ |
-| **CN**     | **中国**         |
-| **HK**     | **中国香港特区** |
-| **US**     | **美国**         |
-| **JP**     | **日本**         |
-| **DE**     | **德国**         |
-| **FR**     | **法国**         |
+| CN     | 中国         |
+| HK     | 中国香港特区 |
+| US     | 美国         |
+| JP     | 日本         |
+| DE     | 德国         |
+| FR     | 法国         |
 
-**其他国家二字码见链接：**[http://www.mamicode.com/info-detail-1583748.html](http://www.mamicode.com/info-detail-1583748.html)
+其他国家二字码见链接：[http://www.mamicode.com/info-detail-1583748.html](http://www.mamicode.com/info-detail-1583748.html)
 
-#### **表 1.4 选产品和查竞品排序字段**
+#### 表 1.4 选产品和查竞品排序字段
 
-| **参数值**   | **说明**           |
+| 参数值   | 说明           |
 | -------------------------- | -------------------- |
-| **total_units**          | **月销量**         |
-| **total_amount**         | **月销售额**       |
-| **bsr_rank** | **bsr排名**        |
-| **price**    | **价格**           |
-| **rating**   | **评分**           |
-| **reviews**  | **评分数**         |
-| **profit**   | **毛利率**         |
-| **reviews_rate**         | **留评率**         |
-| **available_date**       | **上架时间**       |
-| **questions**| **Q & A**          |
-| **total_units_growth**   | **月销量增长率**   |
-| **total_amount_growth**  | **月销售额增长率** |
-| **reviews_increasement** | **月新增评分数**   |
-| **bsr_rank_cv**          | **近7天BSR增长数** |
-| **bsr_rank_cr**          | **近7天BSR增长率** |
+| total_units          | 月销量         |
+| total_amount         | 月销售额       |
+| bsr_rank | bsr排名        |
+| price    | 价格           |
+| rating   | 评分           |
+| reviews  | 评分数         |
+| profit   | 毛利率         |
+| reviews_rate         | 留评率         |
+| available_date       | 上架时间       |
+| questions| Q & A          |
+| total_units_growth   | 月销量增长率   |
+| total_amount_growth  | 月销售额增长率 |
+| reviews_increasement | 月新增评分数   |
+| bsr_rank_cv          | 近7天BSR增长数 |
+| bsr_rank_cr          | 近7天BSR增长率 |
