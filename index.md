@@ -1,4 +1,4 @@
-### Request a gateway
+f### Request a gateway
 {:toc #markdown-toc}
 * The request gateway for external APIs is:[https://api.sellersprite.com/](https://api.sellersprite.com/)
 
@@ -181,11 +181,12 @@ curl 'https://api.sellersprite.com/v1/market/research' \
 
 | Name        | Type    | Introduction                                                                                | Example                    | Required |
 | ------------- | --------- | --------------------------------------------------------------------------------------------- | ---------------------------- | ---------- |
-| marketplace | String   | marketplace code                                          | see table 1.2                                        | ✓       |
-            |  month      | String   | The filter date is the last 30 days by default, and the earliest query time is July 2021 | see table 1.1                                        |              |
+| marketplace | String   | marketplace code                                           | see table 1.2                                    | ✓       |
+            |  month      | String   | The filter date is the last 30 days by default, and the earliest query time is July 2021 | see table 1.1                                    |              |
             | topN        | Integer  | Number of header listings                                  | 10                                              |              |
             | newProduct  | Integer  | New Product Definition                                         | 6                                               |              |
             | nodeIdPath  | String   | Node ID path string                               | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
+
 #### Response parameter
 
 | Name           | Type    | Description                                               | Example                                                                                                                                 |
@@ -243,35 +244,52 @@ curl 'https://api.sellersprite.com/v1/market/statistics' \
   --compressed
 ```
 
-### Product node
+### Product concentration
 
-* Request URI：**GET** /v1/product/node
+* Request URI：**GET** /v1/market/goods
 
 #### Request parameter
 
 | Name        | Type   | description                                | Example                    | Required |
 | ------------- | -------- | -------------------------------------------- | ---------------------------- | ---------- |
-| marketplace | String | marketplace code                           | see table 1.2              | ✓       |
-| nodeIdPath  | String | complete node id paths, separated by colon | 2619525011:3741271:3741281 |          |
-| keyword     | String | keywords or node id                        | Books or 4053              |          |
+    | marketplace | String   | marketplace code                                           | see table 1.2                                    | ✓       |
+    |  month      | String   | The filter date is the last 30 days by default, and the earliest query time is July 2021 | see table 1.1                                    |              |
+    | asins       | List     | filter asin                                         | ["B00P19MFYE"]                                  |              |
+    | topN        | Integer  | Number of header listings                                  | 10                                              |              |
+    | newProduct  | Integer  | New Product Definition                                         | 6                                               |              |
+    | nodeIdPath  | String   | Node ID path string                               | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
 
 #### Response parameter
 
 | Name                | Type    | Description                                | Example                |
 | --------------------- | --------- | -------------------------------------------- | ------------------------ |
-| nodeIdPath          | String  | complete node id paths, separated by colon | 2619525011:3741271     |
-| nodeLabelPath       | String  | node name                                  | Appliances:Dishwashers |
-| products            | Integer | the number of product                      | 42                     |
-| nodeLabelLocale     | String  | chinese translation of node names          | 洗碗机                 |
-| nodeLabelPathLocale | String  | chinese translation of full node names     | 大家电:洗碗机          |
+            | title             | String   | tile                    | Pilot G2, Dr. Grip Gel/Ltd, ExecuGel G6, Q7 Rollerball Gel Ink Pen Refills, 0.7mm, Fine Point, Black Ink, 3 Packs of 2                                 |
+            | asin              | String   | asin                    | B00P19MFYE                                                                                                                                             |
+            | asinUrl           | String   | asin url                | [https://www.amazon.com/dp/B00P19MFYE](https://www.amazon.com/dp/B00P19MFYE)                                                                                  |
+            | imageUrl          | String   | image url                | [https://images-na.ssl-images-amazon.com/images/I/51hxvoxGnjL.\_AC\_US200\_.jpg](https://images-na.ssl-images-amazon.com/images/I/51hxvoxGnjL._AC_US200_.jpg) |
+            | ranking           | Integer  | rank                    | 1                                                                                                                                                      |
+            | brand             | String   | brank                    | PILOT                                                                                                                                                  |
+            | sellerName        | String   | seller name                | JA Wholesale LLC                                                                                                                                       |
+            | sellerType        | String   | seller type                | FBA                                                                                                                                                    |
+            | price             | Float    | price                    | 6.19                                                                                                                                                   |
+            | shelfDate         | String   | Listing time                | 2014-10-30                                                                                                                                             |
+            | ratings           | Integer  | Score evaluation                  | 5695                                                                                                                                                   |
+            | reviews           | Integer  | Number of comments                  | 133                                                                                                                                                    |
+            | rating            | Float    | Comment value                  | 4.8                                                                                                                                                    |
+            | newFlag           | Integer  | Is it a new product? 1 new product, 0 non new product | 0                                                                                                                                                      |
+            | totalUnits        | Integer  | Total sales volume                  | 2515                                                                                                                                                   |
+            | totalRevenue      | Float    | Total sales                  | 18837.35                                                                                                                                               |
+            | totalUnitsRatio   | Float    | Total sales proportion              | 0.4478                                                                                                                                                 |
+            | totalRevenueRatio | Float    | Proportion of total sales              | 0.3052                                                                                                                                                 |
 
 #### Request example
 
 ```
-curl 'https://api.sellersprite.com/v1/product/node?marketplace=US&nodeIdPath=2619525011' \
--H 'secret-key: your secret key' \
--H 'content-type: application/json;charset=utf-8' \
---compressed
+curl 'https://api.sellersprite.com/v1/market/goods' \
+  -H 'Content-Type: application/json;charset=UTF-8' \
+  -H 'secret-key: your secret key' \
+  --data-raw $'{\n  "marketplace":"US",\n  "nodeIdPath":"1064954:1069242:1069784:1069820:1069838:1069828"\n}' \
+  --compressed
 ```
 
 ### Keyword mining
