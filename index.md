@@ -182,10 +182,10 @@ curl 'https://api.sellersprite.com/v1/market/research' \
 | Name        | Type    | Introduction                                                                                | Example                    | Required |
 | ------------- | --------- | --------------------------------------------------------------------------------------------- | ---------------------------- | ---------- |
 | marketplace | String   | marketplace code                                           | see table 1.2                                    | ✓       |
-            |  month      | String   | The filter date is the last 30 days by default, and the earliest query time is July 2021 | see table 1.1                                    |              |
-            | topN        | Integer  | Number of header listings                                  | 10                                              |              |
-            | newProduct  | Integer  | New Product Definition                                         | 6                                               |              |
-            | nodeIdPath  | String   | Node ID path string                               | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
+|  month      | String   | The filter date is the last 30 days by default, and the earliest query time is July 2021 | see table 1.1                                    |              |
+| topN        | Integer  | Number of header listings                                  | 10                                              |              |
+| newProduct  | Integer  | New Product Definition                                         | 6                                               |              |
+| nodeIdPath  | String   | Node ID path string                               | 1064954:1069242:1069784:1069820:1069838:1069828 | ✓       |
 
 #### Response parameter
 
